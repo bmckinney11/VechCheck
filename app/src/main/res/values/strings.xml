@@ -1,0 +1,210 @@
+<resources>
+    <string name="app_name">Vech Check</string>
+    <string name="airtitle">AIR Commercial Services Ltd</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="Login">Login</string>
+    <string name="instructions">Instructions</string>
+    <string name="newuser">New User</string>
+    <string name="Logout">Logout</string>
+
+    <string name="trailer_check">Trailer Check</string>
+    <string name="vehicle_check">Vehicle Check</string>
+    <string name="begin_inspection">Begin Inspection</string>
+
+    <string name="company_Name">Enter Company Name</string>
+    <string name="NiCnumber">Enter NI or C Number</string>
+    <string name="Chassis_number">Enter Chassis Number</string>
+    <string name="Fleet_number">Enter Fleet Number</string>
+    <string name="VehicleYear">Enter Year of Vehicle</string>
+    <string name="TrailerYear">Enter Year of Trailer</string>
+    <string name="Body_Type">Enter Body Type</string>
+    <string name="date_of_inspection">Enter Date of Inspection</string>
+    <string name="Registration">Enter Vehicle Registration</string>
+    <string name="axle_number">Enter Number of Axles</string>
+
+    <string name="Company">Company Name</string>
+    <string name="Reg">Vehicle Registration</string>
+    <string name="Chassis">Chassis Number</string>
+    <string name="YearVec">Year of Vechicle</string>
+    <string name="BodyVech">Vehicle Body Type</string>
+    <string name="axles">Number of Axles</string>
+    <string name="date">Date Of Inspection</string>
+    <string name="NIorCnumber">NI/C Number</string>
+    <string name="YearTrail">Year of Trailer</string>
+    <string name="BodyTrail">Trailer Body Type</string>
+
+    <string name="back">Back</string>
+    <string name="Gallery">Gallery</string>
+    <string name="Capture">Capture Image</string>
+
+    //under/alongside trailer
+    <string name="alongudertrailer">Under/Alongside Trailer</string>
+    <string name="cniplate">Chassis/NI/C Plate</string>
+    <string name="bumper">Bumpers</string>
+    <string name="underrun">Rear underrun device</string>
+    <string name="sideguards">Protective sideguards</string>
+    <string name="fifthwheel">Fifth wheel kign pin+Rubbing plate</string>
+    <string name="drawbar">Drawbar and attachment</string>
+    <string name="landinglegs">Landing Legs</string>
+    <string name="body">Body</string>
+    <string name="wings">Wings/Flaps/Spray supression</string>
+    <string name="bodycontainers">Secuity of body containers+Crane support legs</string>
+    <string name="tippingrams">Tipping rams, pivots+controls</string>
+    <string name="oilleaks">Oil Leaks</string>
+    <string name="fueltanks">Fuel tanks and System</string>
+    <string name="chassisandframe">Chassis(inc Subfame)</string>
+    <string name="electricalwiring">Electrical wiring,Coupling sockets+Equipment</string>
+
+    //suspension
+    <string name="suspension">Suspension</string>
+    <string name="suspinsbushes">Suspension pins+bushes</string>
+    <string name="springs">Suspension springs</string>
+    <string name="springunitlinks">Spring unit links and sub-frames</string>
+    <string name="shockabsorbers">Shock absorbers</string>
+    <string name="axleliftdevices">Axles lift devices</string>
+    <string name="roadwheels">Road wheels and Hubs</string>
+    <string name="airbags">Airbags</string>
+    <string name="axlealingment">Axle Alignment</string>
+
+    //brakes
+    <string name="brakes">Brakes</string>
+    <string name="mecbrakecomponents">Mechanical Brake Components</string>
+    <string name="drumlinginsdiscpads">Brake drums,linings,discs and pads</string>
+    <string name="actuators">Brake Actuators and Adjusters</string>
+    <string name="brakingsystem">Braking System and components</string>
+    <string name="electronicbraking">Electronic braking/Stability control System</string>
+    <string name="loadsensing">Load Sensing equipment</string>
+    <string name="antilock">Anti-Lock equipment and warning lights/service brake operation</string>
+    <string name="parkingbrake">Parking Brake</string>
+    <string name="emergancybrake">Emergancy Brake</string>
+    <string name="operatingadapter">Operating Adapter(Service Line)</string>
+
+    //steering
+    <string name="steering">Steering</string>
+    <string name="stubaxles">Stub Axles and Wheel Bearing</string>
+    <string name="steeringmec">Steering Mechanism</string>
+    <string name="turntable">Turntable</string>
+    <string name="steeringalin">Steering Alignment</string>
+
+    //markings,lamps and reflectors
+    <string name="marklampsref">Markings, Lamps and Reflectos</string>
+    <string name="rearref">Rear Reflective Markings</string>
+    <string name="conspicuity">Conspicuity Markings</string>
+    <string name="frontlamps">Front Lamps and Outline Markers</string>
+    <string name="rearlamps">Rear lamps and Outline Markers</string>
+    <string name="noplatelamps">Number Plate lamps</string>
+    <string name="rearfog">Rear Fog Lamps</string>
+    <string name="reflectors">Reflectors(Front,Side,Rear)</string>
+    <string name="indicators">Direction/hazard indicators</string>
+    <string name="brakelamps">Brake Lamps</string>
+    <string name="reversing">Reversing lamps</string>
+    <string name="sidemarker">Side Marker lamps</string>
+    <string name="noplatecarrier">Number Plate Carrier</string>
+
+    //inside cab
+    <string name="insidecab">Inside Cab</string>
+    <string name="cplate">Chassis Plate</string>
+    <string name="speedlimiter">Speed Limiter Plate</string>
+    <string name="seatbelt">Seat Belts+Supplementary restraints</string>
+    <string name="cabfloor">Cab Floor</string>
+    <string name="seats">Seats-Driver sear all adjustments fully functional</string>
+    <string name="view">View to Front</string>
+    <string name="conditionofglass">Condition Of Glass</string>
+    <string name="washerswipers">Screen wiper+Washers</string>
+    <string name="speedometertaco">Speedometer/tacograph</string>
+    <string name="enginetachometer">Engine Tacometer</string>
+    <string name="audiblewarnings">Audiable Warnings-horn</string>
+    <string name="drivingcontrols">Driving Controls</string>
+    <string name="steeringwheel">Steering Wheel-free play</string>
+    <string name="pressure">Pressure- build up</string>
+    <string name="servicebrakepedal">Service Brake Pedal</string>
+    <string name="servicebrake">Service Brake</string>
+    <string name="brakecontrolvalve">Hand Operated brake control valve</string>
+    <string name="fogauxlampswitch">Front Fog+Aux lamp switch</string>
+    <string name="cabheater">Cab Heater/Demister/Air Consitioning</string>
+
+    //Cab exterior
+    <string name="cabexterior">Cab Exterior</string>
+    <string name="bumperfront">Bumper(Front)</string>
+    <string name="wingssprayfront">Condition of Wings/Spray Suppression(front)</string>
+    <string name="cabsecurity">Cab Security including tilt warning</string>
+    <string name="cabdoors">Cab doors including Hinges+Locks</string>
+    <string name="cabfloorsteps">Cab Floor+Steps</string>
+    <string name="mirrors">Mirrors+Indirect Vision Devices(External)</string>
+    <string name="sidelights">Side Lights and Outline Markers</string>
+    <string name="headlamps">Headlamps</string>
+    <string name="frontfog">Front Fog+Spot lamp*********</string>
+
+    //engine compartment
+    <string name="enginecompartment">Engine Compartment</string>
+    <string name="enginemoutnings">Engine Mountings</string>
+    <string name="exhuastsystems">Exhaust Systmes</string>
+    <string name="SpeedLimiter">Speed Limiter</string>
+    <string name="aircompressor">Air Compressor- Exhuaster,Driver Belts</string>
+
+    //ground level
+    <string name="groundlevel">Ground Level</string>
+    <string name="sideguardsundrrun">Sideguards+Rear underrun guards</string>
+    <string name="vectotrailer">Vehicle to Trailer Coupling</string>
+    <string name="wingssprayrear">Condition of wings/spray suppression(Rear)</string>
+    <string name="securityofbody">Security+Condition of the body</string>
+    <string name="tippinggear">Tipping Gear-Hydraulic rams,pivots+Safety Device</string>
+
+    //under/alongside vehicle
+    <string name="underalongsidevehicle">Under/Alongside Vehicle</string>
+    <string name="chassisvec">Chassis</string>
+    <string name="electricalwiringvec">Electrical Wiring equipment including batteries</string>
+    <string name="electricaltrailerconnections">Electrical connections for Trailer</string>
+    <string name="suspensionunit">Suspension units,linkages+dust covers</string>
+    <string name="springunitsdust">Spring units,dust covers, linkages+sub-frame</string>
+    <string name="wheelbearings">Wheel Bearings+Seal</string>
+    <string name="stubaxle">Stub Axle and Wheel bearing</string>
+    <string name="steeringmecvec">Steering Mechanism- lock function</string>
+    <string name="steeringgear">Steering gear</string>
+    <string name="powersteering">Power Steering+Fluid levels-MIL</string>
+    <string name="clutchop">Clutch Operation</string>
+    <string name="changingspeed">Changing Speed Mechanism</string>
+    <string name="difflock">Differential lock-Traction control</string>
+    <string name="transmission">Transmission-drive line,mountings+dust covers</string>
+    <string name="rearandconspicuity">Rear Marking+Conspicuity Markings</string>
+    <string name="rearoutlinenumberplater">Rear Lamps,Outline Markers+Number Plate Lamp</string>
+    <string name="rearfogwarning">Rear Fog Light, including warning device</string>
+    <string name="siderearref">Side and Rear Reflectors</string>
+    <string name="dirhazard">Direction/Hazard Indicators including warnign devices</string>
+    <string name="regplate">Registration Plate</string>
+
+    //brakes
+    <string name="hydfluid">Hydrualic Fluid Level</string>
+    <string name="elecbraking">Electronic braking system/Electronic Stability Control System</string>
+    <string name="trailercoupling">Trailer Coupling,hoses+Function of self sealing valves</string>
+    <string name="loadsesingantilock">Load Sensing/Anti-Lock System</string>
+    <string name="antilockdev">Anti-lock device</string>
+    <string name="supplydump">Operation of Supply dump valve</string>
+    <string name="addbrakes">Additional Braking Devices</string>
+
+    //tyres
+    <string name="tyres">Tyres</string>
+    <string name="sizzetypetyres">Size and Types of Tyres</string>
+    <string name="condtiontyres">Condtion of Tyres</string>
+    <string name="tyrepressure">Pressure check of all tyres</string>
+    <string name="driveaxle">Drive Axle Tyres comply with calibration plague</string>
+
+    <string name="ancillary">Ancillary Equipment inspection completed?</string>
+    <string name="treadwear">Tread Wear</string>
+    <string name="treaddepth">State-Tread depth left in mm</string>
+    <string name="brakewear">State-Brake wear rates as a %</string>
+
+    <string name="feature">Feature:</string>
+    <string name="severity">Severity Of Defect</string>
+    <string name="minor">Minor</string>
+    <string name="major">Major</string>
+    <string name="critical">Critical</string>
+    <string name="details">Details</string>
+    <string name="defecthint">Enter details of the defect</string>
+    <string name="camera">Camera</string>
+    <string name="save">Save</string>
+    <string name="signiture">Signiture of Inspector</string>
+    <string name="printname">Print Name</string>
+
+</resources>

@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="aircommercialservices.vechcheck.LoginScreen">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimaryDark"
+        android:orientation="vertical"
+        android:padding="40dp">
+
+        <TextView
+            android:id="@+id/AIRTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/airtitle"
+            android:textColor="#fff"
+            android:textSize="40sp" />
+
+        <TextView
+            android:id="@+id/introTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="15dp"
+            android:text="welcome.. all about the inspeoxtion"
+            android:textColor="#fff"
+            android:textSize="20sp" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="30dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/instructionbtn"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/ic_lightbulb_outline_black_24dp"
+                android:drawableStart="@drawable/ic_lightbulb_outline_black_24dp"
+                android:text="@string/instructions" />
+
+            <Button
+                android:id="@+id/newuserbtn"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/ic_person_add_black_24dp"
+                android:drawableStart="@drawable/ic_person_add_black_24dp"
+                android:text="@string/newuser" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginTop="30dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/usernameEditText"
+            android:drawableLeft="@drawable/ic_person_black_24dp"
+            android:drawableStart="@drawable/ic_person_black_24dp"
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:hint="@string/username" />
+
+        <EditText
+            android:id="@+id/passwordEditText"
+            android:layout_marginTop="20dp"
+            android:drawableStart="@drawable/ic_lock_black_24dp"
+            android:drawableLeft="@drawable/ic_lock_black_24dp"
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:hint="@string/password"
+            android:inputType="textPassword" />
+
+        <Button
+            android:id="@+id/loginbutton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="30dp"
+            android:text="@string/Login"
+            android:textColor="#fff"
+            android:textSize="30sp" />
+
+    </LinearLayout>
+
+</LinearLayout>
