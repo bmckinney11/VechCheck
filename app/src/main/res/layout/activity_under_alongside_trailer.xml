@@ -1,0 +1,376 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UnderAlongsideTrailer">
+
+    <ImageView
+        android:id="@+id/LogoimageView5"
+        android:layout_width="200dp"
+        android:layout_height="70dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:contentDescription="@null"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/airlogo" />
+
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="509dp"
+        android:layout_marginBottom="428dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.126"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="0dp">
+
+            <TextView
+                android:id="@+id/underalongtrailer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/alongudertrailer"
+                android:textColor="@android:color/black"
+                android:textSize="22sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/spanner"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/underalongtrailer"
+                android:background="@drawable/ic_build_blue_24dp"
+                android:gravity="start" />
+
+            <CheckBox
+                android:id="@+id/chassis"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/underalongtrailer"
+                android:layout_toEndOf="@+id/spanner"
+                android:layout_toRightOf="@+id/spanner"
+                android:text="@string/cniplate"
+                android:textColor="@color/inspectionblue"
+                android:textSize="26sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/spanner2"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/spanner"
+                android:background="@drawable/ic_build_black_24dp"
+                android:gravity="start" />
+
+            <CheckBox
+                android:id="@+id/bumper"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/chassis"
+                android:layout_toEndOf="@+id/spanner2"
+                android:layout_toRightOf="@+id/spanner2"
+                android:text="@string/bumper"
+                android:textSize="26sp" />
+
+            <Button
+                android:id="@+id/spanner3"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/spanner2"
+                android:background="@drawable/ic_build_blue_24dp"
+                android:gravity="start" />
+
+            <CheckBox
+                android:id="@+id/rearunderrun"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/bumper"
+                android:layout_toEndOf="@+id/spanner3"
+                android:layout_toRightOf="@+id/spanner3"
+                android:text="@string/underrun"
+                android:textColor="@color/inspectionblue"
+                android:textSize="26sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/spanner4"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/spanner3"
+                android:background="@drawable/ic_build_black_24dp"
+                android:gravity="start" />
+
+            <CheckBox
+                android:id="@+id/sideguards"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rearunderrun"
+                android:layout_toEndOf="@+id/spanner4"
+                android:layout_toRightOf="@+id/spanner4"
+                android:text="@string/sideguards"
+                android:textSize="26sp" />
+
+            <Button
+                android:id="@+id/spanner5"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/spanner4"
+                android:background="@drawable/ic_build_blue_24dp"
+                android:gravity="start" />
+
+            <CheckBox
+                android:id="@+id/fifthwheel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/sideguards"
+                android:layout_toEndOf="@+id/spanner5"
+                android:layout_toRightOf="@+id/spanner5"
+                android:text="@string/fifthwheel"
+                android:textColor="@color/inspectionblue"
+                android:textSize="26sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/spanner6"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/spanner5"
+                android:background="@drawable/ic_build_black_24dp"
+                android:gravity="start" />
+
+            <CheckBox
+                android:id="@+id/drawbar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/fifthwheel"
+                android:layout_toEndOf="@+id/spanner6"
+                android:layout_toRightOf="@+id/spanner6"
+                android:text="@string/drawbar"
+                android:textSize="26sp" />
+
+            <Button
+                android:id="@+id/spanner7"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/spanner6"
+                android:background="@drawable/ic_build_blue_24dp"
+                android:gravity="start" />
+
+            <CheckBox
+                android:id="@+id/landinglegs"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/drawbar"
+                android:layout_toEndOf="@+id/spanner7"
+                android:layout_toRightOf="@+id/spanner7"
+                android:text="@string/landinglegs"
+                android:textColor="@color/inspectionblue"
+                android:textSize="26sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/spanner8"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/spanner7"
+                android:background="@drawable/ic_build_black_24dp"
+                android:gravity="start" />
+
+            <CheckBox
+                android:id="@+id/Body"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/landinglegs"
+                android:layout_toEndOf="@+id/spanner8"
+                android:layout_toRightOf="@+id/spanner8"
+                android:text="@string/body"
+                android:textSize="26sp" />
+
+            <Button
+                android:id="@+id/spanner9"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/spanner8"
+                android:background="@drawable/ic_build_blue_24dp"
+                android:gravity="start" />
+
+            <CheckBox
+                android:id="@+id/wings"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/Body"
+                android:layout_toEndOf="@+id/spanner9"
+                android:layout_toRightOf="@+id/spanner9"
+                android:text="@string/wings"
+                android:textColor="@color/inspectionblue"
+                android:textSize="26sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/spanner10"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/spanner9"
+                android:background="@drawable/ic_build_black_24dp"
+                android:gravity="start" />
+
+            <CheckBox
+                android:id="@+id/bodycontainers"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/wings"
+                android:layout_toEndOf="@+id/spanner10"
+                android:layout_toRightOf="@+id/spanner10"
+                android:text="@string/bodycontainers"
+                android:textSize="26sp" />
+
+            <Button
+                android:id="@+id/spanner11"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/spanner10"
+                android:background="@drawable/ic_build_blue_24dp"
+                android:gravity="start" />
+
+            <CheckBox
+                android:id="@+id/tipping_rams"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/bodycontainers"
+                android:layout_toEndOf="@+id/spanner11"
+                android:layout_toRightOf="@+id/spanner11"
+                android:text="@string/tippingrams"
+                android:textColor="@color/inspectionblue"
+                android:textSize="26sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/spanner12"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/spanner11"
+                android:background="@drawable/ic_build_black_24dp"
+                android:gravity="start" />
+
+            <CheckBox
+                android:id="@+id/oilleaks"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tipping_rams"
+                android:layout_toEndOf="@+id/spanner12"
+                android:layout_toRightOf="@+id/spanner12"
+                android:text="@string/oilleaks"
+                android:textSize="26sp" />
+
+            <Button
+                android:id="@+id/spanner13"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/spanner12"
+                android:background="@drawable/ic_build_blue_24dp"
+                android:gravity="start" />
+
+            <CheckBox
+                android:id="@+id/fueltanks"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/oilleaks"
+                android:layout_toEndOf="@+id/spanner13"
+                android:layout_toRightOf="@+id/spanner13"
+                android:text="@string/fueltanks"
+                android:textColor="@color/inspectionblue"
+                android:textSize="26sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/spanner14"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/spanner13"
+                android:background="@drawable/ic_build_black_24dp"
+                android:gravity="start" />
+
+            <CheckBox
+                android:id="@+id/chassissubframe"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/fueltanks"
+                android:layout_toEndOf="@+id/spanner14"
+                android:layout_toRightOf="@+id/spanner14"
+                android:text="@string/chassisandframe"
+                android:textSize="26sp" />
+
+            <Button
+                android:id="@+id/spanner15"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/spanner14"
+                android:background="@drawable/ic_build_blue_24dp"
+                android:gravity="start" />
+
+            <CheckBox
+                android:id="@+id/electricalwiring"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/chassissubframe"
+                android:layout_toEndOf="@+id/spanner15"
+                android:layout_toRightOf="@+id/spanner15"
+                android:text="@string/electricalwiring"
+                android:textColor="@color/inspectionblue"
+                android:textSize="26sp"
+                android:textStyle="bold" />
+
+
+        </RelativeLayout>
+    </ScrollView>
+
+
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".trailerlamps">
+
+
+    <ImageView
+        android:id="@+id/LogoimageView5"
+        android:layout_width="200dp"
+        android:layout_height="70dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:contentDescription="@null"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/airlogo" />
+
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="509dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.585">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="0dp">
+
+            <TextView
+                android:id="@+id/markingslamps"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/marklampsref"
+                android:textColor="@android:color/black"
+                android:textSize="22sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/spanner38"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/markingslamps"
+                android:background="@drawable/ic_build_blue_24dp"
+                android:gravity="start" />
+
+            <CheckBox
+                android:id="@+id/rearreflec"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/markingslamps"
+                android:layout_toEndOf="@+id/spanner38"
+                android:layout_toRightOf="@+id/spanner38"
+                android:text="@string/rearref"
+                android:textColor="@color/inspectionblue"
+                android:textSize="26sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/spanner39"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/spanner38"
+                android:background="@drawable/ic_build_black_24dp"
+                android:gravity="start" />
+
+            <CheckBox
+                android:id="@+id/consmarkings"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rearreflec"
+                android:layout_toEndOf="@+id/spanner39"
+                android:layout_toRightOf="@+id/spanner39"
+                android:text="@string/conspicuity"
+                android:textSize="26sp" />
+
+            <Button
+                android:id="@+id/spanner40"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/spanner39"
+                android:background="@drawable/ic_build_blue_24dp"
+                android:gravity="start" />
+
+            <CheckBox
+                android:id="@+id/frontlamps"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/consmarkings"
+                android:layout_toEndOf="@+id/spanner40"
+                android:layout_toRightOf="@+id/spanner40"
+                android:text="@string/frontlamps"
+                android:textColor="@color/inspectionblue"
+                android:textSize="26sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/spanner41"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/spanner40"
+                android:background="@drawable/ic_build_black_24dp"
+                android:gravity="start" />
+
+            <CheckBox
+                android:id="@+id/rearlamps"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/frontlamps"
+                android:layout_toEndOf="@+id/spanner41"
+                android:layout_toRightOf="@+id/spanner41"
+                android:text="@string/rearlamps"
+                android:textSize="26sp" />
+
+            <Button
+                android:id="@+id/spanner42"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/spanner41"
+                android:background="@drawable/ic_build_blue_24dp"
+                android:gravity="start" />
+
+            <CheckBox
+                android:id="@+id/numberplatelamps"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rearlamps"
+                android:layout_toEndOf="@+id/spanner42"
+                android:layout_toRightOf="@+id/spanner42"
+                android:text="@string/noplatelamps"
+                android:textColor="@color/inspectionblue"
+                android:textSize="26sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/spanner43"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/spanner42"
+                android:background="@drawable/ic_build_black_24dp"
+                android:gravity="start" />
+
+            <CheckBox
+                android:id="@+id/rearfog"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/numberplatelamps"
+                android:layout_toEndOf="@+id/spanner43"
+                android:layout_toRightOf="@+id/spanner43"
+                android:text="@string/rearfog"
+                android:textSize="26sp" />
+
+            <Button
+                android:id="@+id/spanner44"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/spanner43"
+                android:background="@drawable/ic_build_blue_24dp"
+                android:gravity="start" />
+
+            <CheckBox
+                android:id="@+id/reflectors"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rearfog"
+                android:layout_toEndOf="@+id/spanner44"
+                android:layout_toRightOf="@+id/spanner44"
+                android:text="@string/reflectors"
+                android:textColor="@color/inspectionblue"
+                android:textSize="26sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/spanner45"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/spanner44"
+                android:background="@drawable/ic_build_black_24dp"
+                android:gravity="start" />
+
+            <CheckBox
+                android:id="@+id/dirhazindicators"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/reflectors"
+                android:layout_toEndOf="@+id/spanner45"
+                android:layout_toRightOf="@+id/spanner45"
+                android:text="@string/indicators"
+                android:textSize="26sp" />
+
+            <Button
+                android:id="@+id/spanner46"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/spanner45"
+                android:background="@drawable/ic_build_blue_24dp"
+                android:gravity="start" />
+
+            <CheckBox
+                android:id="@+id/brakelamps"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/dirhazindicators"
+                android:layout_toEndOf="@+id/spanner46"
+                android:layout_toRightOf="@+id/spanner46"
+                android:text="@string/brakelamps"
+                android:textColor="@color/inspectionblue"
+                android:textSize="26sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/spanner47"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/spanner46"
+                android:background="@drawable/ic_build_black_24dp"
+                android:gravity="start" />
+
+            <CheckBox
+                android:id="@+id/reversinglamps"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/brakelamps"
+                android:layout_toEndOf="@+id/spanner47"
+                android:layout_toRightOf="@+id/spanner47"
+                android:text="@string/reversing"
+                android:textSize="26sp" />
+
+            <Button
+                android:id="@+id/spanner48"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/spanner47"
+                android:background="@drawable/ic_build_blue_24dp"
+                android:gravity="start" />
+
+            <CheckBox
+                android:id="@+id/sidemarker"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/reversinglamps"
+                android:layout_toEndOf="@+id/spanner48"
+                android:layout_toRightOf="@+id/spanner48"
+                android:text="@string/sidemarker"
+                android:textColor="@color/inspectionblue"
+                android:textSize="26sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/spanner49"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/spanner48"
+                android:background="@drawable/ic_build_black_24dp"
+                android:gravity="start" />
+
+            <CheckBox
+                android:id="@+id/numberplatecarrier"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/sidemarker"
+                android:layout_toEndOf="@+id/spanner49"
+                android:layout_toRightOf="@+id/spanner49"
+                android:text="@string/noplatecarrier"
+                android:textSize="26sp" />
+
+        </RelativeLayout>
+    </ScrollView>
+
+</android.support.constraint.ConstraintLayout>

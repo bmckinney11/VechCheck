@@ -2,7 +2,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="aircommercialservices.vechcheck">
 
-
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -13,6 +12,7 @@
         <activity android:name=".LoginScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
@@ -25,6 +25,18 @@
         <activity
             android:name=".defectActivity"
             android:theme="@style/AppTheme.popup" />
+        <activity android:name=".Information" />
+        <activity android:name=".newuser" />
+        <activity android:name=".insidecab" />
+        <activity android:name=".cabexterior" />
+        <activity android:name=".enginecomp" />
+        <activity android:name=".groundlevel" />
+        <activity android:name=".underalongsidevec" />
+        <activity android:name=".brakeandtyres" />
+        <activity android:name=".UnderAlongsideTrailer" />
+        <activity android:name=".TrailerSuspensionandsteering" />
+        <activity android:name=".Trailerbrakesandtyres" />
+        <activity android:name=".trailerlamps"></activity>
     </application>
 
 </manifest>

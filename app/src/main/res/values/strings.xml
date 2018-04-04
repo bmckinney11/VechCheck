@@ -206,5 +206,8 @@
     <string name="save">Save</string>
     <string name="signiture">Signiture of Inspector</string>
     <string name="printname">Print Name</string>
+    <string name="trailer_brakes_and_tyres">Trailer Brakes and Tyres</string>
+    <string name="suspension_and_steering">Suspension and Steering</string>
+    <string name="vehicle_brakes_and_tyres">Vehicle Brakes and Tyres</string>
 
 </resources>
