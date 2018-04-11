@@ -8,7 +8,7 @@ import android.widget.Button;
 
 public class enginecomp extends AppCompatActivity {
 
-    Button sbtn29,sbtn30,sbtn31,sbtn32,sbtn33,sbtn34;
+    Button sbtn29,sbtn30,sbtn31,sbtn32,sbtn33,sbtn34, finish;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,6 +27,7 @@ public class enginecomp extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent I29 = new Intent(getApplicationContext(), defectActivity.class);
+                I29.putExtra("message","Engine mountings");
                 startActivity(I29);
             }
         });
@@ -35,6 +36,7 @@ public class enginecomp extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent I30 = new Intent(getApplicationContext(), defectActivity.class);
+                I30.putExtra("message","Oil leaks");
                 startActivity(I30);
             }
         });
@@ -43,6 +45,7 @@ public class enginecomp extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent I31 = new Intent(getApplicationContext(), defectActivity.class);
+                I31.putExtra("message","Fuel tanks and systems");
                 startActivity(I31);
             }
         });
@@ -51,6 +54,7 @@ public class enginecomp extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent I32 = new Intent(getApplicationContext(), defectActivity.class);
+                I32.putExtra("message","Exhaust system");
                 startActivity(I32);
             }
         });
@@ -59,6 +63,7 @@ public class enginecomp extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent I33 = new Intent(getApplicationContext(), defectActivity.class);
+                I33.putExtra("message","Speed limiter- Condition, seals, linkage");
                 startActivity(I33);
             }
         });
@@ -67,6 +72,7 @@ public class enginecomp extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent I34 = new Intent(getApplicationContext(), defectActivity.class);
+                I34.putExtra("message","Air compressor- exhauster, driver belts");
                 startActivity(I34);
             }
         });

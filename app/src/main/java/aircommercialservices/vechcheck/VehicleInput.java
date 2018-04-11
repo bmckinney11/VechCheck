@@ -12,8 +12,6 @@ import android.widget.Toast;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
-import java.time.Year;
-
 public class VehicleInput extends AppCompatActivity {
 
     EditText VCname;
@@ -33,18 +31,30 @@ public class VehicleInput extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_vehicle_input);
 
-        VBegin = (Button)findViewById(R.id.VBeginBtn);
-        VCname = (EditText)findViewById(R.id.CompanyNameEditText);
-        Reg = (EditText)findViewById(R.id.RegistrationEditText);
-        Vchassis = (EditText)findViewById(R.id.ChassisNumberEditText);
-        VecYear = (EditText)findViewById(R.id.YearofVehicleEditText);
-        VNAxles = (EditText)findViewById(R.id.AxleNumbersEditText);
-        VBody = (EditText)findViewById(R.id.BodyTypeEditText);
-        VDate = (EditText)findViewById(R.id.dateOfInspectionEditText);
+        VBegin = findViewById(R.id.VBeginBtn);
+        VCname = findViewById(R.id.CompanyNameEditText);
+        Reg = findViewById(R.id.RegistrationEditText);
+        Vchassis = findViewById(R.id.ChassisNumberEditText);
+        VecYear = findViewById(R.id.YearofVehicleEditText);
+        VNAxles = findViewById(R.id.AxleNumbersEditText);
+        VBody = findViewById(R.id.BodyTypeEditText);
+        VDate = findViewById(R.id.dateOfInspectionEditText);
         database = FirebaseDatabase.getInstance();
         databaseReference = database.getReference("Vehicles");
 
-        //passing input to the VehicleInspection Activity
+
+        //navigate back to second activity
+        VehicleBack = findViewById(R.id.VehicleBackButton);
+        VehicleBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent4 = new Intent(getApplicationContext(), secondactivity.class);
+                startActivity(intent4);
+            }
+        });
+
+
+        //passing input to the VehicleInspection Activity and adding information to the database
         VBegin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -54,15 +64,6 @@ public class VehicleInput extends AppCompatActivity {
             }
         });
 
-        //navigate back to second activity
-        VehicleBack = (Button)findViewById(R.id.VehicleBackButton);
-        VehicleBack.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent4 = new Intent(getApplicationContext(), secondactivity.class);
-                startActivity(intent4);
-            }
-        });
     }
 
     private void launchVehicleActivityInfo(){
@@ -72,7 +73,7 @@ public class VehicleInput extends AppCompatActivity {
         String year = VecYear.getText().toString();
         String axles = VNAxles.getText().toString();
         String body = VBody.getText().toString();
-        String date = VBegin.getText().toString();
+        String date = VDate.getText().toString();
 
         Intent intent2 = new Intent(VehicleInput.this, VehicleInspection.class);
         intent2.putExtra("Company name:", vcname);
@@ -83,7 +84,9 @@ public class VehicleInput extends AppCompatActivity {
         intent2.putExtra("Body Type:", body);
         intent2.putExtra("Date of Inspection", date);
         startActivity(intent2);
+
     }
+
 
     private void addVehicleArrayList(){
         String vcname = VCname.getText().toString().trim();
@@ -92,7 +95,7 @@ public class VehicleInput extends AppCompatActivity {
         String vyear = VecYear.getText().toString().trim();
         String vnumberaxles = VNAxles.getText().toString().trim();
         String vbodytype = VBody.getText().toString().trim();
-        String vdateofi = VBegin.getText().toString().trim();
+        String vdateofi = VDate.getText().toString().trim();
 
         if(TextUtils.isEmpty(vcname)){
             Toast.makeText(this,"Please enter Company Name!",Toast.LENGTH_LONG).show();
@@ -110,7 +113,7 @@ public class VehicleInput extends AppCompatActivity {
             Toast.makeText(this,"Please enter Date of Inspection!",Toast.LENGTH_LONG).show();
         }else{
             String id = databaseReference.push().getKey();
-            Vehicles vehicles = new Vehicles(vcname,reg,vchassisno,vyear,vnumberaxles,vbodytype,vdateofi);
+            //Vehicles vehicles = new Vehicles(vcname,reg,vchassisno,vyear,vnumberaxles,vbodytype,vdateofi);
             databaseReference.child(id).child("Company Name").setValue(vcname);
             databaseReference.child(id).child("Registration").setValue(reg);
             databaseReference.child(id).child("Chassis Number").setValue(vchassisno);
@@ -132,4 +135,5 @@ public class VehicleInput extends AppCompatActivity {
         VBody.setText("");
         VDate.setText("");
     }
+
 }

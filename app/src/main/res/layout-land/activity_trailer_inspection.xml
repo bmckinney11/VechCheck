@@ -25,7 +25,7 @@
 
     <TextView
         android:id="@+id/TrailerInfoTextView"
-        android:layout_width="44dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textColor="@android:color/black"
         android:textSize="22sp"
@@ -60,27 +60,30 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/alongsidetrailer"
-            android:text="@string/suspension_and_steering" />
+            android:text="@string/suspension_and_steering"
+            android:visibility="invisible"/>
 
         <Button
             android:id="@+id/markingslamps"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/trsuspensionandsteering"
-            android:text="@string/marklampsref" />
+            android:text="@string/marklampsref"
+            android:visibility="invisible"/>
 
         <Button
             android:id="@+id/trailerbrakesandtyres"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/markingslamps"
-            android:text="@string/trailer_brakes_and_tyres" />
+            android:text="@string/trailer_brakes_and_tyres"
+            android:visibility="invisible"/>
 
 
     </RelativeLayout>
 
     <Button
-        android:id="@+id/continuebtn"
+        android:id="@+id/savetrailerinspectionbtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="17dp"
@@ -89,13 +92,14 @@
         android:layout_marginRight="33dp"
         android:layout_marginStart="1159dp"
         android:layout_marginTop="8dp"
-        android:text="Button"
+        android:text="@string/save"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.977" />
+        app:layout_constraintVertical_bias="0.977"
+        android:visibility="invisible"/>
 
 
 </android.support.constraint.ConstraintLayout>

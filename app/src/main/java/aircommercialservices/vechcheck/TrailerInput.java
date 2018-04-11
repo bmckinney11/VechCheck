@@ -31,14 +31,14 @@ public class TrailerInput extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_trailer_input);
 
-       TrBeginInspection = (Button)findViewById(R.id.TbeginBtn);
-       CName = (EditText)findViewById(R.id.CompanyNameEdittext2);
-       NIC = (EditText)findViewById(R.id.NiCNumberEditText);
-       ChNO = (EditText)findViewById(R.id.TChassisNumberEditText);
-       TYear =(EditText)findViewById(R.id.YearOfTrailerEditText);
-       TNAxles = (EditText)findViewById(R.id.NumberOfAxlesEditText);
-       TBody = (EditText)findViewById(R.id.BodyTypeTrEditText);
-       TDate = (EditText)findViewById(R.id.DateOfInspectionTrEditText);
+       TrBeginInspection = findViewById(R.id.TbeginBtn);
+       CName = findViewById(R.id.CompanyNameEdittext2);
+       NIC = findViewById(R.id.NiCNumberEditText);
+       ChNO = findViewById(R.id.TChassisNumberEditText);
+       TYear = findViewById(R.id.YearOfTrailerEditText);
+       TNAxles = findViewById(R.id.NumberOfAxlesEditText);
+       TBody = findViewById(R.id.BodyTypeTrEditText);
+       TDate = findViewById(R.id.DateOfInspectionTrEditText);
        database = FirebaseDatabase.getInstance();
        databaseReference = database.getReference("Trailers");
 
@@ -53,7 +53,7 @@ public class TrailerInput extends AppCompatActivity {
         });
 
         //navigate back to second activity
-        Trailerback = (Button)findViewById(R.id.TrailerBackButton);
+        Trailerback = findViewById(R.id.TrailerBackButton);
         Trailerback.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -109,7 +109,7 @@ public class TrailerInput extends AppCompatActivity {
             Toast.makeText(this,"Please enter Date of Inspection!",Toast.LENGTH_LONG).show();
         }else{
             String id = databaseReference.push().getKey();
-            Trailers trailers = new Trailers(cname,nicNumber,chassisno,traileryear,tnumberaxles,tbodytype,tdateofi);
+            //Trailers trailers = new Trailers(cname,nicNumber,chassisno,traileryear,tnumberaxles,tbodytype,tdateofi);
             databaseReference.child(id).child("Company Name").setValue(cname);
             databaseReference.child(id).child("NiorC Number").setValue(nicNumber);
             databaseReference.child(id).child("Chassis Number").setValue(chassisno);

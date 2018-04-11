@@ -1,12 +1,13 @@
 package aircommercialservices.vechcheck;
 
+import android.app.Activity;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.DisplayMetrics;
 import android.view.Gravity;
 import android.view.WindowManager;
 
-public class Information extends AppCompatActivity {
+public class Information extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

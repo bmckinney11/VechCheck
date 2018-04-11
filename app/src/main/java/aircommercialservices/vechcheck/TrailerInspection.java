@@ -17,7 +17,7 @@ public class TrailerInspection extends AppCompatActivity {
     String TBody;
     String TDate;
     TextView trailerinfo;
-    Button alongside, sussteer, lamps, brakestyres;
+    Button alongside, sussteer, lamps, brakestyres, saveTrIn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,11 +37,13 @@ public class TrailerInspection extends AppCompatActivity {
         trailerinfo.setText("Company Name:"+" "+CName+"Ni/C Number:"+" "+NIC+'\n'+"Chassis Nunber:"+" "+ChNo+"Year of Trailer:"+" "+TYear+'\n'+"Number of axles:"+" "+TNAxles+"Body Type:"+" "+TBody+'\n'+"Date of Inspection:"+" "+TDate);
 
         //opening each seperate inspection
+
         alongside = findViewById(R.id.alongsidetrailer);
         alongside.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent trailerintent1 = new Intent(getApplicationContext(), UnderAlongsideTrailer.class);
+                sussteer.setVisibility(View.VISIBLE);
                 startActivity(trailerintent1);
             }
         });
@@ -51,6 +53,7 @@ public class TrailerInspection extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent trailerintent2 = new Intent(getApplicationContext(), TrailerSuspensionandsteering.class);
+                lamps.setVisibility(View.VISIBLE);
                 startActivity(trailerintent2);
             }
         });
@@ -60,6 +63,7 @@ public class TrailerInspection extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent trailerintent3 = new Intent(getApplicationContext(), trailerlamps.class);
+                brakestyres.setVisibility(View.VISIBLE);
                 startActivity(trailerintent3);
             }
         });
@@ -69,9 +73,19 @@ public class TrailerInspection extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent trailerintent4 = new Intent(getApplicationContext(), Trailerbrakesandtyres.class);
+                saveTrIn.setVisibility(View.VISIBLE);
                 startActivity(trailerintent4);
             }
         });
 
+        //saving inspection when all parts are complete
+        saveTrIn = findViewById(R.id.savetrailerinspectionbtn);
+        saveTrIn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent saveTRintent = new Intent(getApplicationContext(),Rectification.class);
+                startActivity(saveTRintent);
+            }
+        });
     }
 }

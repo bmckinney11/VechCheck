@@ -23,19 +23,19 @@
             app:layout_constraintVertical_bias="0.0"
             app:srcCompat="@drawable/airlogo" />
 
-        <ScrollView
-            android:layout_width="wrap_content"
-            android:layout_height="519dp"
-            android:layout_marginBottom="8dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.064"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.941">
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="519dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.578">
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -45,416 +45,435 @@
             tools:layout_editor_absoluteX="0dp"
             tools:layout_editor_absoluteY="0dp">
 
-        <TextView
-            android:id="@+id/insidecab"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/insidecab"
-            android:textColor="@android:color/black"
-            android:textSize="22sp"
-            android:textStyle="bold" />
+            <TextView
+                android:id="@+id/insidecab"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/insidecab"
+                android:textColor="@android:color/black"
+                android:textSize="22sp"
+                android:textStyle="bold" />
 
-        <Button
-            android:id="@+id/spannerbtn1"
-            android:layout_width="35dp"
-            android:layout_height="35dp"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
-            android:layout_below="@+id/insidecab"
-            android:background="@drawable/ic_build_blue_24dp"
-            android:gravity="start" />
+            <Button
+                android:id="@+id/spannerbtn1"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/insidecab"
+                android:background="@drawable/ic_build_blue_24dp"
+                android:gravity="start" />
 
-        <CheckBox
-            android:id="@+id/chassis"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/insidecab"
-            android:layout_toEndOf="@+id/spannerbtn1"
-            android:layout_toRightOf="@+id/spannerbtn1"
-            android:text="@string/cplate"
-            android:textColor="@color/inspectionblue"
-            android:textSize="26sp"
-            android:textStyle="bold" />
+            <CheckBox
+                android:id="@+id/chassis"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/insidecab"
+                android:layout_toEndOf="@+id/spannerbtn1"
+                android:layout_toRightOf="@+id/spannerbtn1"
+                android:text="@string/cplate"
+                android:textColor="@color/inspectionblue"
+                android:textSize="26sp"
+                android:textStyle="bold" />
 
-        <Button
-            android:id="@+id/spannerbtn2"
-            android:layout_width="35dp"
-            android:layout_height="35dp"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
-            android:layout_below="@+id/spannerbtn1"
-            android:background="@drawable/ic_build_black_24dp"
-            android:gravity="start" />
+            <Button
+                android:id="@+id/spannerbtn2"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/spannerbtn1"
+                android:background="@drawable/ic_build_black_24dp"
+                android:gravity="start" />
 
-        <CheckBox
-            android:id="@+id/speedlimiterplate"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/chassis"
-            android:layout_toEndOf="@+id/spannerbtn2"
-            android:layout_toRightOf="@+id/spannerbtn2"
-            android:text="@string/speedlimiter"
-            android:textSize="26sp" />
+            <CheckBox
+                android:id="@+id/speedlimiterplate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/chassis"
+                android:layout_toEndOf="@+id/spannerbtn2"
+                android:layout_toRightOf="@+id/spannerbtn2"
+                android:text="@string/speedlimiter"
+                android:textSize="26sp" />
 
-        <Button
-            android:id="@+id/spannerbtn3"
-            android:layout_width="35dp"
-            android:layout_height="35dp"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
-            android:layout_below="@+id/spannerbtn2"
-            android:background="@drawable/ic_build_blue_24dp"
-            android:gravity="start" />
+            <Button
+                android:id="@+id/spannerbtn3"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/spannerbtn2"
+                android:background="@drawable/ic_build_blue_24dp"
+                android:gravity="start" />
 
-        <CheckBox
-            android:id="@+id/seatbelts"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/speedlimiterplate"
-            android:layout_toEndOf="@+id/spannerbtn3"
-            android:layout_toRightOf="@+id/spannerbtn3"
-            android:text="@string/seatbelt"
-            android:textColor="@color/inspectionblue"
-            android:textSize="26sp"
-            android:textStyle="bold" />
+            <CheckBox
+                android:id="@+id/seatbelts"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/speedlimiterplate"
+                android:layout_toEndOf="@+id/spannerbtn3"
+                android:layout_toRightOf="@+id/spannerbtn3"
+                android:text="@string/seatbelt"
+                android:textColor="@color/inspectionblue"
+                android:textSize="26sp"
+                android:textStyle="bold" />
 
-        <Button
-            android:id="@+id/spannerbtn4"
-            android:layout_width="35dp"
-            android:layout_height="35dp"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
-            android:layout_below="@+id/spannerbtn3"
-            android:background="@drawable/ic_build_black_24dp"
-            android:gravity="start" />
+            <Button
+                android:id="@+id/spannerbtn4"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/spannerbtn3"
+                android:background="@drawable/ic_build_black_24dp"
+                android:gravity="start" />
 
-        <CheckBox
-            android:id="@+id/cabfloor"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/seatbelts"
-            android:layout_toEndOf="@+id/spannerbtn4"
-            android:layout_toRightOf="@+id/spannerbtn4"
-            android:text="@string/cabfloorsteps"
-            android:textSize="26sp" />
+            <CheckBox
+                android:id="@+id/cabfloor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/seatbelts"
+                android:layout_toEndOf="@+id/spannerbtn4"
+                android:layout_toRightOf="@+id/spannerbtn4"
+                android:text="@string/cabfloorsteps"
+                android:textSize="26sp" />
 
-        <Button
-            android:id="@+id/spannerbtn5"
-            android:layout_width="35dp"
-            android:layout_height="35dp"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
-            android:layout_below="@+id/spannerbtn4"
-            android:background="@drawable/ic_build_blue_24dp"
-            android:gravity="start" />
+            <Button
+                android:id="@+id/spannerbtn5"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/spannerbtn4"
+                android:background="@drawable/ic_build_blue_24dp"
+                android:gravity="start" />
 
-        <CheckBox
-            android:id="@+id/seats"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/cabfloor"
-            android:layout_toEndOf="@+id/spannerbtn5"
-            android:layout_toRightOf="@+id/spannerbtn5"
-            android:text="@string/seats"
-            android:textColor="@color/inspectionblue"
-            android:textSize="26sp"
-            android:textStyle="bold" />
+            <CheckBox
+                android:id="@+id/seats"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/cabfloor"
+                android:layout_toEndOf="@+id/spannerbtn5"
+                android:layout_toRightOf="@+id/spannerbtn5"
+                android:text="@string/seats"
+                android:textColor="@color/inspectionblue"
+                android:textSize="26sp"
+                android:textStyle="bold" />
 
-        <Button
-            android:id="@+id/spannerbtn6"
-            android:layout_width="35dp"
-            android:layout_height="35dp"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
-            android:layout_below="@+id/spannerbtn5"
-            android:background="@drawable/ic_build_black_24dp"
-            android:gravity="start" />
+            <Button
+                android:id="@+id/spannerbtn6"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/spannerbtn5"
+                android:background="@drawable/ic_build_black_24dp"
+                android:gravity="start" />
 
-        <CheckBox
-            android:id="@+id/viewtofront"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/seats"
-            android:layout_toEndOf="@+id/spannerbtn6"
-            android:layout_toRightOf="@+id/spannerbtn6"
-            android:text="@string/view"
-            android:textSize="26sp" />
+            <CheckBox
+                android:id="@+id/viewtofront"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/seats"
+                android:layout_toEndOf="@+id/spannerbtn6"
+                android:layout_toRightOf="@+id/spannerbtn6"
+                android:text="@string/view"
+                android:textSize="26sp" />
 
-        <Button
-            android:id="@+id/spannerbtn7"
-            android:layout_width="35dp"
-            android:layout_height="35dp"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
-            android:layout_below="@+id/spannerbtn6"
-            android:background="@drawable/ic_build_blue_24dp"
-            android:gravity="start" />
+            <Button
+                android:id="@+id/spannerbtn7"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/spannerbtn6"
+                android:background="@drawable/ic_build_blue_24dp"
+                android:gravity="start" />
 
-        <CheckBox
-            android:id="@+id/conditionglass"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/viewtofront"
-            android:layout_toEndOf="@+id/spannerbtn7"
-            android:layout_toRightOf="@+id/spannerbtn7"
-            android:text="@string/conditionofglass"
-            android:textColor="@color/inspectionblue"
-            android:textSize="26sp"
-            android:textStyle="bold" />
+            <CheckBox
+                android:id="@+id/conditionglass"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/viewtofront"
+                android:layout_toEndOf="@+id/spannerbtn7"
+                android:layout_toRightOf="@+id/spannerbtn7"
+                android:text="@string/conditionofglass"
+                android:textColor="@color/inspectionblue"
+                android:textSize="26sp"
+                android:textStyle="bold" />
 
-        <Button
-            android:id="@+id/spannerbtn8"
-            android:layout_width="35dp"
-            android:layout_height="35dp"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
-            android:layout_below="@+id/spannerbtn7"
-            android:background="@drawable/ic_build_black_24dp"
-            android:gravity="start" />
+            <Button
+                android:id="@+id/spannerbtn8"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/spannerbtn7"
+                android:background="@drawable/ic_build_black_24dp"
+                android:gravity="start" />
 
-        <CheckBox
-            android:id="@+id/screenwipers"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/conditionglass"
-            android:layout_toEndOf="@+id/spannerbtn8"
-            android:layout_toRightOf="@+id/spannerbtn8"
-            android:text="@string/washerswipers"
-            android:textSize="26sp" />
+            <CheckBox
+                android:id="@+id/screenwipers"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/conditionglass"
+                android:layout_toEndOf="@+id/spannerbtn8"
+                android:layout_toRightOf="@+id/spannerbtn8"
+                android:text="@string/washerswipers"
+                android:textSize="26sp" />
 
-        <Button
-            android:id="@+id/spannerbtn9"
-            android:layout_width="35dp"
-            android:layout_height="35dp"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
-            android:layout_below="@+id/spannerbtn8"
-            android:background="@drawable/ic_build_blue_24dp"
-            android:gravity="start" />
+            <Button
+                android:id="@+id/spannerbtn9"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/spannerbtn8"
+                android:background="@drawable/ic_build_blue_24dp"
+                android:gravity="start" />
 
-        <CheckBox
-            android:id="@+id/speedmetertaco"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/screenwipers"
-            android:layout_toEndOf="@+id/spannerbtn9"
-            android:layout_toRightOf="@+id/spannerbtn9"
-            android:text="@string/speedometertaco"
-            android:textColor="@color/inspectionblue"
-            android:textSize="26sp"
-            android:textStyle="bold" />
+            <CheckBox
+                android:id="@+id/speedmetertaco"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/screenwipers"
+                android:layout_toEndOf="@+id/spannerbtn9"
+                android:layout_toRightOf="@+id/spannerbtn9"
+                android:text="@string/speedometertaco"
+                android:textColor="@color/inspectionblue"
+                android:textSize="26sp"
+                android:textStyle="bold" />
 
-        <Button
-            android:id="@+id/spannerbtn10"
-            android:layout_width="35dp"
-            android:layout_height="35dp"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
-            android:layout_below="@+id/spannerbtn9"
-            android:background="@drawable/ic_build_black_24dp"
-            android:gravity="start" />
+            <Button
+                android:id="@+id/spannerbtn10"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/spannerbtn9"
+                android:background="@drawable/ic_build_black_24dp"
+                android:gravity="start" />
 
-        <CheckBox
-            android:id="@+id/enginetaco"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/speedmetertaco"
-            android:layout_toEndOf="@+id/spannerbtn10"
-            android:layout_toRightOf="@+id/spannerbtn10"
-            android:text="@string/enginetachometer"
-            android:textSize="26sp" />
+            <CheckBox
+                android:id="@+id/enginetaco"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/speedmetertaco"
+                android:layout_toEndOf="@+id/spannerbtn10"
+                android:layout_toRightOf="@+id/spannerbtn10"
+                android:text="@string/enginetachometer"
+                android:textSize="26sp" />
 
-        <Button
-            android:id="@+id/spannerbtn11"
-            android:layout_width="35dp"
-            android:layout_height="35dp"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
-            android:layout_below="@+id/spannerbtn10"
-            android:background="@drawable/ic_build_blue_24dp"
-            android:gravity="start" />
+            <Button
+                android:id="@+id/spannerbtn11"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/spannerbtn10"
+                android:background="@drawable/ic_build_blue_24dp"
+                android:gravity="start" />
 
-        <CheckBox
-            android:id="@+id/audiablewarning"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/enginetaco"
-            android:layout_toEndOf="@+id/spannerbtn11"
-            android:layout_toRightOf="@+id/spannerbtn11"
-            android:text="@string/audiblewarnings"
-            android:textColor="@color/inspectionblue"
-            android:textSize="26sp"
-            android:textStyle="bold" />
+            <CheckBox
+                android:id="@+id/audiablewarning"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/enginetaco"
+                android:layout_toEndOf="@+id/spannerbtn11"
+                android:layout_toRightOf="@+id/spannerbtn11"
+                android:text="@string/audiblewarnings"
+                android:textColor="@color/inspectionblue"
+                android:textSize="26sp"
+                android:textStyle="bold" />
 
-        <Button
-            android:id="@+id/spannerbtn12"
-            android:layout_width="35dp"
-            android:layout_height="35dp"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
-            android:layout_below="@+id/spannerbtn11"
-            android:background="@drawable/ic_build_black_24dp"
-            android:gravity="start" />
+            <Button
+                android:id="@+id/spannerbtn12"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/spannerbtn11"
+                android:background="@drawable/ic_build_black_24dp"
+                android:gravity="start" />
 
-        <CheckBox
-            android:id="@+id/drivingcontrols"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/audiablewarning"
-            android:layout_toEndOf="@+id/spannerbtn12"
-            android:layout_toRightOf="@+id/spannerbtn12"
-            android:text="@string/drivingcontrols"
-            android:textSize="26sp" />
+            <CheckBox
+                android:id="@+id/drivingcontrols"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/audiablewarning"
+                android:layout_toEndOf="@+id/spannerbtn12"
+                android:layout_toRightOf="@+id/spannerbtn12"
+                android:text="@string/drivingcontrols"
+                android:textSize="26sp" />
 
-        <Button
-            android:id="@+id/spannerbtn13"
-            android:layout_width="35dp"
-            android:layout_height="35dp"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
-            android:layout_below="@+id/spannerbtn12"
-            android:background="@drawable/ic_build_blue_24dp"
-            android:gravity="start" />
+            <Button
+                android:id="@+id/spannerbtn13"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/spannerbtn12"
+                android:background="@drawable/ic_build_blue_24dp"
+                android:gravity="start" />
 
-        <CheckBox
-            android:id="@+id/steeringwheel"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/drivingcontrols"
-            android:layout_toEndOf="@+id/spannerbtn13"
-            android:layout_toRightOf="@+id/spannerbtn13"
-            android:text="@string/steeringwheel"
-            android:textColor="@color/inspectionblue"
-            android:textSize="26sp"
-            android:textStyle="bold" />
+            <CheckBox
+                android:id="@+id/steeringwheel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/drivingcontrols"
+                android:layout_toEndOf="@+id/spannerbtn13"
+                android:layout_toRightOf="@+id/spannerbtn13"
+                android:text="@string/steeringwheel"
+                android:textColor="@color/inspectionblue"
+                android:textSize="26sp"
+                android:textStyle="bold" />
 
-        <Button
-            android:id="@+id/spannerbtn14"
-            android:layout_width="35dp"
-            android:layout_height="35dp"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
-            android:layout_below="@+id/spannerbtn13"
-            android:background="@drawable/ic_build_black_24dp"
-            android:gravity="start" />
+            <Button
+                android:id="@+id/spannerbtn14"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/spannerbtn13"
+                android:background="@drawable/ic_build_black_24dp"
+                android:gravity="start" />
 
-        <CheckBox
-            android:id="@+id/pressure"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/steeringwheel"
-            android:layout_toEndOf="@+id/spannerbtn14"
-            android:layout_toRightOf="@+id/spannerbtn14"
-            android:text="@string/pressure"
-            android:textSize="26sp" />
+            <CheckBox
+                android:id="@+id/pressure"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/steeringwheel"
+                android:layout_toEndOf="@+id/spannerbtn14"
+                android:layout_toRightOf="@+id/spannerbtn14"
+                android:text="@string/pressure"
+                android:textSize="26sp" />
 
-        <Button
-            android:id="@+id/spannerbtn15"
-            android:layout_width="35dp"
-            android:layout_height="35dp"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
-            android:layout_below="@+id/spannerbtn14"
-            android:background="@drawable/ic_build_blue_24dp"
-            android:gravity="start" />
+            <Button
+                android:id="@+id/spannerbtn15"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/spannerbtn14"
+                android:background="@drawable/ic_build_blue_24dp"
+                android:gravity="start" />
 
-        <CheckBox
-            android:id="@+id/servicebrakepedal"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/pressure"
-            android:layout_toEndOf="@+id/spannerbtn15"
-            android:layout_toRightOf="@+id/spannerbtn15"
-            android:text="@string/servicebrakepedal"
-            android:textColor="@color/inspectionblue"
-            android:textSize="26sp"
-            android:textStyle="bold" />
+            <CheckBox
+                android:id="@+id/servicebrakepedal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/pressure"
+                android:layout_toEndOf="@+id/spannerbtn15"
+                android:layout_toRightOf="@+id/spannerbtn15"
+                android:text="@string/servicebrakepedal"
+                android:textColor="@color/inspectionblue"
+                android:textSize="26sp"
+                android:textStyle="bold" />
 
-        <Button
-            android:id="@+id/spannerbtn16"
-            android:layout_width="35dp"
-            android:layout_height="35dp"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
-            android:layout_below="@+id/spannerbtn15"
-            android:background="@drawable/ic_build_black_24dp"
-            android:gravity="start" />
+            <Button
+                android:id="@+id/spannerbtn16"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/spannerbtn15"
+                android:background="@drawable/ic_build_black_24dp"
+                android:gravity="start" />
 
-        <CheckBox
-            android:id="@+id/servicebrake"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/servicebrakepedal"
-            android:layout_toEndOf="@+id/spannerbtn16"
-            android:layout_toRightOf="@+id/spannerbtn16"
-            android:text="@string/servicebrake"
-            android:textSize="26sp" />
+            <CheckBox
+                android:id="@+id/servicebrake"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/servicebrakepedal"
+                android:layout_toEndOf="@+id/spannerbtn16"
+                android:layout_toRightOf="@+id/spannerbtn16"
+                android:text="@string/servicebrake"
+                android:textSize="26sp" />
 
-        <Button
-            android:id="@+id/spannerbtn17"
-            android:layout_width="35dp"
-            android:layout_height="35dp"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
-            android:layout_below="@+id/spannerbtn16"
-            android:background="@drawable/ic_build_blue_24dp"
-            android:gravity="start" />
+            <Button
+                android:id="@+id/spannerbtn17"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/spannerbtn16"
+                android:background="@drawable/ic_build_blue_24dp"
+                android:gravity="start" />
 
-        <CheckBox
-            android:id="@+id/brakecontrolvalve"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/servicebrake"
-            android:layout_toEndOf="@+id/spannerbtn17"
-            android:layout_toRightOf="@+id/spannerbtn17"
-            android:text="@string/brakecontrolvalve"
-            android:textColor="@color/inspectionblue"
-            android:textSize="26sp"
-            android:textStyle="bold" />
+            <CheckBox
+                android:id="@+id/brakecontrolvalve"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/servicebrake"
+                android:layout_toEndOf="@+id/spannerbtn17"
+                android:layout_toRightOf="@+id/spannerbtn17"
+                android:text="@string/brakecontrolvalve"
+                android:textColor="@color/inspectionblue"
+                android:textSize="26sp"
+                android:textStyle="bold" />
 
-        <Button
-            android:id="@+id/spannerbtn18"
-            android:layout_width="35dp"
-            android:layout_height="35dp"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
-            android:layout_below="@+id/spannerbtn17"
-            android:background="@drawable/ic_build_black_24dp"
-            android:gravity="start" />
+            <Button
+                android:id="@+id/spannerbtn18"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/spannerbtn17"
+                android:background="@drawable/ic_build_black_24dp"
+                android:gravity="start" />
 
-        <CheckBox
-            android:id="@+id/frontfogaux"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/brakecontrolvalve"
-            android:layout_toEndOf="@+id/spannerbtn18"
-            android:layout_toRightOf="@+id/spannerbtn18"
-            android:text="@string/fogauxlampswitch"
-            android:textSize="26sp" />
+            <CheckBox
+                android:id="@+id/frontfogaux"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/brakecontrolvalve"
+                android:layout_toEndOf="@+id/spannerbtn18"
+                android:layout_toRightOf="@+id/spannerbtn18"
+                android:text="@string/fogauxlampswitch"
+                android:textSize="26sp" />
 
-        <Button
-            android:id="@+id/spannerbtn19"
-            android:layout_width="35dp"
-            android:layout_height="35dp"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
-            android:layout_below="@+id/spannerbtn18"
-            android:background="@drawable/ic_build_blue_24dp"
-            android:gravity="start" />
+            <Button
+                android:id="@+id/spannerbtn19"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/spannerbtn18"
+                android:background="@drawable/ic_build_blue_24dp"
+                android:gravity="start" />
 
-        <CheckBox
-            android:id="@+id/cabheater"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/frontfogaux"
-            android:layout_toEndOf="@+id/spannerbtn19"
-            android:layout_toRightOf="@+id/spannerbtn19"
-            android:text="@string/cabheater"
-            android:textColor="@color/inspectionblue"
-            android:textSize="26sp"
-            android:textStyle="bold" />
+            <CheckBox
+                android:id="@+id/cabheater"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/frontfogaux"
+                android:layout_toEndOf="@+id/spannerbtn19"
+                android:layout_toRightOf="@+id/spannerbtn19"
+                android:text="@string/cabheater"
+                android:textColor="@color/inspectionblue"
+                android:textSize="26sp"
+                android:textStyle="bold" />
+
 
         </RelativeLayout>
-        </ScrollView>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/insidecabfinished"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/finished"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.984"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.962" />
 
     </android.support.constraint.ConstraintLayout>

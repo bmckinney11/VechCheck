@@ -2,13 +2,24 @@ package aircommercialservices.vechcheck;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
+import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
+import android.widget.Toast;
+
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.AuthResult;
+import com.google.firebase.auth.FirebaseAuth;
 
 public class LoginScreen extends AppCompatActivity {
 
-    Button instruction, newuser;
+    private FirebaseAuth mAuth;
+    private FirebaseAuth.AuthStateListener authStateListener;
+    private EditText username, password;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -16,7 +27,7 @@ public class LoginScreen extends AppCompatActivity {
         setContentView(R.layout.activity_login_screen);
 
         //opening pop up from information button
-        instruction = (Button)findViewById(R.id.instructionbtn);
+        Button instruction = findViewById(R.id.instructionbtn);
         instruction.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -26,7 +37,7 @@ public class LoginScreen extends AppCompatActivity {
         });
 
         //opening pop up from newuser button
-        newuser = (Button)findViewById(R.id.newuserbtn);
+        Button newuser = findViewById(R.id.newuserbtn);
         newuser.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -35,16 +46,55 @@ public class LoginScreen extends AppCompatActivity {
             }
         });
 
-        //opening activity2
-        Button Login = (Button)findViewById(R.id.loginbutton);
-        Login.setOnClickListener(new View.OnClickListener() {
+        //login in feature
+
+        mAuth = FirebaseAuth.getInstance();
+        username = findViewById(R.id.usernameEditText);
+        password = findViewById(R.id.passwordEditText);
+        Button login = findViewById(R.id.loginbutton);
+
+        authStateListener = new FirebaseAuth.AuthStateListener() {
+            @Override
+            public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
+                if (firebaseAuth.getCurrentUser() != null){
+                    startActivity(new Intent(LoginScreen.this, secondactivity.class));
+                }
+            }
+        };
+
+        login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent startintent = new Intent(getApplicationContext(), secondactivity.class);
-                startActivity(startintent);
+
+                startSignIn();
             }
         });
 
+    }
 
+    @Override
+    protected void onStart() {
+        super.onStart();
+        mAuth.addAuthStateListener(authStateListener);
+    }
+
+    private void startSignIn(){
+
+        String Username = username.getText().toString();
+        String Password = password.getText().toString();
+
+        if(TextUtils.isEmpty(Username) || TextUtils.isEmpty(Password)){
+            Toast.makeText(LoginScreen.this,"Please Enter Login Details",Toast.LENGTH_LONG).show();
+        }else{
+            mAuth.signInWithEmailAndPassword(Username,Password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                @Override
+                public void onComplete(@NonNull Task<AuthResult> task) {
+
+                    if (!task.isSuccessful()) {
+                        Toast.makeText((LoginScreen.this), "Incorrect Details", Toast.LENGTH_LONG).show();
+                    }
+                }
+            });
+        }
     }
 }

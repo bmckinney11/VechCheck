@@ -8,7 +8,7 @@ import android.widget.Button;
 
 public class TrailerSuspensionandsteering extends AppCompatActivity {
 
-    Button btn16,btn17,btn18,btn19,btn20,btn21,btn22,btn23,btn34,btn35,btn36,btn37;
+    Button btn16,btn17,btn18,btn19,btn20,btn21,btn22,btn23,btn34,btn35,btn36,btn37, finish;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -32,6 +32,7 @@ public class TrailerSuspensionandsteering extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent16 = new Intent(getApplicationContext(), defectActivity.class);
+                intent16.putExtra("message","Suspension pins bushes");
                 startActivity(intent16);
             }
         });
@@ -40,6 +41,7 @@ public class TrailerSuspensionandsteering extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent17 = new Intent(getApplicationContext(), defectActivity.class);
+                intent17.putExtra("message","Suspension Springs");
                 startActivity(intent17);
             }
         });
@@ -48,6 +50,7 @@ public class TrailerSuspensionandsteering extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent18 = new Intent(getApplicationContext(), defectActivity.class);
+                intent18.putExtra("message","Spring units links and sub-frames");
                 startActivity(intent18);
             }
         });
@@ -56,6 +59,7 @@ public class TrailerSuspensionandsteering extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent19 = new Intent(getApplicationContext(), defectActivity.class);
+                intent19.putExtra("message","Shock absorbers");
                 startActivity(intent19);
             }
         });
@@ -64,6 +68,7 @@ public class TrailerSuspensionandsteering extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent20 = new Intent(getApplicationContext(), defectActivity.class);
+                intent20.putExtra("message","Axle lift device");
                 startActivity(intent20);
             }
         });
@@ -72,6 +77,7 @@ public class TrailerSuspensionandsteering extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent21 = new Intent(getApplicationContext(), defectActivity.class);
+                intent21.putExtra("message","Road Wheels and hubs");
                 startActivity(intent21);
             }
         });
@@ -80,6 +86,7 @@ public class TrailerSuspensionandsteering extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent22 = new Intent(getApplicationContext(), defectActivity.class);
+                intent22.putExtra("message","Airbags");
                 startActivity(intent22);
             }
         });
@@ -88,6 +95,7 @@ public class TrailerSuspensionandsteering extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent23 = new Intent(getApplicationContext(), defectActivity.class);
+                intent23.putExtra("message","Axle Alignment");
                 startActivity(intent23);
             }
         });
@@ -96,6 +104,7 @@ public class TrailerSuspensionandsteering extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent34 = new Intent(getApplicationContext(), defectActivity.class);
+                intent34.putExtra("message","Stub axles and wheel bearing- Condition, wear, security and adjustment");
                 startActivity(intent34);
             }
         });
@@ -104,6 +113,7 @@ public class TrailerSuspensionandsteering extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent35 = new Intent(getApplicationContext(), defectActivity.class);
+                intent35.putExtra("message","Steering Mechanisms");
                 startActivity(intent35);
             }
         });
@@ -112,6 +122,7 @@ public class TrailerSuspensionandsteering extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent36 = new Intent(getApplicationContext(), defectActivity.class);
+                intent36.putExtra("message","Turntable");
                 startActivity(intent36);
             }
         });
@@ -120,9 +131,11 @@ public class TrailerSuspensionandsteering extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent37 = new Intent(getApplicationContext(), defectActivity.class);
+                intent37.putExtra("message","Steering Alignment");
                 startActivity(intent37);
             }
         });
+
 
     }
 }

@@ -56,10 +56,11 @@
 
         <Button
             android:id="@+id/spannerbtn41"
-            android:layout_width="35dp"
-            android:layout_height="35dp"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
+            android:layout_below="@id/underalongsidevehicle"
             android:background="@drawable/ic_build_blue_24dp"
             android:gravity="start" />
 
@@ -67,9 +68,9 @@
             android:id="@+id/chassisvec"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/underalongsidevehicle"
-            android:layout_toEndOf="@+id/spannerbtn41"
-            android:layout_toRightOf="@+id/spannerbtn41"
+            android:layout_below="@id/underalongsidevehicle"
+            android:layout_toEndOf="@id/spannerbtn41"
+            android:layout_toRightOf="@id/spannerbtn41"
             android:text="@string/chassisvec"
             android:textColor="@color/inspectionblue"
             android:textSize="26sp"
@@ -77,11 +78,11 @@
 
         <Button
             android:id="@+id/spannerbtn42"
-            android:layout_width="35dp"
-            android:layout_height="35dp"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
-            android:layout_below="@+id/spannerbtn41"
+            android:layout_below="@id/spannerbtn41"
             android:background="@drawable/ic_build_black_24dp"
             android:gravity="start" />
 
@@ -89,19 +90,19 @@
             android:id="@+id/electricalwiringvec"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/chassisvec"
-            android:layout_toEndOf="@+id/spannerbtn42"
-            android:layout_toRightOf="@+id/spannerbtn42"
+            android:layout_below="@id/chassisvec"
+            android:layout_toEndOf="@id/spannerbtn42"
+            android:layout_toRightOf="@id/spannerbtn42"
             android:text="@string/electricalwiringvec"
             android:textSize="26sp" />
 
         <Button
             android:id="@+id/spannerbtn43"
-            android:layout_width="35dp"
-            android:layout_height="35dp"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
-            android:layout_below="@+id/spannerbtn42"
+            android:layout_below="@id/spannerbtn42"
             android:background="@drawable/ic_build_blue_24dp"
             android:gravity="start" />
 
@@ -109,9 +110,9 @@
             android:id="@+id/electrailerconnections"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/electricalwiringvec"
-            android:layout_toEndOf="@+id/spannerbtn43"
-            android:layout_toRightOf="@+id/spannerbtn43"
+            android:layout_below="@id/electricalwiringvec"
+            android:layout_toEndOf="@id/spannerbtn43"
+            android:layout_toRightOf="@id/spannerbtn43"
             android:text="@string/electricaltrailerconnections"
             android:textColor="@color/inspectionblue"
             android:textSize="26sp"
@@ -119,11 +120,11 @@
 
         <Button
             android:id="@+id/spannerbtn44"
-            android:layout_width="35dp"
-            android:layout_height="35dp"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
-            android:layout_below="@+id/spannerbtn43"
+            android:layout_below="@id/spannerbtn43"
             android:background="@drawable/ic_build_black_24dp"
             android:gravity="start" />
 
@@ -131,19 +132,19 @@
             android:id="@+id/oilleaksvec"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/electrailerconnections"
-            android:layout_toEndOf="@+id/spannerbtn44"
-            android:layout_toRightOf="@+id/spannerbtn44"
+            android:layout_below="@id/electrailerconnections"
+            android:layout_toEndOf="@id/spannerbtn44"
+            android:layout_toRightOf="@id/spannerbtn44"
             android:text="@string/oilleaks"
             android:textSize="26sp" />
 
         <Button
             android:id="@+id/spannerbtn45"
-            android:layout_width="35dp"
-            android:layout_height="35dp"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
-            android:layout_below="@+id/spannerbtn44"
+            android:layout_below="@id/spannerbtn44"
             android:background="@drawable/ic_build_blue_24dp"
             android:gravity="start" />
 
@@ -151,9 +152,9 @@
             android:id="@+id/fueltanksvec"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/oilleaksvec"
-            android:layout_toEndOf="@+id/spannerbtn45"
-            android:layout_toRightOf="@+id/spannerbtn45"
+            android:layout_below="@id/oilleaksvec"
+            android:layout_toEndOf="@id/spannerbtn45"
+            android:layout_toRightOf="@id/spannerbtn45"
             android:text="@string/fueltanks"
             android:textColor="@color/inspectionblue"
             android:textSize="26sp"
@@ -161,11 +162,11 @@
 
         <Button
             android:id="@+id/spannerbtn46"
-            android:layout_width="35dp"
-            android:layout_height="35dp"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
-            android:layout_below="@+id/spannerbtn45"
+            android:layout_below="@id/spannerbtn45"
             android:background="@drawable/ic_build_black_24dp"
             android:gravity="start" />
 
@@ -173,19 +174,19 @@
             android:id="@+id/exhaustsystemsvec"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/fueltanksvec"
-            android:layout_toEndOf="@+id/spannerbtn46"
-            android:layout_toRightOf="@+id/spannerbtn46"
+            android:layout_below="@id/fueltanksvec"
+            android:layout_toEndOf="@id/spannerbtn46"
+            android:layout_toRightOf="@id/spannerbtn46"
             android:text="@string/exhuastsystems"
             android:textSize="26sp" />
 
         <Button
             android:id="@+id/spannerbtn47"
-            android:layout_width="35dp"
-            android:layout_height="35dp"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
-            android:layout_below="@+id/spannerbtn46"
+            android:layout_below="@id/spannerbtn46"
             android:background="@drawable/ic_build_blue_24dp"
             android:gravity="start" />
 
@@ -193,9 +194,9 @@
             android:id="@+id/suspinsbushes"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/exhaustsystemsvec"
-            android:layout_toEndOf="@+id/spannerbtn47"
-            android:layout_toRightOf="@+id/spannerbtn47"
+            android:layout_below="@id/exhaustsystemsvec"
+            android:layout_toEndOf="@id/spannerbtn47"
+            android:layout_toRightOf="@id/spannerbtn47"
             android:text="@string/suspinsbushes"
             android:textColor="@color/inspectionblue"
             android:textSize="26sp"
@@ -203,11 +204,11 @@
 
         <Button
             android:id="@+id/spannerbtn48"
-            android:layout_width="35dp"
-            android:layout_height="35dp"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
-            android:layout_below="@+id/spannerbtn47"
+            android:layout_below="@id/spannerbtn47"
             android:background="@drawable/ic_build_black_24dp"
             android:gravity="start" />
 
@@ -215,19 +216,19 @@
             android:id="@+id/susunitslinkages"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/suspinsbushes"
-            android:layout_toEndOf="@+id/spannerbtn48"
-            android:layout_toRightOf="@+id/spannerbtn48"
+            android:layout_below="@id/suspinsbushes"
+            android:layout_toEndOf="@id/spannerbtn48"
+            android:layout_toRightOf="@id/spannerbtn48"
             android:text="@string/suspensionunit"
             android:textSize="26sp" />
 
         <Button
             android:id="@+id/spannerbtn49"
-            android:layout_width="35dp"
-            android:layout_height="35dp"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
-            android:layout_below="@+id/spannerbtn48"
+            android:layout_below="@id/spannerbtn48"
             android:background="@drawable/ic_build_blue_24dp"
             android:gravity="start" />
 
@@ -235,9 +236,9 @@
             android:id="@+id/springunits"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/susunitslinkages"
-            android:layout_toEndOf="@+id/spannerbtn49"
-            android:layout_toRightOf="@+id/spannerbtn49"
+            android:layout_below="@id/susunitslinkages"
+            android:layout_toEndOf="@id/spannerbtn49"
+            android:layout_toRightOf="@id/spannerbtn49"
             android:text="@string/springunitsdust"
             android:textColor="@color/inspectionblue"
             android:textSize="26sp"
@@ -245,11 +246,11 @@
 
         <Button
             android:id="@+id/spannerbtn50"
-            android:layout_width="35dp"
-            android:layout_height="35dp"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
-            android:layout_below="@+id/spannerbtn49"
+            android:layout_below="@id/spannerbtn49"
             android:background="@drawable/ic_build_black_24dp"
             android:gravity="start" />
 
@@ -257,19 +258,19 @@
             android:id="@+id/shockabsorbersvec"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/springunits"
-            android:layout_toEndOf="@+id/spannerbtn50"
-            android:layout_toRightOf="@+id/spannerbtn50"
+            android:layout_below="@id/springunits"
+            android:layout_toEndOf="@id/spannerbtn50"
+            android:layout_toRightOf="@id/spannerbtn50"
             android:text="@string/shockabsorbers"
             android:textSize="26sp" />
 
         <Button
             android:id="@+id/spannerbtn51"
-            android:layout_width="35dp"
-            android:layout_height="35dp"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
-            android:layout_below="@+id/spannerbtn50"
+            android:layout_below="@id/spannerbtn50"
             android:background="@drawable/ic_build_blue_24dp"
             android:gravity="start" />
 
@@ -277,9 +278,9 @@
             android:id="@+id/wheelbearingsseal"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/shockabsorbersvec"
-            android:layout_toEndOf="@+id/spannerbtn51"
-            android:layout_toRightOf="@+id/spannerbtn51"
+            android:layout_below="@id/shockabsorbersvec"
+            android:layout_toEndOf="@id/spannerbtn51"
+            android:layout_toRightOf="@id/spannerbtn51"
             android:text="@string/wheelbearings"
             android:textColor="@color/inspectionblue"
             android:textSize="26sp"
@@ -287,11 +288,11 @@
 
         <Button
             android:id="@+id/spannerbtn52"
-            android:layout_width="35dp"
-            android:layout_height="35dp"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
-            android:layout_below="@+id/spannerbtn51"
+            android:layout_below="@id/spannerbtn51"
             android:background="@drawable/ic_build_black_24dp"
             android:gravity="start" />
 
@@ -299,19 +300,19 @@
             android:id="@+id/stubaxles"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/wheelbearingsseal"
-            android:layout_toEndOf="@+id/spannerbtn52"
-            android:layout_toRightOf="@+id/spannerbtn52"
+            android:layout_below="@id/wheelbearingsseal"
+            android:layout_toEndOf="@id/spannerbtn52"
+            android:layout_toRightOf="@id/spannerbtn52"
             android:text="@string/stubaxle"
             android:textSize="26sp" />
 
         <Button
             android:id="@+id/spannerbtn53"
-            android:layout_width="35dp"
-            android:layout_height="35dp"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
-            android:layout_below="@+id/spannerbtn52"
+            android:layout_below="@id/spannerbtn52"
             android:background="@drawable/ic_build_blue_24dp"
             android:gravity="start" />
 
@@ -319,9 +320,9 @@
             android:id="@+id/steeringmec"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/stubaxles"
-            android:layout_toEndOf="@+id/spannerbtn53"
-            android:layout_toRightOf="@+id/spannerbtn53"
+            android:layout_below="@id/stubaxles"
+            android:layout_toEndOf="@id/spannerbtn53"
+            android:layout_toRightOf="@id/spannerbtn53"
             android:text="@string/steeringmecvec"
             android:textColor="@color/inspectionblue"
             android:textSize="26sp"
@@ -329,11 +330,11 @@
 
         <Button
             android:id="@+id/spannerbtn54"
-            android:layout_width="35dp"
-            android:layout_height="35dp"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
-            android:layout_below="@+id/spannerbtn53"
+            android:layout_below="@id/spannerbtn53"
             android:background="@drawable/ic_build_black_24dp"
             android:gravity="start" />
 
@@ -341,19 +342,19 @@
             android:id="@+id/steeringalignvec"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/steeringmec"
-            android:layout_toEndOf="@+id/spannerbtn54"
-            android:layout_toRightOf="@+id/spannerbtn54"
+            android:layout_below="@id/steeringmec"
+            android:layout_toEndOf="@id/spannerbtn54"
+            android:layout_toRightOf="@id/spannerbtn54"
             android:text="@string/steeringalin"
             android:textSize="26sp" />
 
         <Button
             android:id="@+id/spannerbtn55"
-            android:layout_width="35dp"
-            android:layout_height="35dp"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
-            android:layout_below="@+id/spannerbtn54"
+            android:layout_below="@id/spannerbtn54"
             android:background="@drawable/ic_build_blue_24dp"
             android:gravity="start" />
 
@@ -361,9 +362,9 @@
             android:id="@+id/steeringgear"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/steeringalignvec"
-            android:layout_toEndOf="@+id/spannerbtn55"
-            android:layout_toRightOf="@+id/spannerbtn55"
+            android:layout_below="@id/steeringalignvec"
+            android:layout_toEndOf="@id/spannerbtn55"
+            android:layout_toRightOf="@id/spannerbtn55"
             android:text="@string/steeringgear"
             android:textColor="@color/inspectionblue"
             android:textSize="26sp"
@@ -371,11 +372,11 @@
 
         <Button
             android:id="@+id/spannerbtn56"
-            android:layout_width="35dp"
-            android:layout_height="35dp"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
-            android:layout_below="@+id/spannerbtn55"
+            android:layout_below="@id/spannerbtn55"
             android:background="@drawable/ic_build_black_24dp"
             android:gravity="start" />
 
@@ -383,19 +384,19 @@
             android:id="@+id/powersteering"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/steeringgear"
-            android:layout_toEndOf="@+id/spannerbtn56"
-            android:layout_toRightOf="@+id/spannerbtn56"
+            android:layout_below="@id/steeringgear"
+            android:layout_toEndOf="@id/spannerbtn56"
+            android:layout_toRightOf="@id/spannerbtn56"
             android:text="@string/powersteering"
             android:textSize="26sp" />
 
         <Button
             android:id="@+id/spannerbtn57"
-            android:layout_width="35dp"
-            android:layout_height="35dp"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
-            android:layout_below="@+id/spannerbtn56"
+            android:layout_below="@id/spannerbtn56"
             android:background="@drawable/ic_build_blue_24dp"
             android:gravity="start" />
 
@@ -403,9 +404,9 @@
             android:id="@+id/axlealignmentvec"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/powersteering"
-            android:layout_toEndOf="@+id/spannerbtn57"
-            android:layout_toRightOf="@+id/spannerbtn57"
+            android:layout_below="@id/powersteering"
+            android:layout_toEndOf="@id/spannerbtn57"
+            android:layout_toRightOf="@id/spannerbtn57"
             android:text="@string/axlealingment"
             android:textColor="@color/inspectionblue"
             android:textSize="26sp"
@@ -413,11 +414,11 @@
 
         <Button
             android:id="@+id/spannerbtn58"
-            android:layout_width="35dp"
-            android:layout_height="35dp"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
-            android:layout_below="@+id/spannerbtn57"
+            android:layout_below="@id/spannerbtn57"
             android:background="@drawable/ic_build_black_24dp"
             android:gravity="start" />
 
@@ -425,19 +426,19 @@
             android:id="@+id/clutchop"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/axlealignmentvec"
-            android:layout_toEndOf="@+id/spannerbtn58"
-            android:layout_toRightOf="@+id/spannerbtn58"
+            android:layout_below="@id/axlealignmentvec"
+            android:layout_toEndOf="@id/spannerbtn58"
+            android:layout_toRightOf="@id/spannerbtn58"
             android:text="@string/clutchop"
             android:textSize="26sp" />
 
         <Button
             android:id="@+id/spannerbtn59"
-            android:layout_width="35dp"
-            android:layout_height="35dp"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
-            android:layout_below="@+id/spannerbtn58"
+            android:layout_below="@id/spannerbtn58"
             android:background="@drawable/ic_build_blue_24dp"
             android:gravity="start" />
 
@@ -445,9 +446,9 @@
             android:id="@+id/changingspeed"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/clutchop"
-            android:layout_toEndOf="@+id/spannerbtn59"
-            android:layout_toRightOf="@+id/spannerbtn59"
+            android:layout_below="@id/clutchop"
+            android:layout_toEndOf="@id/spannerbtn59"
+            android:layout_toRightOf="@id/spannerbtn59"
             android:text="@string/changingspeed"
             android:textColor="@color/inspectionblue"
             android:textSize="26sp"
@@ -455,11 +456,11 @@
 
         <Button
             android:id="@+id/spannerbtn60"
-            android:layout_width="35dp"
-            android:layout_height="35dp"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
-            android:layout_below="@+id/spannerbtn59"
+            android:layout_below="@id/spannerbtn59"
             android:background="@drawable/ic_build_black_24dp"
             android:gravity="start" />
 
@@ -467,19 +468,19 @@
             android:id="@+id/difflock"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/changingspeed"
-            android:layout_toEndOf="@+id/spannerbtn60"
-            android:layout_toRightOf="@+id/spannerbtn60"
+            android:layout_below="@id/changingspeed"
+            android:layout_toEndOf="@id/spannerbtn60"
+            android:layout_toRightOf="@id/spannerbtn60"
             android:text="@string/difflock"
             android:textSize="26sp" />
 
         <Button
             android:id="@+id/spannerbtn61"
-            android:layout_width="35dp"
-            android:layout_height="35dp"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
-            android:layout_below="@+id/spannerbtn60"
+            android:layout_below="@id/spannerbtn60"
             android:background="@drawable/ic_build_blue_24dp"
             android:gravity="start" />
 
@@ -487,9 +488,9 @@
             android:id="@+id/axleliftvec"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/difflock"
-            android:layout_toEndOf="@+id/spannerbtn61"
-            android:layout_toRightOf="@+id/spannerbtn61"
+            android:layout_below="@id/difflock"
+            android:layout_toEndOf="@id/spannerbtn61"
+            android:layout_toRightOf="@id/spannerbtn61"
             android:text="@string/axleliftdevices"
             android:textColor="@color/inspectionblue"
             android:textSize="26sp"
@@ -497,11 +498,11 @@
 
         <Button
             android:id="@+id/spannerbtn62"
-            android:layout_width="35dp"
-            android:layout_height="35dp"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
-            android:layout_below="@+id/spannerbtn61"
+            android:layout_below="@id/spannerbtn61"
             android:background="@drawable/ic_build_black_24dp"
             android:gravity="start" />
 
@@ -509,19 +510,19 @@
             android:id="@+id/transmission"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/axleliftvec"
-            android:layout_toEndOf="@+id/spannerbtn62"
-            android:layout_toRightOf="@+id/spannerbtn62"
+            android:layout_below="@id/axleliftvec"
+            android:layout_toEndOf="@id/spannerbtn62"
+            android:layout_toRightOf="@id/spannerbtn62"
             android:text="@string/transmission"
             android:textSize="26sp" />
 
         <Button
             android:id="@+id/spannerbtn63"
-            android:layout_width="35dp"
-            android:layout_height="35dp"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
-            android:layout_below="@+id/spannerbtn62"
+            android:layout_below="@id/spannerbtn62"
             android:background="@drawable/ic_build_blue_24dp"
             android:gravity="start" />
 
@@ -529,9 +530,9 @@
             android:id="@+id/rearmarkingconspicuity"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/transmission"
-            android:layout_toEndOf="@+id/spannerbtn63"
-            android:layout_toRightOf="@+id/spannerbtn63"
+            android:layout_below="@id/transmission"
+            android:layout_toEndOf="@id/spannerbtn63"
+            android:layout_toRightOf="@id/spannerbtn63"
             android:text="@string/rearandconspicuity"
             android:textColor="@color/inspectionblue"
             android:textSize="26sp"
@@ -539,11 +540,11 @@
 
         <Button
             android:id="@+id/spannerbtn64"
-            android:layout_width="35dp"
-            android:layout_height="35dp"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
-            android:layout_below="@+id/spannerbtn63"
+            android:layout_below="@id/spannerbtn63"
             android:background="@drawable/ic_build_black_24dp"
             android:gravity="start" />
 
@@ -551,19 +552,19 @@
             android:id="@+id/rearoutlinenoplate"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/rearmarkingconspicuity"
-            android:layout_toEndOf="@+id/spannerbtn64"
-            android:layout_toRightOf="@+id/spannerbtn64"
+            android:layout_below="@id/rearmarkingconspicuity"
+            android:layout_toEndOf="@id/spannerbtn64"
+            android:layout_toRightOf="@id/spannerbtn64"
             android:text="@string/rearoutlinenumberplater"
             android:textSize="26sp" />
 
         <Button
             android:id="@+id/spannerbtn65"
-            android:layout_width="35dp"
-            android:layout_height="35dp"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
-            android:layout_below="@+id/spannerbtn64"
+            android:layout_below="@id/spannerbtn64"
             android:background="@drawable/ic_build_blue_24dp"
             android:gravity="start" />
 
@@ -571,9 +572,9 @@
             android:id="@+id/rearfogandwarning"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/rearoutlinenoplate"
-            android:layout_toEndOf="@+id/spannerbtn65"
-            android:layout_toRightOf="@+id/spannerbtn65"
+            android:layout_below="@id/rearoutlinenoplate"
+            android:layout_toEndOf="@id/spannerbtn65"
+            android:layout_toRightOf="@id/spannerbtn65"
             android:text="@string/rearfogwarning"
             android:textColor="@color/inspectionblue"
             android:textSize="26sp"
@@ -581,11 +582,11 @@
 
         <Button
             android:id="@+id/spannerbtn66"
-            android:layout_width="35dp"
-            android:layout_height="35dp"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
-            android:layout_below="@+id/spannerbtn65"
+            android:layout_below="@id/spannerbtn65"
             android:background="@drawable/ic_build_black_24dp"
             android:gravity="start" />
 
@@ -593,19 +594,19 @@
             android:id="@+id/sideandrearref"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/rearfogandwarning"
-            android:layout_toEndOf="@+id/spannerbtn66"
-            android:layout_toRightOf="@+id/spannerbtn66"
+            android:layout_below="@id/rearfogandwarning"
+            android:layout_toEndOf="@id/spannerbtn66"
+            android:layout_toRightOf="@id/spannerbtn66"
             android:text="@string/siderearref"
             android:textSize="26sp" />
 
         <Button
             android:id="@+id/spannerbtn67"
-            android:layout_width="35dp"
-            android:layout_height="35dp"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
-            android:layout_below="@+id/spannerbtn66"
+            android:layout_below="@id/spannerbtn66"
             android:background="@drawable/ic_build_blue_24dp"
             android:gravity="start" />
 
@@ -613,9 +614,9 @@
             android:id="@+id/directionandhazardindicators"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/sideandrearref"
-            android:layout_toEndOf="@+id/spannerbtn67"
-            android:layout_toRightOf="@+id/spannerbtn67"
+            android:layout_below="@id/sideandrearref"
+            android:layout_toEndOf="@id/spannerbtn67"
+            android:layout_toRightOf="@id/spannerbtn67"
             android:text="@string/indicators"
             android:textColor="@color/inspectionblue"
             android:textSize="26sp"
@@ -623,11 +624,11 @@
 
         <Button
             android:id="@+id/spannerbtn68"
-            android:layout_width="35dp"
-            android:layout_height="35dp"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
-            android:layout_below="@+id/spannerbtn67"
+            android:layout_below="@id/spannerbtn67"
             android:background="@drawable/ic_build_black_24dp"
             android:gravity="start" />
 
@@ -635,19 +636,19 @@
             android:id="@+id/sidemarkersvec"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/directionandhazardindicators"
-            android:layout_toEndOf="@+id/spannerbtn68"
-            android:layout_toRightOf="@+id/spannerbtn68"
+            android:layout_below="@id/directionandhazardindicators"
+            android:layout_toEndOf="@id/spannerbtn68"
+            android:layout_toRightOf="@id/spannerbtn68"
             android:text="@string/sidemarker"
             android:textSize="26sp" />
 
         <Button
             android:id="@+id/spannerbtn69"
-            android:layout_width="35dp"
-            android:layout_height="35dp"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
-            android:layout_below="@+id/spannerbtn68"
+            android:layout_below="@id/spannerbtn68"
             android:background="@drawable/ic_build_blue_24dp"
             android:gravity="start" />
 
@@ -655,9 +656,9 @@
             android:id="@+id/brakelightsvec"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/sidemarkersvec"
-            android:layout_toEndOf="@+id/spannerbtn69"
-            android:layout_toRightOf="@+id/spannerbtn69"
+            android:layout_below="@id/sidemarkersvec"
+            android:layout_toEndOf="@id/spannerbtn69"
+            android:layout_toRightOf="@id/spannerbtn69"
             android:text="@string/brakelamps"
             android:textColor="@color/inspectionblue"
             android:textSize="26sp"
@@ -665,11 +666,11 @@
 
         <Button
             android:id="@+id/spannerbtn70"
-            android:layout_width="35dp"
-            android:layout_height="35dp"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
-            android:layout_below="@+id/spannerbtn69"
+            android:layout_below="@id/spannerbtn69"
             android:background="@drawable/ic_build_black_24dp"
             android:gravity="start" />
 
@@ -677,19 +678,19 @@
             android:id="@+id/reversinglampsvec"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/brakelightsvec"
-            android:layout_toEndOf="@+id/spannerbtn70"
-            android:layout_toRightOf="@+id/spannerbtn70"
+            android:layout_below="@id/brakelightsvec"
+            android:layout_toEndOf="@id/spannerbtn70"
+            android:layout_toRightOf="@id/spannerbtn70"
             android:text="@string/reversing"
             android:textSize="26sp" />
 
         <Button
             android:id="@+id/spannerbtn71"
-            android:layout_width="35dp"
-            android:layout_height="35dp"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
-            android:layout_below="@+id/spannerbtn70"
+            android:layout_below="@id/spannerbtn70"
             android:background="@drawable/ic_build_blue_24dp"
             android:gravity="start" />
 
@@ -697,9 +698,9 @@
             android:id="@+id/regplate"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/reversinglampsvec"
-            android:layout_toEndOf="@+id/spannerbtn71"
-            android:layout_toRightOf="@+id/spannerbtn71"
+            android:layout_below="@id/reversinglampsvec"
+            android:layout_toEndOf="@id/spannerbtn71"
+            android:layout_toRightOf="@id/spannerbtn71"
             android:text="@string/regplate"
             android:textColor="@color/inspectionblue"
             android:textSize="26sp"
@@ -707,5 +708,23 @@
 
     </RelativeLayout>
     </ScrollView>
+
+    <Button
+        android:id="@+id/BTfinish"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/finished"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.955"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.977" />
 
 </android.support.constraint.ConstraintLayout>

@@ -8,7 +8,7 @@ import android.widget.Button;
 
 public class trailerlamps extends AppCompatActivity {
 
-    Button btn38,btn39,btn40,btn41,btn42,btn43,btn44,btn45,btn46,btn47,btn48,btn49;
+    Button btn38,btn39,btn40,btn41,btn42,btn43,btn44,btn45,btn46,btn47,btn48,btn49, finish;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -32,6 +32,7 @@ public class trailerlamps extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent38 = new Intent(getApplicationContext(), defectActivity.class);
+                intent38.putExtra("message","Rear Reflective markings");
                 startActivity(intent38);
             }
         });
@@ -40,6 +41,7 @@ public class trailerlamps extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent39 = new Intent(getApplicationContext(), defectActivity.class);
+                intent39.putExtra("message","Conspicuity markings");
                 startActivity(intent39);
             }
         });
@@ -48,6 +50,7 @@ public class trailerlamps extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent40 = new Intent(getApplicationContext(), defectActivity.class);
+                intent40.putExtra("message","Front lamps and outline markers");
                 startActivity(intent40);
             }
         });
@@ -56,6 +59,7 @@ public class trailerlamps extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent41 = new Intent(getApplicationContext(), defectActivity.class);
+                intent41.putExtra("message","Rear lamps and outline markers");
                 startActivity(intent41);
             }
         });
@@ -64,6 +68,7 @@ public class trailerlamps extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent42 = new Intent(getApplicationContext(), defectActivity.class);
+                intent42.putExtra("message","Number plate lamps");
                 startActivity(intent42);
             }
         });
@@ -71,6 +76,7 @@ public class trailerlamps extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent43 = new Intent(getApplicationContext(), defectActivity.class);
+                intent43.putExtra("message","Rear fog lamps");
                 startActivity(intent43);
             }
         });
@@ -79,6 +85,7 @@ public class trailerlamps extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent44 = new Intent(getApplicationContext(), defectActivity.class);
+                intent44.putExtra("message","Reflectors(Side,Front and Rear)");
                 startActivity(intent44);
             }
         });
@@ -87,6 +94,7 @@ public class trailerlamps extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent45 = new Intent(getApplicationContext(), defectActivity.class);
+                intent45.putExtra("message","Direction/Hazard indicators");
                 startActivity(intent45);
             }
         });
@@ -95,6 +103,7 @@ public class trailerlamps extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent46 = new Intent(getApplicationContext(), defectActivity.class);
+                intent46.putExtra("message","Brake lamps");
                 startActivity(intent46);
             }
         });
@@ -103,6 +112,7 @@ public class trailerlamps extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent47 = new Intent(getApplicationContext(), defectActivity.class);
+                intent47.putExtra("message","Reversing lamp(s)");
                 startActivity(intent47);
             }
         });
@@ -111,6 +121,7 @@ public class trailerlamps extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent48 = new Intent(getApplicationContext(), defectActivity.class);
+                intent48.putExtra("message","Side marker lamps");
                 startActivity(intent48);
             }
         });
@@ -119,6 +130,7 @@ public class trailerlamps extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent49 = new Intent(getApplicationContext(), defectActivity.class);
+                intent49.putExtra("message","Number plate carrier");
                 startActivity(intent49);
             }
         });

@@ -8,7 +8,7 @@ import android.widget.Button;
 
 public class cabexterior extends AppCompatActivity {
 
-    Button sbtn20,sbtn21,sbtn22,sbtn23,sbtn24,sbtn25,sbtn26,sbtn27,sbtn28;
+    Button sbtn20,sbtn21,sbtn22,sbtn23,sbtn24,sbtn25,sbtn26,sbtn27,sbtn28, CEfinish;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,6 +30,7 @@ public class cabexterior extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent I20 = new Intent(getApplicationContext(), defectActivity.class);
+                I20.putExtra("message","Bumper(front)");
                 startActivity(I20);
             }
         });
@@ -38,6 +39,7 @@ public class cabexterior extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent I21 = new Intent(getApplicationContext(), defectActivity.class);
+                I21.putExtra("message","Condition of wings/spray suppresion(front)");
                 startActivity(I21);
             }
         });
@@ -46,6 +48,7 @@ public class cabexterior extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent I22 = new Intent(getApplicationContext(), defectActivity.class);
+                I22.putExtra("message","Cab security including tilt warning");
                 startActivity(I22);
             }
         });
@@ -54,6 +57,7 @@ public class cabexterior extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent I23 = new Intent(getApplicationContext(), defectActivity.class);
+                I23.putExtra("message","Cab doors including hinges and locks");
                 startActivity(I23);
             }
         });
@@ -62,6 +66,7 @@ public class cabexterior extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent I24 = new Intent(getApplicationContext(), defectActivity.class);
+                I24.putExtra("message","Cab floor and steps");
                 startActivity(I24);
             }
         });
@@ -70,6 +75,7 @@ public class cabexterior extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent I25 = new Intent(getApplicationContext(), defectActivity.class);
+                I25.putExtra("message","Mirrors and indirect vision devices(external)");
                 startActivity(I25);
             }
         });
@@ -78,6 +84,7 @@ public class cabexterior extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent I26 = new Intent(getApplicationContext(), defectActivity.class);
+                I26.putExtra("message","Side lights and outline markers");
                 startActivity(I26);
             }
         });
@@ -86,6 +93,7 @@ public class cabexterior extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent I27 = new Intent(getApplicationContext(), defectActivity.class);
+                I27.putExtra("message","Headlamps(operation,aim,adjustment mechanism)");
                 startActivity(I27);
             }
         });
@@ -94,6 +102,7 @@ public class cabexterior extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent I28 = new Intent(getApplicationContext(), defectActivity.class);
+                I28.putExtra("message","Frong fog and spot lamps,dipped and main beam warning light");
                 startActivity(I28);
             }
         });

@@ -26,341 +26,360 @@
 
     <ScrollView
         android:layout_width="wrap_content"
-        android:layout_height="509dp"
+        android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.057"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.945">
+        app:layout_constraintVertical_bias="0.6">
 
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:padding="16dp"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="0dp">
-
-    <TextView
-        android:id="@+id/brakes"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/brakes"
-        android:textColor="@android:color/black"
-        android:textSize="22sp"
-        android:textStyle="bold" />
-
-    <Button
-        android:id="@+id/spanner24"
-        android:layout_width="35dp"
-        android:layout_height="35dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_below="@+id/brakes"
-        android:background="@drawable/ic_build_blue_24dp"
-        android:gravity="start" />
-
-    <CheckBox
-        android:id="@+id/mechbrakecomp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/brakes"
-        android:layout_toEndOf="@+id/spanner24"
-        android:layout_toRightOf="@+id/spanner24"
-        android:text="@string/mecbrakecomponents"
-        android:textColor="@color/inspectionblue"
-        android:textSize="26sp"
-        android:textStyle="bold" />
-
-    <Button
-        android:id="@+id/spanner25"
-        android:layout_width="35dp"
-        android:layout_height="35dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_below="@+id/spanner24"
-        android:background="@drawable/ic_build_blue_24dp"
-        android:gravity="start" />
-
-    <CheckBox
-        android:id="@+id/brakeDLDP"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/mechbrakecomp"
-        android:layout_toEndOf="@+id/spanner25"
-        android:layout_toRightOf="@+id/spanner25"
-        android:text="@string/drumlinginsdiscpads"
-        android:textSize="26sp" />
-
-    <Button
-        android:id="@+id/spanner26"
-        android:layout_width="35dp"
-        android:layout_height="35dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_below="@+id/spanner25"
-        android:background="@drawable/ic_build_blue_24dp"
-        android:gravity="start" />
-
-    <CheckBox
-        android:id="@+id/brakeactuators"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/brakeDLDP"
-        android:layout_toEndOf="@+id/spanner26"
-        android:layout_toRightOf="@+id/spanner26"
-        android:text="@string/actuators"
-        android:textColor="@color/inspectionblue"
-        android:textSize="26sp"
-        android:textStyle="bold" />
-
-    <Button
-        android:id="@+id/spanner27"
-        android:layout_width="35dp"
-        android:layout_height="35dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_below="@+id/spanner26"
-        android:background="@drawable/ic_build_black_24dp"
-        android:gravity="start" />
-
-    <CheckBox
-        android:id="@+id/brakingsystem"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/brakeactuators"
-        android:layout_toEndOf="@+id/spanner27"
-        android:layout_toRightOf="@+id/spanner27"
-        android:text="@string/brakingsystem"
-        android:textSize="26sp" />
-
-    <Button
-        android:id="@+id/spanner28"
-        android:layout_width="35dp"
-        android:layout_height="35dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_below="@+id/spanner27"
-        android:background="@drawable/ic_build_blue_24dp"
-        android:gravity="start" />
-
-    <CheckBox
-        android:id="@+id/elecbraking"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/brakingsystem"
-        android:layout_toEndOf="@+id/spanner28"
-        android:layout_toRightOf="@+id/spanner28"
-        android:text="@string/electronicbraking"
-        android:textColor="@color/inspectionblue"
-        android:textSize="26sp"
-        android:textStyle="bold" />
-
-    <Button
-        android:id="@+id/spanner29"
-        android:layout_width="35dp"
-        android:layout_height="35dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_below="@+id/spanner28"
-        android:background="@drawable/ic_build_black_24dp"
-        android:gravity="start" />
-
-    <CheckBox
-        android:id="@+id/loadsensing"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/elecbraking"
-        android:layout_toEndOf="@+id/spanner29"
-        android:layout_toRightOf="@+id/spanner29"
-        android:text="@string/loadsensing"
-        android:textSize="26sp" />
-
-    <Button
-        android:id="@+id/spanner30"
-        android:layout_width="35dp"
-        android:layout_height="35dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_below="@+id/spanner29"
-        android:background="@drawable/ic_build_blue_24dp"
-        android:gravity="start" />
-
-    <CheckBox
-        android:id="@+id/antilock"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/loadsensing"
-        android:layout_toEndOf="@+id/spanner30"
-        android:layout_toRightOf="@+id/spanner30"
-        android:text="@string/antilock"
-        android:textColor="@color/inspectionblue"
-        android:textSize="26sp"
-        android:textStyle="bold" />
-
-    <Button
-        android:id="@+id/spanner31"
-        android:layout_width="35dp"
-        android:layout_height="35dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_below="@+id/spanner30"
-        android:background="@drawable/ic_build_black_24dp"
-        android:gravity="start" />
-
-    <CheckBox
-        android:id="@+id/parkingbrake"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/antilock"
-        android:layout_toEndOf="@+id/spanner31"
-        android:layout_toRightOf="@+id/spanner31"
-        android:text="@string/parkingbrake"
-        android:textSize="26sp" />
-
-    <Button
-        android:id="@+id/spanner32"
-        android:layout_width="35dp"
-        android:layout_height="35dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_below="@+id/spanner31"
-        android:background="@drawable/ic_build_blue_24dp"
-        android:gravity="start" />
-
-    <CheckBox
-        android:id="@+id/emergancybrake"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/parkingbrake"
-        android:layout_toEndOf="@+id/spanner32"
-        android:layout_toRightOf="@+id/spanner32"
-        android:text="@string/emergancybrake"
-        android:textColor="@color/inspectionblue"
-        android:textSize="26sp"
-        android:textStyle="bold" />
-
-    <Button
-        android:id="@+id/spanner33"
-        android:layout_width="35dp"
-        android:layout_height="35dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_below="@+id/spanner32"
-        android:background="@drawable/ic_build_black_24dp"
-        android:gravity="start" />
-
-    <CheckBox
-        android:id="@+id/operatingadaptor"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/emergancybrake"
-        android:layout_toEndOf="@+id/spanner33"
-        android:layout_toRightOf="@+id/spanner33"
-        android:text="@string/operatingadapter"
-        android:textSize="26sp" />
-
-    <TextView
-        android:id="@+id/tyres"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/operatingadaptor"
-        android:text="@string/tyres"
-        android:textColor="@android:color/black"
-        android:textSize="22sp"
-        android:textStyle="bold" />
-
-    <Button
-        android:id="@+id/spanner50"
-        android:layout_width="35dp"
-        android:layout_height="35dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_below="@+id/tyres"
-        android:background="@drawable/ic_build_blue_24dp"
-        android:gravity="start" />
-
-    <CheckBox
-        android:id="@+id/tyresize"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/tyres"
-        android:layout_toEndOf="@+id/spanner50"
-        android:layout_toRightOf="@+id/spanner50"
-        android:text="@string/sizzetypetyres"
-        android:textColor="@color/inspectionblue"
-        android:textSize="26sp"
-        android:textStyle="bold" />
-
-    <Button
-        android:id="@+id/spanner51"
-        android:layout_width="35dp"
-        android:layout_height="35dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_below="@+id/spanner50"
-        android:background="@drawable/ic_build_black_24dp"
-        android:gravity="start" />
-
-    <CheckBox
-        android:id="@+id/tyrecondition"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/tyresize"
-        android:layout_toEndOf="@+id/spanner51"
-        android:layout_toRightOf="@+id/spanner51"
-        android:text="@string/condtiontyres"
-        android:textSize="26sp" />
-
-    <Button
-        android:id="@+id/spanner52"
-        android:layout_width="35dp"
-        android:layout_height="35dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_below="@+id/spanner51"
-        android:background="@drawable/ic_build_blue_24dp"
-        android:gravity="start" />
-
-    <CheckBox
-        android:id="@+id/tyrepressure"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/tyrecondition"
-        android:layout_toEndOf="@+id/spanner52"
-        android:layout_toRightOf="@+id/spanner52"
-        android:text="@string/tyrepressure"
-        android:textColor="@color/inspectionblue"
-        android:textSize="26sp"
-        android:textStyle="bold" />
-
-        <Button
-            android:id="@+id/spanner53"
-            android:layout_width="35dp"
-            android:layout_height="35dp"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
-            android:layout_below="@+id/spanner52"
-            android:background="@drawable/ic_build_black_24dp"
-            android:gravity="start" />
-
-        <TextView
-            android:id="@+id/ancillary"
-            android:layout_width="wrap_content"
+        <RelativeLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/tyrepressure"
-            android:text="@string/ancillary"
-            android:textColor="@android:color/black"
-            android:textSize="22sp"
-            android:textStyle="bold" />
+            android:orientation="vertical"
+            android:padding="16dp"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="0dp">
 
-    </RelativeLayout>
+            <TextView
+                android:id="@+id/brakes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/brakes"
+                android:textColor="@android:color/black"
+                android:textSize="22sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/spanner24"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/brakes"
+                android:background="@drawable/ic_build_blue_24dp"
+                android:gravity="start" />
+
+            <CheckBox
+                android:id="@+id/mechbrakecomp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/brakes"
+                android:layout_toEndOf="@+id/spanner24"
+                android:layout_toRightOf="@+id/spanner24"
+                android:text="@string/mecbrakecomponents"
+                android:textColor="@color/inspectionblue"
+                android:textSize="26sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/spanner25"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/spanner24"
+                android:background="@drawable/ic_build_black_24dp"
+                android:gravity="start" />
+
+            <CheckBox
+                android:id="@+id/brakeDLDP"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/mechbrakecomp"
+                android:layout_toEndOf="@+id/spanner25"
+                android:layout_toRightOf="@+id/spanner25"
+                android:text="@string/drumlinginsdiscpads"
+                android:textSize="26sp" />
+
+            <Button
+                android:id="@+id/spanner26"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/spanner25"
+                android:background="@drawable/ic_build_blue_24dp"
+                android:gravity="start" />
+
+            <CheckBox
+                android:id="@+id/brakeactuators"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/brakeDLDP"
+                android:layout_toEndOf="@+id/spanner26"
+                android:layout_toRightOf="@+id/spanner26"
+                android:text="@string/actuators"
+                android:textColor="@color/inspectionblue"
+                android:textSize="26sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/spanner27"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/spanner26"
+                android:background="@drawable/ic_build_black_24dp"
+                android:gravity="start" />
+
+            <CheckBox
+                android:id="@+id/brakingsystem"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/brakeactuators"
+                android:layout_toEndOf="@+id/spanner27"
+                android:layout_toRightOf="@+id/spanner27"
+                android:text="@string/brakingsystem"
+                android:textSize="26sp" />
+
+            <Button
+                android:id="@+id/spanner28"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/spanner27"
+                android:background="@drawable/ic_build_blue_24dp"
+                android:gravity="start" />
+
+            <CheckBox
+                android:id="@+id/elecbraking"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/brakingsystem"
+                android:layout_toEndOf="@+id/spanner28"
+                android:layout_toRightOf="@+id/spanner28"
+                android:text="@string/electronicbraking"
+                android:textColor="@color/inspectionblue"
+                android:textSize="26sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/spanner29"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/spanner28"
+                android:background="@drawable/ic_build_black_24dp"
+                android:gravity="start" />
+
+            <CheckBox
+                android:id="@+id/loadsensing"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/elecbraking"
+                android:layout_toEndOf="@+id/spanner29"
+                android:layout_toRightOf="@+id/spanner29"
+                android:text="@string/loadsensing"
+                android:textSize="26sp" />
+
+            <Button
+                android:id="@+id/spanner30"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/spanner29"
+                android:background="@drawable/ic_build_blue_24dp"
+                android:gravity="start" />
+
+            <CheckBox
+                android:id="@+id/antilock"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/loadsensing"
+                android:layout_toEndOf="@+id/spanner30"
+                android:layout_toRightOf="@+id/spanner30"
+                android:text="@string/antilock"
+                android:textColor="@color/inspectionblue"
+                android:textSize="26sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/spanner31"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/spanner30"
+                android:background="@drawable/ic_build_black_24dp"
+                android:gravity="start" />
+
+            <CheckBox
+                android:id="@+id/parkingbrake"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/antilock"
+                android:layout_toEndOf="@+id/spanner31"
+                android:layout_toRightOf="@+id/spanner31"
+                android:text="@string/parkingbrake"
+                android:textSize="26sp" />
+
+            <Button
+                android:id="@+id/spanner32"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/spanner31"
+                android:background="@drawable/ic_build_blue_24dp"
+                android:gravity="start" />
+
+            <CheckBox
+                android:id="@+id/emergancybrake"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/parkingbrake"
+                android:layout_toEndOf="@+id/spanner32"
+                android:layout_toRightOf="@+id/spanner32"
+                android:text="@string/emergancybrake"
+                android:textColor="@color/inspectionblue"
+                android:textSize="26sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/spanner33"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/spanner32"
+                android:background="@drawable/ic_build_black_24dp"
+                android:gravity="start" />
+
+            <CheckBox
+                android:id="@+id/operatingadaptor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/emergancybrake"
+                android:layout_toEndOf="@+id/spanner33"
+                android:layout_toRightOf="@+id/spanner33"
+                android:text="@string/operatingadapter"
+                android:textSize="26sp" />
+
+            <TextView
+                android:id="@+id/tyres"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/operatingadaptor"
+                android:text="@string/tyres"
+                android:textColor="@android:color/black"
+                android:textSize="22sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/spanner50"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/tyres"
+                android:background="@drawable/ic_build_blue_24dp"
+                android:gravity="start" />
+
+            <CheckBox
+                android:id="@+id/tyresize"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tyres"
+                android:layout_toEndOf="@+id/spanner50"
+                android:layout_toRightOf="@+id/spanner50"
+                android:text="@string/sizzetypetyres"
+                android:textColor="@color/inspectionblue"
+                android:textSize="26sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/spanner51"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/spanner50"
+                android:background="@drawable/ic_build_black_24dp"
+                android:gravity="start" />
+
+            <CheckBox
+                android:id="@+id/tyrecondition"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tyresize"
+                android:layout_toEndOf="@+id/spanner51"
+                android:layout_toRightOf="@+id/spanner51"
+                android:text="@string/condtiontyres"
+                android:textSize="26sp" />
+
+            <Button
+                android:id="@+id/spanner52"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/spanner51"
+                android:background="@drawable/ic_build_blue_24dp"
+                android:gravity="start" />
+
+            <CheckBox
+                android:id="@+id/tyrepressure"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tyrecondition"
+                android:layout_toEndOf="@+id/spanner52"
+                android:layout_toRightOf="@+id/spanner52"
+                android:text="@string/tyrepressure"
+                android:textColor="@color/inspectionblue"
+                android:textSize="26sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/spanner53"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/spanner52"
+                android:background="@drawable/ic_build_black_24dp"
+                android:gravity="start" />
+
+            <TextView
+                android:id="@+id/ancillary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tyrepressure"
+                android:layout_toEndOf="@+id/spanner53"
+                android:layout_toRightOf="@+id/spanner53"
+                android:text="@string/ancillary"
+                android:textColor="@android:color/black"
+                android:textSize="22sp"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
     </ScrollView>
 
+    <Button
+        android:id="@+id/BTfinish"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/finished"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.955"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.977" />
 
 </android.support.constraint.ConstraintLayout>
