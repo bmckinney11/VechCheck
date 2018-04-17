@@ -34,7 +34,7 @@ public class TrailerInspection extends AppCompatActivity {
         TDate = getIntent().getExtras().getString("Date of Inspection:");
 
         trailerinfo = findViewById(R.id.TrailerInfoTextView);
-        trailerinfo.setText("Company Name:"+" "+CName+"Ni/C Number:"+" "+NIC+'\n'+"Chassis Nunber:"+" "+ChNo+"Year of Trailer:"+" "+TYear+'\n'+"Number of axles:"+" "+TNAxles+"Body Type:"+" "+TBody+'\n'+"Date of Inspection:"+" "+TDate);
+        trailerinfo.setText("Company Name:"+" "+CName+'\n'+"Ni/C Number:"+" "+NIC+'\n'+"Chassis Nunber:"+" "+ChNo+'\n'+"Year of Trailer:"+" "+TYear+'\n'+"Number of axles:"+" "+TNAxles+'\n'+"Body Type:"+" "+TBody+'\n'+"Date of Inspection:"+" "+TDate);
 
         //opening each seperate inspection
 

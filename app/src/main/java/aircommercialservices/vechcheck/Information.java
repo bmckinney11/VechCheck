@@ -7,12 +7,14 @@ import android.util.DisplayMetrics;
 import android.view.Gravity;
 import android.view.WindowManager;
 
+import static aircommercialservices.vechcheck.R.layout.activity_information;
+
 public class Information extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_information);
+        setContentView(activity_information);
 
         //changing the display to popup
         DisplayMetrics infodm = new DisplayMetrics();

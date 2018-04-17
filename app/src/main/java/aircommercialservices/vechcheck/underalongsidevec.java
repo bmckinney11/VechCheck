@@ -8,7 +8,7 @@ import android.widget.Button;
 
 public class underalongsidevec extends AppCompatActivity {
 
-    Button sbtn42,sbtn43,sbtn44,sbtn45,sbtn46,sbtn47,sbtn48,sbtn49,sbtn50,sbtn51,sbtn52,sbtn53,sbtn54,sbtn55,sbtn56,sbtn57,sbtn58,sbtn59,sbtn60,sbtn61,sbtn62,sbtn63,sbtn64,sbtn65,sbtn66,sbtn67,sbtn68,sbtn69,sbtn70,sbtn71, finish;
+    Button sbtn42,sbtn43,sbtn44,sbtn45,sbtn46,sbtn47,sbtn48,sbtn49,sbtn50,sbtn51,sbtn52,sbtn53,sbtn54,sbtn55,sbtn56,sbtn57,sbtn58,sbtn59,sbtn60,sbtn61,sbtn62,sbtn63,sbtn64,sbtn65,sbtn66,sbtn67,sbtn68,sbtn69,sbtn70,sbtn71, uafinish;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -44,6 +44,7 @@ public class underalongsidevec extends AppCompatActivity {
         sbtn69 = findViewById(R.id.spannerbtn69);
         sbtn70 = findViewById(R.id.spannerbtn70);
         sbtn71 = findViewById(R.id.spannerbtn71);
+        uafinish = findViewById(R.id.uafinish);
 
         //opening the pop up defect activity
         sbtn42.setOnClickListener(new View.OnClickListener() {
@@ -316,6 +317,12 @@ public class underalongsidevec extends AppCompatActivity {
             }
         });
 
+        uafinish.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
+            }
+        });
 
     }
 }

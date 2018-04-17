@@ -1,19 +1,48 @@
 package aircommercialservices.vechcheck;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatDelegate;
+import android.util.DisplayMetrics;
+import android.view.Gravity;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.Button;
+import android.widget.CheckBox;
+import android.widget.ImageButton;
 
 public class insidecab extends AppCompatActivity {
 
-    Button sbtn1,sbtn2,sbtn3,sbtn4,sbtn5,sbtn6,sbtn7,sbtn8,sbtn9,sbtn10,sbtn11,sbtn12,sbtn13,sbtn14,sbtn15,sbtn16,sbtn17,sbtn18,sbtn19,finish;
+    static {
+        AppCompatDelegate.setCompatVectorFromResourcesEnabled(true);
+    }
+
+    ImageButton sbtn1, sbtn2,sbtn3,sbtn4,sbtn5,sbtn6,sbtn7,sbtn8,sbtn9,sbtn10,sbtn11,sbtn12,sbtn13,sbtn14,sbtn15,sbtn16,sbtn17,sbtn18,sbtn19;
+    Button finish;
+    CheckBox CB1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_insidecab);
+
+        //changing the display to popup
+        DisplayMetrics dm = new DisplayMetrics();
+        getWindowManager().getDefaultDisplay().getMetrics(dm);
+
+        int width = dm.widthPixels;
+        int height = dm.heightPixels;
+
+        getWindow().setLayout((int) (width * .8), (int) (height * .7));
+
+        WindowManager.LayoutParams params = getWindow().getAttributes();
+        params.gravity = Gravity.CENTER;
+        params.x = 0;
+        params.y = -20;
+
+        getWindow().setAttributes(params);
 
         sbtn1 = findViewById(R.id.spannerbtn1);
         sbtn2 = findViewById(R.id.spannerbtn2);
@@ -34,6 +63,9 @@ public class insidecab extends AppCompatActivity {
         sbtn17 = findViewById(R.id.spannerbtn17);
         sbtn18 = findViewById(R.id.spannerbtn18);
         sbtn19 = findViewById(R.id.spannerbtn19);
+        finish = findViewById(R.id.insidecabfinished);
+
+        CB1 = findViewById(R.id.chassis);
 
         //opening popupwindow with each spannerbtn
         sbtn1.setOnClickListener(new View.OnClickListener() {
@@ -207,5 +239,20 @@ public class insidecab extends AppCompatActivity {
             }
         });
 
+        finish.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
+            }
+        });
+
+        checkboxes();
+    }
+
+    private void checkboxes() {
+        if(CB1.isChecked()){
+            Intent checked1 = new Intent(getApplicationContext(),Rectification.class);
+            checked1.putExtra("notdefective", "Chassis plate");
+        }
     }
 }

@@ -3,8 +3,13 @@ package aircommercialservices.vechcheck;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.DisplayMetrics;
+import android.view.Gravity;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.Button;
+
+import static aircommercialservices.vechcheck.R.layout.activity_cabexterior;
 
 public class cabexterior extends AppCompatActivity {
 
@@ -12,7 +17,23 @@ public class cabexterior extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_cabexterior);
+        setContentView(activity_cabexterior);
+
+        //changing the display to popup
+        DisplayMetrics dm = new DisplayMetrics();
+        getWindowManager().getDefaultDisplay().getMetrics(dm);
+
+        int width = dm.widthPixels;
+        int height = dm.heightPixels;
+
+        getWindow().setLayout((int) (width * .8), (int) (height * .7));
+
+        WindowManager.LayoutParams params = getWindow().getAttributes();
+        params.gravity = Gravity.CENTER;
+        params.x = 0;
+        params.y = -20;
+
+        getWindow().setAttributes(params);
 
         sbtn20 = findViewById(R.id.spannerbtn20);
         sbtn21 = findViewById(R.id.spannerbtn21);
@@ -23,6 +44,7 @@ public class cabexterior extends AppCompatActivity {
         sbtn26 = findViewById(R.id.spannerbtn26);
         sbtn27 = findViewById(R.id.spannerbtn27);
         sbtn28 = findViewById(R.id.spannerbtn28);
+        CEfinish = findViewById(R.id.CEfinish);
 
         //opening pop up defect activity
 
@@ -107,5 +129,11 @@ public class cabexterior extends AppCompatActivity {
             }
         });
 
+        CEfinish.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
+            }
+        });
     }
 }

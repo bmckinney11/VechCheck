@@ -15,6 +15,8 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 
+import static aircommercialservices.vechcheck.R.layout.activity_login_screen;
+
 public class LoginScreen extends AppCompatActivity {
 
     private FirebaseAuth mAuth;
@@ -24,7 +26,7 @@ public class LoginScreen extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_login_screen);
+        setContentView(activity_login_screen);
 
         //opening pop up from information button
         Button instruction = findViewById(R.id.instructionbtn);

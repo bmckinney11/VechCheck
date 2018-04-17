@@ -37,7 +37,7 @@ public class VehicleInspection extends AppCompatActivity {
         VDate = getIntent().getStringExtra("Date of Inspection:");
 
         vehicleinfo = findViewById(R.id.VehicleInfoTextView);
-        vehicleinfo.setText("Company Name:"+" "+VCname+"Vehicle Registration:"+" "+Reg+'\n'+"Chassis Number:"+" "+VChassis+"Year of Vehicle:"+" "+VecYear+'\n'+"Number of Axles:"+" "+VNAxles+"Body Type:"+" "+VBody+'\n'+"Date Of Insepction:"+" "+VDate);
+        vehicleinfo.setText("Company Name:"+" "+VCname+'\n'+"Vehicle Registration:"+" "+Reg+'\n'+"Chassis Number:"+" "+VChassis+'\n'+"Year of Vehicle:"+" "+VecYear+'\n'+"Number of Axles:"+" "+VNAxles+'\n'+"Body Type:"+" "+VBody+'\n'+"Date Of Insepction:"+" "+VDate);
 
         //open up each inspection
         interior = findViewById(R.id.insidecabbtn);

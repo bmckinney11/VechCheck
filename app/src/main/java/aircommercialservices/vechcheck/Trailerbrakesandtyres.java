@@ -3,16 +3,35 @@ package aircommercialservices.vechcheck;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.DisplayMetrics;
+import android.view.Gravity;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.Button;
 
 public class Trailerbrakesandtyres extends AppCompatActivity {
 
-    Button btn24,btn25,btn26,btn27,btn28,btn29,btn30,btn31,btn32,btn33,btn50,btn51,btn52,btn53,finish;
+    Button btn24,btn25,btn26,btn27,btn28,btn29,btn30,btn31,btn32,btn33,btn50,btn51,btn52,btn53,TBTfinish;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_trailerbrakesandtyres);
+
+        //changing the display to popup
+        DisplayMetrics dm = new DisplayMetrics();
+        getWindowManager().getDefaultDisplay().getMetrics(dm);
+
+        int width = dm.widthPixels;
+        int height = dm.heightPixels;
+
+        getWindow().setLayout((int) (width * .8), (int) (height * .7));
+
+        WindowManager.LayoutParams params = getWindow().getAttributes();
+        params.gravity = Gravity.CENTER;
+        params.x = 0;
+        params.y = -20;
+
+        getWindow().setAttributes(params);
 
         btn24 = findViewById(R.id.spanner24);
         btn25 = findViewById(R.id.spanner25);
@@ -24,12 +43,12 @@ public class Trailerbrakesandtyres extends AppCompatActivity {
         btn31 = findViewById(R.id.spanner31);
         btn32 = findViewById(R.id.spanner32);
         btn33 = findViewById(R.id.spanner33);
-
         btn50 = findViewById(R.id.spanner50);
         btn51 = findViewById(R.id.spanner51);
         btn52 = findViewById(R.id.spanner52);
-
         btn53 = findViewById(R.id.spanner53);
+        TBTfinish = findViewById(R.id.TBTfinish);
+
 
         //opening pop up defect activity
         btn24.setOnClickListener(new View.OnClickListener() {
@@ -155,6 +174,13 @@ public class Trailerbrakesandtyres extends AppCompatActivity {
                 Intent intent53 = new Intent(getApplicationContext(), defectActivity.class);
                 intent53.putExtra("message","Ancillary equipment inspection");
                 startActivity(intent53);
+            }
+        });
+
+        TBTfinish.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
             }
         });
 

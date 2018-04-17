@@ -3,16 +3,35 @@ package aircommercialservices.vechcheck;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.DisplayMetrics;
+import android.view.Gravity;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.Button;
 
 public class TrailerSuspensionandsteering extends AppCompatActivity {
 
-    Button btn16,btn17,btn18,btn19,btn20,btn21,btn22,btn23,btn34,btn35,btn36,btn37, finish;
+    Button btn16,btn17,btn18,btn19,btn20,btn21,btn22,btn23,btn34,btn35,btn36,btn37, susfinish;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_trailer_suspension_steering);
+
+        //changing the display to popup
+        DisplayMetrics dm = new DisplayMetrics();
+        getWindowManager().getDefaultDisplay().getMetrics(dm);
+
+        int width = dm.widthPixels;
+        int height = dm.heightPixels;
+
+        getWindow().setLayout((int) (width * .8), (int) (height * .7));
+
+        WindowManager.LayoutParams params = getWindow().getAttributes();
+        params.gravity = Gravity.CENTER;
+        params.x = 0;
+        params.y = -20;
+
+        getWindow().setAttributes(params);
 
         btn16 = findViewById(R.id.spanner16);
         btn17 = findViewById(R.id.spanner17);
@@ -27,6 +46,7 @@ public class TrailerSuspensionandsteering extends AppCompatActivity {
         btn35 = findViewById(R.id.spanner35);
         btn36 = findViewById(R.id.spanner36);
         btn37 = findViewById(R.id.spanner37);
+        susfinish = findViewById(R.id.susfinish);
 
         btn16.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -133,6 +153,13 @@ public class TrailerSuspensionandsteering extends AppCompatActivity {
                 Intent intent37 = new Intent(getApplicationContext(), defectActivity.class);
                 intent37.putExtra("message","Steering Alignment");
                 startActivity(intent37);
+            }
+        });
+
+        susfinish.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
             }
         });
 

@@ -148,6 +148,7 @@ public class defectActivity extends Activity {
             public void onClick(View view) {
 
                 defectinformation();
+                finish();
             }
         });
 

@@ -3,17 +3,36 @@ package aircommercialservices.vechcheck;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.DisplayMetrics;
+import android.view.Gravity;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.Button;
 
 public class groundlevel extends AppCompatActivity {
 
-    Button sbtn35,sbtn36,sbtn37,sbtn38,sbtn39,sbtn40,sbtn41;
+    Button sbtn35,sbtn36,sbtn37,sbtn38,sbtn39,sbtn40,sbtn41, glfinish;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_groundlevel);
+
+        //changing the display to popup
+        DisplayMetrics dm = new DisplayMetrics();
+        getWindowManager().getDefaultDisplay().getMetrics(dm);
+
+        int width = dm.widthPixels;
+        int height = dm.heightPixels;
+
+        getWindow().setLayout((int) (width * .8), (int) (height * .7));
+
+        WindowManager.LayoutParams params = getWindow().getAttributes();
+        params.gravity = Gravity.CENTER;
+        params.x = 0;
+        params.y = -20;
+
+        getWindow().setAttributes(params);
 
         sbtn35 = findViewById(R.id.spannerbtn35);
         sbtn36 = findViewById(R.id.spannerbtn36);
@@ -22,6 +41,7 @@ public class groundlevel extends AppCompatActivity {
         sbtn39 = findViewById(R.id.spannerbtn39);
         sbtn40 = findViewById(R.id.spannerbtn40);
         sbtn41 = findViewById(R.id.spannerbtn41);
+        glfinish = findViewById(R.id.GLfinish);
 
         //opening pop up defect activity
 
@@ -87,6 +107,14 @@ public class groundlevel extends AppCompatActivity {
           *      startActivity(I41);
          *   }
         });*/
+
+       glfinish.setOnClickListener(new View.OnClickListener() {
+           @Override
+           public void onClick(View view) {
+               finish();
+           }
+       });
+
 
     }
 }

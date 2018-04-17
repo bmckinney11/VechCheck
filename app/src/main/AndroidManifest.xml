@@ -2,7 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="aircommercialservices.vechcheck">
 
-
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
     <uses-permission android:name="android.permission.CAMERA" />
     <application
         android:allowBackup="true"
@@ -32,16 +32,37 @@
         <activity
             android:name=".newuser"
             android:theme="@style/AppTheme.popup" />
-        <activity android:name=".insidecab" />
-        <activity android:name=".cabexterior" />
-        <activity android:name=".enginecomp" />
-        <activity android:name=".groundlevel" />
-        <activity android:name=".underalongsidevec" />
-        <activity android:name=".brakeandtyres" />
-        <activity android:name=".UnderAlongsideTrailer" />
-        <activity android:name=".TrailerSuspensionandsteering" />
-        <activity android:name=".Trailerbrakesandtyres" />
-        <activity android:name=".trailerlamps"></activity>
+        <activity
+            android:name=".insidecab"
+            android:theme="@style/AppTheme.popup" />
+        <activity
+            android:name=".cabexterior"
+            android:theme="@style/AppTheme.popup"/>
+        <activity
+            android:name=".enginecomp"
+            android:theme="@style/AppTheme.popup"/>
+        <activity
+            android:name=".groundlevel"
+            android:theme="@style/AppTheme.popup"/>
+        <activity
+            android:name=".underalongsidevec"
+            android:theme="@style/AppTheme.popup"/>
+        <activity
+            android:name=".brakeandtyres"
+            android:theme="@style/AppTheme.popup"/>
+        <activity
+            android:name=".UnderAlongsideTrailer"
+            android:theme="@style/AppTheme.popup"/>
+        <activity
+            android:name=".TrailerSuspensionandsteering"
+            android:theme="@style/AppTheme.popup"/>
+        <activity
+            android:name=".Trailerbrakesandtyres"
+            android:theme="@style/AppTheme.popup"/>
+        <activity
+            android:name=".trailerlamps"
+            android:theme="@style/AppTheme.popup"/>
+
     </application>
 
 </manifest>

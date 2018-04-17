@@ -3,17 +3,36 @@ package aircommercialservices.vechcheck;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.DisplayMetrics;
+import android.view.Gravity;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.Button;
 
 public class UnderAlongsideTrailer extends AppCompatActivity {
 
-    Button btn1,btn2,btn3,btn4,btn5,btn6,btn7,btn8,btn9,btn10,btn11,btn12,btn13,btn14,btn15,finish;
+    Button btn1,btn2,btn3,btn4,btn5,btn6,btn7,btn8,btn9,btn10,btn11,btn12,btn13,btn14,btn15,UAfinish;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_under_alongside_trailer);
+
+        //changing the display to popup
+        DisplayMetrics dm = new DisplayMetrics();
+        getWindowManager().getDefaultDisplay().getMetrics(dm);
+
+        int width = dm.widthPixels;
+        int height = dm.heightPixels;
+
+        getWindow().setLayout((int) (width * .8), (int) (height * .7));
+
+        WindowManager.LayoutParams params = getWindow().getAttributes();
+        params.gravity = Gravity.CENTER;
+        params.x = 0;
+        params.y = -20;
+
+        getWindow().setAttributes(params);
 
         btn1 = findViewById(R.id.spanner);
         btn2 = findViewById(R.id.spanner2);
@@ -30,6 +49,7 @@ public class UnderAlongsideTrailer extends AppCompatActivity {
         btn13 = findViewById(R.id.spanner13);
         btn14 = findViewById(R.id.spanner14);
         btn15 = findViewById(R.id.spanner15);
+        UAfinish = findViewById(R.id.UAfinish);
 
         //opening pop up from each spanner button
         btn1.setOnClickListener(new View.OnClickListener() {
@@ -167,6 +187,12 @@ public class UnderAlongsideTrailer extends AppCompatActivity {
             }
         });
 
+        UAfinish.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
+            }
+        });
 
     }
 }
