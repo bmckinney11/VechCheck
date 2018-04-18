@@ -4,6 +4,7 @@ import android.Manifest;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.graphics.ImageFormat;
 import android.graphics.SurfaceTexture;
@@ -34,8 +35,10 @@ import android.view.Surface;
 import android.view.TextureView;
 import android.view.View;
 import android.view.WindowManager;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ListView;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
@@ -49,6 +52,8 @@ import java.io.OutputStream;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
+import java.util.List;
+import java.util.Objects;
 import java.util.UUID;
 
 
@@ -61,6 +66,18 @@ public class defectActivity extends Activity {
     private Size imageDimensions;
     private ImageReader imageReader;
     private static final SparseIntArray ORIENTATIONS = new SparseIntArray();
+    private File file;
+    private static final int REQUEST_CAMERA_PERMISSION = 200;
+    private boolean mFlashSupported;
+    private Handler mBackgroundHandler;
+    private HandlerThread mBackgroundThread;
+    private int id =0;
+    TextView feature;
+    Button save, camerabtn;
+    EditText defectdescription;
+    String name;
+    RadioButton minor, major, critical;
+    RadioGroup RGroup;
 
     static {
         ORIENTATIONS.append(Surface.ROTATION_0, 90);
@@ -68,17 +85,6 @@ public class defectActivity extends Activity {
         ORIENTATIONS.append(Surface.ROTATION_180, 270);
         ORIENTATIONS.append(Surface.ROTATION_270, 180);
     }
-
-    private File file;
-    private static final int REQUEST_CAMERA_PERMISSION = 200;
-    private boolean mFlashSupported;
-    private Handler mBackgroundHandler;
-    private HandlerThread mBackgroundThread;
-
-    TextView feature;
-    EditText defectdescription;
-    RadioButton minor, major, critical;
-    RadioGroup RGroup;
 
     CameraDevice.StateCallback stateCallBack = new CameraDevice.StateCallback() {
         @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
@@ -98,7 +104,6 @@ public class defectActivity extends Activity {
         @Override
         public void onError(@NonNull CameraDevice cameraDevice, int i) {
             cameraDevice.close();
-            cameraDevice = null;
 
         }
     };
@@ -107,6 +112,15 @@ public class defectActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_defect);
+
+        feature = findViewById(R.id.featuredes);
+        defectdescription = findViewById(R.id.defectdescriptionET);
+        minor = findViewById(R.id.minorRB);
+        major = findViewById(R.id.majorRB);
+        critical = findViewById(R.id.criticalRB);
+        save = findViewById(R.id.savedefect);
+        camerabtn = findViewById(R.id.captureImageBtn);
+        image = findViewById(R.id.cameraimageview);
 
         //changing the display to popup
         DisplayMetrics dm = new DisplayMetrics();
@@ -125,11 +139,15 @@ public class defectActivity extends Activity {
         getWindow().setAttributes(params);
 
         //opening camera to take pictures
-
-        Button camerabtn = findViewById(R.id.captureImageBtn);
-        image = findViewById(R.id.cameraimageview);
         assert image != null;
         image.setSurfaceTextureListener(textureListener);
+        camerabtn.setOnClickListener(new View.OnClickListener() {
+            @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
+            @Override
+            public void onClick(View v) {
+                takePicture();
+            }
+        });
 
         //pulling message value from inspection activities
         Intent intent = getIntent();
@@ -137,18 +155,10 @@ public class defectActivity extends Activity {
         ((TextView) findViewById(R.id.featuredes)).setText(message);
 
         // sending defect information to table
-        feature = findViewById(R.id.featuredes);
-        defectdescription = findViewById(R.id.defectdescriptionET);
-        minor = findViewById(R.id.minorRB);
-        major = findViewById(R.id.majorRB);
-        critical = findViewById(R.id.criticalRB);
-        Button save = findViewById(R.id.savedefect);
         save.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
-                defectinformation();
-                finish();
+             finish();
             }
         });
 
@@ -161,10 +171,9 @@ public class defectActivity extends Activity {
             return;
         CameraManager manager = (CameraManager) getSystemService(Context.CAMERA_SERVICE);
         try {
-            CameraCharacteristics characteristics = manager.getCameraCharacteristics(cameraDevice.getId());
-            Size[] jpegSizes = null;
-            if (characteristics != null)
-                jpegSizes = characteristics.get(CameraCharacteristics.SCALER_STREAM_CONFIGURATION_MAP).getOutputSizes(ImageFormat.JPEG);
+            CameraCharacteristics characteristics = Objects.requireNonNull(manager).getCameraCharacteristics(cameraDevice.getId());
+            Size[] jpegSizes;
+            jpegSizes = Objects.requireNonNull(characteristics.get(CameraCharacteristics.SCALER_STREAM_CONFIGURATION_MAP)).getOutputSizes(ImageFormat.JPEG);
             //capture image with custom size
             int width = 640;
             int height = 480;
@@ -266,7 +275,7 @@ public class defectActivity extends Activity {
             Surface surface = new Surface(texture);
             captureRequestBuilder = cameraDevice.createCaptureRequest(CameraDevice.TEMPLATE_PREVIEW);
             captureRequestBuilder.addTarget(surface);
-            cameraDevice.createCaptureSession(Arrays.asList(surface), new CameraCaptureSession.StateCallback() {
+            cameraDevice.createCaptureSession(Collections.singletonList(surface), new CameraCaptureSession.StateCallback() {
                 @Override
                 public void onConfigured(@NonNull CameraCaptureSession cameraCaptureSession) {
 

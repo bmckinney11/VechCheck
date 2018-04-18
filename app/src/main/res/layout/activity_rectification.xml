@@ -75,12 +75,12 @@
 
         <TableRow
             android:background="#ECEFF1"
-            android:padding="5dp">
+            android:padding="5dp"
+            android:layout_width="match_parent">
 
             <TextView
-                android:id="@+id/ddd"
+                android:id="@+id/txt"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:textSize="20sp"/>
 
@@ -102,58 +102,6 @@
 
         </TableRow>
 
-        <TableRow
-            android:background="#ECEFF1"
-            android:padding="5dp">
-
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1" />
-
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1" />
-        </TableRow>
-
-        <TableRow
-            android:background="#ECEFF1"
-            android:padding="5dp">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1" />
-
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1" />
-        </TableRow>
     </TableLayout>
 
     <Button
@@ -167,6 +115,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:text="Save Inspection"
+        android:onClick="pickImage"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
@@ -174,12 +123,10 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0" />
 
-    <TextView
-        android:id="@+id/help"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="TextView"
-        tools:layout_editor_absoluteX="258dp"
-        tools:layout_editor_absoluteY="512dp" />
+    <ImageView
+        android:id="@+id/imageviewpdf"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
 
 </android.support.constraint.ConstraintLayout>
