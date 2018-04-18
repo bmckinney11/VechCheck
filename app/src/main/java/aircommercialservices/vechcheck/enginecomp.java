@@ -8,10 +8,13 @@ import android.view.Gravity;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
+import android.widget.CheckBox;
+import android.widget.Toast;
 
 public class enginecomp extends AppCompatActivity {
 
     Button sbtn29,sbtn30,sbtn31,sbtn32,sbtn33,sbtn34, engfinish;
+    CheckBox CB29, CB30, CB31, CB32, CB33, CB34;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,6 +44,13 @@ public class enginecomp extends AppCompatActivity {
         sbtn33 = findViewById(R.id.spannerbtn33);
         sbtn34 = findViewById(R.id.spannerbtn34);
         engfinish = findViewById(R.id.Engfinish);
+
+        CB29 = findViewById(R.id.enginemountings);
+        CB30 = findViewById(R.id.oilleaksengine);
+        CB31 = findViewById(R.id.fueltanksengine);
+        CB32 = findViewById(R.id.exhaustsystemengine);
+        CB33 = findViewById(R.id.speedlimiter);
+        CB34 = findViewById(R.id.aircompressor);
 
         //opening pop up defect activty
         sbtn29.setOnClickListener(new View.OnClickListener() {
@@ -94,6 +104,66 @@ public class enginecomp extends AppCompatActivity {
                 Intent I34 = new Intent(getApplicationContext(), defectActivity.class);
                 I34.putExtra("message","Air compressor- exhauster, driver belts");
                 startActivity(I34);
+            }
+        });
+
+        CB29.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                CheckBox defectcheck = (CheckBox) v;
+                if (defectcheck.isChecked()) {
+                    Toast.makeText(enginecomp.this, "Engine Mountings not defective", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+
+        CB30.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                CheckBox defectcheck = (CheckBox) v;
+                if (defectcheck.isChecked()) {
+                    Toast.makeText(enginecomp.this, "Oil leaks not defective", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+
+        CB31.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                CheckBox defectcheck = (CheckBox) v;
+                if (defectcheck.isChecked()) {
+                    Toast.makeText(enginecomp.this, "Fuel tanks and Systems not defective", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+
+        CB32.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                CheckBox defectcheck = (CheckBox) v;
+                if (defectcheck.isChecked()) {
+                    Toast.makeText(enginecomp.this, "Exhaust Systens not defective", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+
+        CB33.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                CheckBox defectcheck = (CheckBox) v;
+                if (defectcheck.isChecked()) {
+                    Toast.makeText(enginecomp.this, "Speed Limiter Plate not defective", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+
+        CB34.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                CheckBox defectcheck = (CheckBox) v;
+                if (defectcheck.isChecked()) {
+                    Toast.makeText(enginecomp.this, "Air Compressor not defective", Toast.LENGTH_SHORT).show();
+                }
             }
         });
 

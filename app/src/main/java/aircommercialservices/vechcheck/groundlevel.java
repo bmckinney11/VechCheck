@@ -8,10 +8,13 @@ import android.view.Gravity;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
+import android.widget.CheckBox;
+import android.widget.Toast;
 
 public class groundlevel extends AppCompatActivity {
 
     Button sbtn35,sbtn36,sbtn37,sbtn38,sbtn39,sbtn40,sbtn41, glfinish;
+    CheckBox CB35, CB36,CB37,CB38,CB39, CB40, CB41;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,6 +45,14 @@ public class groundlevel extends AppCompatActivity {
         sbtn40 = findViewById(R.id.spannerbtn40);
         sbtn41 = findViewById(R.id.spannerbtn41);
         glfinish = findViewById(R.id.GLfinish);
+
+        CB35 = findViewById(R.id.roadwheelsvec);
+        CB36 = findViewById(R.id.sideguardsunderrun);
+        CB37 = findViewById(R.id.vehicletotrailer);
+        CB38 = findViewById(R.id.wingssprayrear);
+        CB39 = findViewById(R.id.secconditionbody);
+        CB40 = findViewById(R.id.containerscranes);
+        CB41 = findViewById(R.id.tippinggearvec);
 
         //opening pop up defect activity
 
@@ -98,15 +109,85 @@ public class groundlevel extends AppCompatActivity {
                 startActivity(I40);
             }
         });
-        //TODO
-       /* sbtn41.setOnClickListener(new View.OnClickListener() {
-         *   @Override
-        *    public void onClick(View view) {
-            *    Intent I41 = new Intent(getApplicationContext(), defectActivity.class);
-           *     I41.putExtra("message","Tipping gear- hydraulic rams, pivots and safety devices");
-          *      startActivity(I41);
-         *   }
-        });*/
+
+       sbtn41.setOnClickListener(new View.OnClickListener() {
+          @Override
+          public void onClick(View view) {
+                Intent I41 = new Intent(getApplicationContext(), defectActivity.class);
+                I41.putExtra("message","Tipping gear- hydraulic rams, pivots and safety devices");
+                startActivity(I41);
+           }
+        });
+
+        CB35.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                CheckBox defectcheck = (CheckBox) v;
+                if (defectcheck.isChecked()) {
+                    Toast.makeText(groundlevel.this, "Road Wheels and Hubs not defective", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+
+        CB36.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                CheckBox defectcheck = (CheckBox) v;
+                if (defectcheck.isChecked()) {
+                    Toast.makeText(groundlevel.this, "Sideguards and Rear underrun guards not defective", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+
+        CB37.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                CheckBox defectcheck = (CheckBox) v;
+                if (defectcheck.isChecked()) {
+                    Toast.makeText(groundlevel.this, "Trailer coupling, hoses and self sealing valves not defective", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+
+        CB38.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                CheckBox defectcheck = (CheckBox) v;
+                if (defectcheck.isChecked()) {
+                    Toast.makeText(groundlevel.this, "Condition of the rear wings and spray suppression not defective", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+
+        CB39.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                CheckBox defectcheck = (CheckBox) v;
+                if (defectcheck.isChecked()) {
+                    Toast.makeText(groundlevel.this, "Security and condition of the body not defective", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+
+        CB40.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                CheckBox defectcheck = (CheckBox) v;
+                if (defectcheck.isChecked()) {
+                    Toast.makeText(groundlevel.this, "Security of body containers and crane support legs not defective", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+
+        CB41.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                CheckBox defectcheck = (CheckBox) v;
+                if (defectcheck.isChecked()) {
+                    Toast.makeText(groundlevel.this, "Tipping gear not defective", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
 
        glfinish.setOnClickListener(new View.OnClickListener() {
            @Override

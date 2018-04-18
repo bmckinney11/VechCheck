@@ -20,11 +20,13 @@ import android.text.StaticLayout;
 import android.text.TextPaint;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.Objects;
 
 import static aircommercialservices.vechcheck.R.layout.activity_rectification;
@@ -32,14 +34,18 @@ import static aircommercialservices.vechcheck.R.layout.activity_rectification;
 public class Rectification extends AppCompatActivity {
 
     int checked;
+    ArrayList<String> TV;
     ImageView imagev;
 
+    @RequiresApi(api = Build.VERSION_CODES.KITKAT)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(activity_rectification);
 
         imagev = findViewById(R.id.imageviewpdf);
+
+        TV = Objects.requireNonNull(getIntent().getExtras()).getStringArrayList("message");
 
         //TODO SIGNIUTRE
     }

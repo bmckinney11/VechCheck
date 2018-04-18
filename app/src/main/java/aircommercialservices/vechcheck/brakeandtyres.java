@@ -8,10 +8,13 @@ import android.view.Gravity;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
+import android.widget.CheckBox;
+import android.widget.Toast;
 
 public class brakeandtyres extends AppCompatActivity {
 
     Button sbtn72,sbtn73,sbtn74,sbtn75,sbtn76,sbtn77,sbtn78,sbtn79,sbtn80,sbtn81,sbtn82,sbtn83,sbtn84,sbtn85,sbtn86,sbtn87, finish;
+    CheckBox CB72, CB73,CB74,CB75,CB76,CB77,CB78,CB79,CB80,CB81,CB82,CB83,CB84,CB85,CB86,CB86, CB87;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,6 +53,24 @@ public class brakeandtyres extends AppCompatActivity {
         sbtn85 = findViewById(R.id.spannerbtn85);
         sbtn86 = findViewById(R.id.spannerbtn86);
         sbtn87 = findViewById(R.id.spannerbtn87);
+
+        CB72 = findViewById(R.id.hyfluidlevel);
+        CB73 = findViewById(R.id.elecbrakingsystemandstabilitycontrol);
+        CB74 = findViewById(R.id.mecbrakecomponentsvec);
+        CB75 = findViewById(R.id.vecDLDP);
+        CB76 = findViewById(R.id.brakeactuatorsvec);
+        CB77 = findViewById(R.id.brakesyscomponentsvec);
+        CB78 = findViewById(R.id.trailercoupling);
+        CB79 = findViewById(R.id.loadsensingvec);
+        CB80 = findViewById(R.id.antilock);
+        CB81 = findViewById(R.id.supplydumpvalve);
+        CB82 = findViewById(R.id.addbraking);
+        CB83 = findViewById(R.id.sizetypetyresvec);
+        CB84 = findViewById(R.id.condtyresvec);
+        CB85 = findViewById(R.id.tyrepressurevec);
+        CB86 = findViewById(R.id.driveaxles);
+        CB87 = findViewById(R.id.ancillaryvec);
+
 
         //opening popup defect activity
 
@@ -196,6 +217,169 @@ public class brakeandtyres extends AppCompatActivity {
                 startActivity(I87);
             }
         });
+
+        CB72.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                CheckBox defectcheck = (CheckBox) v;
+                if (defectcheck.isChecked()) {
+                    Toast.makeText(brakeandtyres.this, "hydraulic fluid level not defective", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+
+        CB73.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                CheckBox defectcheck = (CheckBox) v;
+                if (defectcheck.isChecked()) {
+                    Toast.makeText(brakeandtyres.this, "Electronic braking system and electronic stability control system not defective", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+
+        CB74.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                CheckBox defectcheck = (CheckBox) v;
+                if (defectcheck.isChecked()) {
+                    Toast.makeText(brakeandtyres.this, "Mechanic brake components not defective", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+
+        CB75.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                CheckBox defectcheck = (CheckBox) v;
+                if (defectcheck.isChecked()) {
+                    Toast.makeText(brakeandtyres.this, "Brake drums, linings, discs and pads not defective", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+
+        CB76.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                CheckBox defectcheck = (CheckBox) v;
+                if (defectcheck.isChecked()) {
+                    Toast.makeText(brakeandtyres.this, "Brake actuators and adjuster not defective", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+
+        CB77.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                CheckBox defectcheck = (CheckBox) v;
+                if (defectcheck.isChecked()) {
+                    Toast.makeText(brakeandtyres.this, "Braking system and components not defective", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+
+        CB78.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                CheckBox defectcheck = (CheckBox) v;
+                if (defectcheck.isChecked()) {
+                    Toast.makeText(brakeandtyres.this, "Trailer coupling, hoses and self sealing valves not defective", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+
+        CB79.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                CheckBox defectcheck = (CheckBox) v;
+                if (defectcheck.isChecked()) {
+                    Toast.makeText(brakeandtyres.this, "Load sensing and antilock system not defective", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+
+        CB80.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                CheckBox defectcheck = (CheckBox) v;
+                if (defectcheck.isChecked()) {
+                    Toast.makeText(brakeandtyres.this, "Antilock device not defective", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+
+        CB81.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                CheckBox defectcheck = (CheckBox) v;
+                if (defectcheck.isChecked()) {
+                    Toast.makeText(brakeandtyres.this, "Supply dump valve not defective", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+
+        CB82.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                CheckBox defectcheck = (CheckBox) v;
+                if (defectcheck.isChecked()) {
+                    Toast.makeText(brakeandtyres.this, "Additional braking devices not defective", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+
+        CB83.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                CheckBox defectcheck = (CheckBox) v;
+                if (defectcheck.isChecked()) {
+                    Toast.makeText(brakeandtyres.this, "Size and type of tyres correct", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+
+        CB84.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                CheckBox defectcheck = (CheckBox) v;
+                if (defectcheck.isChecked()) {
+                    Toast.makeText(brakeandtyres.this, "Condition of tyres not defective", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+
+        CB85.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                CheckBox defectcheck = (CheckBox) v;
+                if (defectcheck.isChecked()) {
+                    Toast.makeText(brakeandtyres.this, "Pressure of tyres correct", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+
+        CB86.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                CheckBox defectcheck = (CheckBox) v;
+                if (defectcheck.isChecked()) {
+                    Toast.makeText(brakeandtyres.this, "Drive axle tyres comply with calibration plaque", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+
+        CB87.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                CheckBox defectcheck = (CheckBox) v;
+                if (defectcheck.isChecked()) {
+                    Toast.makeText(brakeandtyres.this, "Ancilliary equipment not defective", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+
+
+
 
         //back to main inspection when finished this section
         finish = findViewById(R.id.BTfinish);
