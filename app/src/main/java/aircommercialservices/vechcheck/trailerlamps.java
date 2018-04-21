@@ -8,10 +8,14 @@ import android.view.Gravity;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
+import android.widget.CheckBox;
+import android.widget.Toast;
 
 public class trailerlamps extends AppCompatActivity {
 
     Button btn38,btn39,btn40,btn41,btn42,btn43,btn44,btn45,btn46,btn47,btn48,btn49, TLfinish;
+    CheckBox cb38,cb39,cb40,cb41,cb42,cb43,cb44,cb45, cb46,cb47,cb48,cb49;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -46,6 +50,19 @@ public class trailerlamps extends AppCompatActivity {
         btn48 = findViewById(R.id.spanner48);
         btn49 = findViewById(R.id.spanner49);
         TLfinish = findViewById(R.id.TLfinish);
+
+        cb38 = findViewById(R.id.rearreflec);
+        cb39 = findViewById(R.id.consmarkings);
+        cb40 = findViewById(R.id.frontlamps);
+        cb41 = findViewById(R.id.rearlamps);
+        cb42 = findViewById(R.id.numberplatelamps);
+        cb43 = findViewById(R.id.rearfog);
+        cb44 = findViewById(R.id.reflectors);
+        cb45 = findViewById(R.id.dirhazindicators);
+        cb46 = findViewById(R.id.brakelamps);
+        cb47 = findViewById(R.id.reversinglamps);
+        cb48 = findViewById(R.id.sidemarker);
+        cb49 = findViewById(R.id.numberplatecarrier);
 
         //opening popup defect activity
         btn38.setOnClickListener(new View.OnClickListener() {
@@ -154,6 +171,128 @@ public class trailerlamps extends AppCompatActivity {
                 startActivity(intent49);
             }
         });
+
+        cb38.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                CheckBox defectcheck = (CheckBox) v;
+                if (defectcheck.isChecked()) {
+                    Toast.makeText(trailerlamps.this, "Rear reflective markings not defective", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+
+        cb39.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                CheckBox defectcheck = (CheckBox) v;
+                if (defectcheck.isChecked()) {
+                    Toast.makeText(trailerlamps.this, "Conspicuity markings not defective", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+
+        cb40.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                CheckBox defectcheck = (CheckBox) v;
+                if (defectcheck.isChecked()) {
+                    Toast.makeText(trailerlamps.this, "Front lamps and outline markers not defective", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+
+        cb41.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                CheckBox defectcheck = (CheckBox) v;
+                if (defectcheck.isChecked()) {
+                    Toast.makeText(trailerlamps.this, "Rear lamps and outline markers not defective", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+
+        cb42.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                CheckBox defectcheck = (CheckBox) v;
+                if (defectcheck.isChecked()) {
+                    Toast.makeText(trailerlamps.this, "Number plate lamps not defective", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+
+        cb43.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                CheckBox defectcheck = (CheckBox) v;
+                if (defectcheck.isChecked()) {
+                    Toast.makeText(trailerlamps.this, "Rear fog lamps not defective", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+
+        cb44.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                CheckBox defectcheck = (CheckBox) v;
+                if (defectcheck.isChecked()) {
+                    Toast.makeText(trailerlamps.this, "Reflectors not defective", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+
+        cb45.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                CheckBox defectcheck = (CheckBox) v;
+                if (defectcheck.isChecked()) {
+                    Toast.makeText(trailerlamps.this, "Direction and hazard indicators not defective", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+
+        cb46.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                CheckBox defectcheck = (CheckBox) v;
+                if (defectcheck.isChecked()) {
+                    Toast.makeText(trailerlamps.this, "Brake lamps not defective", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+
+        cb47.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                CheckBox defectcheck = (CheckBox) v;
+                if (defectcheck.isChecked()) {
+                    Toast.makeText(trailerlamps.this, "Reversing lamps not defective", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+
+        cb48.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                CheckBox defectcheck = (CheckBox) v;
+                if (defectcheck.isChecked()) {
+                    Toast.makeText(trailerlamps.this, "Side marker lamps not defective", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+
+        cb49.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                CheckBox defectcheck = (CheckBox) v;
+                if (defectcheck.isChecked()) {
+                    Toast.makeText(trailerlamps.this, "Number plate carrier not defective", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+
+
 
         TLfinish.setOnClickListener(new View.OnClickListener() {
             @Override

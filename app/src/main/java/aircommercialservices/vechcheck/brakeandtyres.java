@@ -14,7 +14,7 @@ import android.widget.Toast;
 public class brakeandtyres extends AppCompatActivity {
 
     Button sbtn72,sbtn73,sbtn74,sbtn75,sbtn76,sbtn77,sbtn78,sbtn79,sbtn80,sbtn81,sbtn82,sbtn83,sbtn84,sbtn85,sbtn86,sbtn87, finish;
-    CheckBox CB72, CB73,CB74,CB75,CB76,CB77,CB78,CB79,CB80,CB81,CB82,CB83,CB84,CB85,CB86,CB86, CB87;
+    CheckBox CB72, CB73,CB74,CB75,CB76,CB77,CB78,CB79,CB80,CB81,CB82,CB83,CB84,CB85,CB86, CB87;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

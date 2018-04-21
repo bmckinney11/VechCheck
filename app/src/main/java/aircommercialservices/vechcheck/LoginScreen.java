@@ -38,15 +38,6 @@ public class LoginScreen extends AppCompatActivity {
             }
         });
 
-        //opening pop up from newuser button
-        Button newuser = findViewById(R.id.newuserbtn);
-        newuser.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent nuintent = new Intent(getApplicationContext(), newuser.class);
-                startActivity(nuintent);
-            }
-        });
 
         //login in feature
 

@@ -134,7 +134,7 @@
     <string name="mirrors">Mirrors+Indirect Vision Devices(External)</string>
     <string name="sidelights">Side Lights and Outline Markers</string>
     <string name="headlamps">Headlamps</string>
-    <string name="frontfog">Front Fog+Spot lamp*********</string>
+    <string name="frontfog">Front Fog+Spot lamp</string>
 
     //engine compartment
     <string name="enginecompartment">Engine Compartment</string>
@@ -188,7 +188,7 @@
     <string name="sizzetypetyres">Size and Types of Tyres</string>
     <string name="condtiontyres">Condtion of Tyres</string>
     <string name="tyrepressure">Pressure check of all tyres</string>
-    <string name="driveaxle">Drive Axle Tyres comply with calibration plague</string>
+    <string name="driveaxle">Drive Axle Tyres comply with calibration plaque</string>
 
     <string name="ancillary">Ancillary Equipment inspection completed?</string>
     <string name="treadwear">Tread Wear</string>

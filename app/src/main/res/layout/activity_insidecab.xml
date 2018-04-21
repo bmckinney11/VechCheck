@@ -8,7 +8,7 @@
     tools:context=".insidecab">
 
     <ScrollView
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
@@ -16,10 +16,9 @@
         android:layout_marginTop="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.07">
+        app:layout_constraintVertical_bias="1.0">
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -38,14 +37,14 @@
                 android:textSize="22sp"
                 android:textStyle="bold" />
 
-            <ImageButton
+            <Button
                 android:id="@+id/spannerbtn1"
                 android:layout_width="36dp"
                 android:layout_height="36dp"
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentStart="true"
                 android:layout_below="@+id/insidecab"
-                app:srcCompat="@drawable/ic_build_blue_24dp"
+                android:background="@drawable/ic_build_blue_24dp"
                 tools:ignore="ContentDescription" />
 
 
@@ -61,14 +60,14 @@
                 android:textSize="26sp"
                 android:textStyle="bold" />
 
-            <ImageButton
+            <Button
                 android:id="@+id/spannerbtn2"
                 android:layout_width="36dp"
                 android:layout_height="36dp"
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentStart="true"
                 android:layout_below="@+id/spannerbtn1"
-                app:srcCompat="@drawable/ic_build_black_24dp"
+                android:background="@drawable/ic_build_black_24dp"
                 tools:ignore="ContentDescription" />
 
             <CheckBox
@@ -81,16 +80,16 @@
                 android:text="@string/speedlimiter"
                 android:textSize="26sp" />
 
-            <ImageButton
+            <Button
                 android:id="@+id/spannerbtn3"
                 android:layout_width="36dp"
                 android:layout_height="36dp"
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentStart="true"
                 android:layout_below="@+id/spannerbtn2"
+                android:background="@drawable/ic_build_blue_24dp"
                 android:contentDescription="@null"
-                android:gravity="start"
-                app:srcCompat="@drawable/ic_build_blue_24dp" />
+                android:gravity="start" />
 
             <CheckBox
                 android:id="@+id/seatbelts"
@@ -104,16 +103,16 @@
                 android:textSize="26sp"
                 android:textStyle="bold" />
 
-            <ImageButton
+            <Button
                 android:id="@+id/spannerbtn4"
                 android:layout_width="36dp"
                 android:layout_height="36dp"
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentStart="true"
                 android:layout_below="@+id/spannerbtn3"
+                android:background="@drawable/ic_build_black_24dp"
                 android:contentDescription="@null"
-                android:gravity="start"
-                app:srcCompat="@drawable/ic_build_black_24dp" />
+                android:gravity="start" />
 
             <CheckBox
                 android:id="@+id/cabfloor"
@@ -125,16 +124,16 @@
                 android:text="@string/cabfloorsteps"
                 android:textSize="26sp" />
 
-            <ImageButton
+            <Button
                 android:id="@+id/spannerbtn5"
                 android:layout_width="36dp"
                 android:layout_height="36dp"
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentStart="true"
                 android:layout_below="@+id/spannerbtn4"
+                android:background="@drawable/ic_build_blue_24dp"
                 android:contentDescription="@null"
-                android:gravity="start"
-                app:srcCompat="@drawable/ic_build_blue_24dp" />
+                android:gravity="start" />
 
             <CheckBox
                 android:id="@+id/seats"
@@ -148,16 +147,16 @@
                 android:textSize="26sp"
                 android:textStyle="bold" />
 
-            <ImageButton
+            <Button
                 android:id="@+id/spannerbtn6"
                 android:layout_width="36dp"
                 android:layout_height="36dp"
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentStart="true"
                 android:layout_below="@+id/spannerbtn5"
+                android:background="@drawable/ic_build_black_24dp"
                 android:contentDescription="@null"
-                android:gravity="start"
-                app:srcCompat="@drawable/ic_build_black_24dp" />
+                android:gravity="start" />
 
             <CheckBox
                 android:id="@+id/viewtofront"
@@ -169,16 +168,16 @@
                 android:text="@string/view"
                 android:textSize="26sp" />
 
-            <ImageButton
+            <Button
                 android:id="@+id/spannerbtn7"
                 android:layout_width="36dp"
                 android:layout_height="36dp"
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentStart="true"
                 android:layout_below="@+id/spannerbtn6"
+                android:background="@drawable/ic_build_blue_24dp"
                 android:contentDescription="@null"
-                android:gravity="start"
-                app:srcCompat="@drawable/ic_build_blue_24dp" />
+                android:gravity="start" />
 
             <CheckBox
                 android:id="@+id/conditionglass"
@@ -192,16 +191,16 @@
                 android:textSize="26sp"
                 android:textStyle="bold" />
 
-            <ImageButton
+            <Button
                 android:id="@+id/spannerbtn8"
                 android:layout_width="36dp"
                 android:layout_height="36dp"
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentStart="true"
                 android:layout_below="@+id/spannerbtn7"
+                android:background="@drawable/ic_build_black_24dp"
                 android:contentDescription="@null"
-                android:gravity="start"
-                app:srcCompat="@drawable/ic_build_black_24dp" />
+                android:gravity="start" />
 
             <CheckBox
                 android:id="@+id/screenwipers"
@@ -213,16 +212,16 @@
                 android:text="@string/washerswipers"
                 android:textSize="26sp" />
 
-            <ImageButton
+            <Button
                 android:id="@+id/spannerbtn9"
                 android:layout_width="36dp"
                 android:layout_height="36dp"
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentStart="true"
                 android:layout_below="@+id/spannerbtn8"
+                android:background="@drawable/ic_build_blue_24dp"
                 android:contentDescription="@null"
-                android:gravity="start"
-                app:srcCompat="@drawable/ic_build_blue_24dp" />
+                android:gravity="start" />
 
             <CheckBox
                 android:id="@+id/speedmetertaco"
@@ -236,16 +235,16 @@
                 android:textSize="26sp"
                 android:textStyle="bold" />
 
-            <ImageButton
+            <Button
                 android:id="@+id/spannerbtn10"
                 android:layout_width="36dp"
                 android:layout_height="36dp"
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentStart="true"
                 android:layout_below="@+id/spannerbtn9"
+                android:background="@drawable/ic_build_black_24dp"
                 android:contentDescription="@null"
-                android:gravity="start"
-                app:srcCompat="@drawable/ic_build_black_24dp" />
+                android:gravity="start" />
 
             <CheckBox
                 android:id="@+id/enginetaco"
@@ -257,16 +256,16 @@
                 android:text="@string/enginetachometer"
                 android:textSize="26sp" />
 
-            <ImageButton
+            <Button
                 android:id="@+id/spannerbtn11"
                 android:layout_width="36dp"
                 android:layout_height="36dp"
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentStart="true"
                 android:layout_below="@+id/spannerbtn10"
+                android:background="@drawable/ic_build_blue_24dp"
                 android:contentDescription="@null"
-                android:gravity="start"
-                app:srcCompat="@drawable/ic_build_blue_24dp" />
+                android:gravity="start" />
 
             <CheckBox
                 android:id="@+id/audiablewarning"
@@ -280,16 +279,16 @@
                 android:textSize="26sp"
                 android:textStyle="bold" />
 
-            <ImageButton
+            <Button
                 android:id="@+id/spannerbtn12"
                 android:layout_width="36dp"
                 android:layout_height="36dp"
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentStart="true"
                 android:layout_below="@+id/spannerbtn11"
+                android:background="@drawable/ic_build_black_24dp"
                 android:contentDescription="@null"
-                android:gravity="start"
-                app:srcCompat="@drawable/ic_build_black_24dp" />
+                android:gravity="start" />
 
             <CheckBox
                 android:id="@+id/drivingcontrols"
@@ -301,16 +300,16 @@
                 android:text="@string/drivingcontrols"
                 android:textSize="26sp" />
 
-            <ImageButton
+            <Button
                 android:id="@+id/spannerbtn13"
                 android:layout_width="36dp"
                 android:layout_height="36dp"
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentStart="true"
                 android:layout_below="@+id/spannerbtn12"
+                android:background="@drawable/ic_build_blue_24dp"
                 android:contentDescription="@null"
-                android:gravity="start"
-                app:srcCompat="@drawable/ic_build_blue_24dp" />
+                android:gravity="start" />
 
             <CheckBox
                 android:id="@+id/steeringwheel"
@@ -324,16 +323,16 @@
                 android:textSize="26sp"
                 android:textStyle="bold" />
 
-            <ImageButton
+            <Button
                 android:id="@+id/spannerbtn14"
                 android:layout_width="36dp"
                 android:layout_height="36dp"
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentStart="true"
                 android:layout_below="@+id/spannerbtn13"
+                android:background="@drawable/ic_build_black_24dp"
                 android:contentDescription="@null"
-                android:gravity="start"
-                app:srcCompat="@drawable/ic_build_black_24dp" />
+                android:gravity="start" />
 
             <CheckBox
                 android:id="@+id/pressure"
@@ -345,16 +344,16 @@
                 android:text="@string/pressure"
                 android:textSize="26sp" />
 
-            <ImageButton
+            <Button
                 android:id="@+id/spannerbtn15"
                 android:layout_width="36dp"
                 android:layout_height="36dp"
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentStart="true"
                 android:layout_below="@+id/spannerbtn14"
+                android:background="@drawable/ic_build_blue_24dp"
                 android:contentDescription="@null"
-                android:gravity="start"
-                app:srcCompat="@drawable/ic_build_blue_24dp" />
+                android:gravity="start" />
 
             <CheckBox
                 android:id="@+id/servicebrakepedal"
@@ -368,16 +367,16 @@
                 android:textSize="26sp"
                 android:textStyle="bold" />
 
-            <ImageButton
+            <Button
                 android:id="@+id/spannerbtn16"
                 android:layout_width="36dp"
                 android:layout_height="36dp"
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentStart="true"
                 android:layout_below="@+id/spannerbtn15"
+                android:background="@drawable/ic_build_black_24dp"
                 android:contentDescription="@null"
-                android:gravity="start"
-                app:srcCompat="@drawable/ic_build_black_24dp" />
+                android:gravity="start" />
 
             <CheckBox
                 android:id="@+id/servicebrake"
@@ -389,16 +388,16 @@
                 android:text="@string/servicebrake"
                 android:textSize="26sp" />
 
-            <ImageButton
+            <Button
                 android:id="@+id/spannerbtn17"
                 android:layout_width="36dp"
                 android:layout_height="36dp"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"
-                android:layout_below="@+id/spannerbtn16"
+                android:layout_alignStart="@+id/insidecab"
+                android:layout_below="@+id/servicebrake"
+                android:background="@drawable/ic_build_blue_24dp"
                 android:contentDescription="@null"
                 android:gravity="start"
-                app:srcCompat="@drawable/ic_build_blue_24dp" />
+                tools:ignore="RtlCompat" />
 
             <CheckBox
                 android:id="@+id/brakecontrolvalve"
@@ -412,16 +411,16 @@
                 android:textSize="26sp"
                 android:textStyle="bold" />
 
-            <ImageButton
+            <Button
                 android:id="@+id/spannerbtn18"
                 android:layout_width="36dp"
                 android:layout_height="36dp"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"
-                android:layout_below="@+id/spannerbtn17"
+                android:layout_alignStart="@+id/insidecab"
+                android:layout_below="@+id/brakecontrolvalve"
+                android:background="@drawable/ic_build_black_24dp"
                 android:contentDescription="@null"
                 android:gravity="start"
-                app:srcCompat="@drawable/ic_build_black_24dp" />
+                tools:ignore="RtlCompat"/>
 
             <CheckBox
                 android:id="@+id/frontfogaux"
@@ -433,16 +432,16 @@
                 android:text="@string/fogauxlampswitch"
                 android:textSize="26sp" />
 
-            <ImageButton
+            <Button
                 android:id="@+id/spannerbtn19"
                 android:layout_width="36dp"
                 android:layout_height="36dp"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"
-                android:layout_below="@+id/spannerbtn18"
+                android:layout_alignStart="@+id/insidecab"
+                android:layout_below="@+id/frontfogaux"
+                android:background="@drawable/ic_build_blue_24dp"
                 android:contentDescription="@null"
                 android:gravity="start"
-                app:srcCompat="@drawable/ic_build_blue_24dp" />
+                tools:ignore="RtlCompat"/>
 
             <CheckBox
                 android:id="@+id/cabheater"

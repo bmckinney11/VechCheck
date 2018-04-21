@@ -8,10 +8,13 @@ import android.view.Gravity;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
+import android.widget.CheckBox;
+import android.widget.Toast;
 
 public class UnderAlongsideTrailer extends AppCompatActivity {
 
     Button btn1,btn2,btn3,btn4,btn5,btn6,btn7,btn8,btn9,btn10,btn11,btn12,btn13,btn14,btn15,UAfinish;
+    CheckBox cb1,cb2,cb3,cb4,cb5,cb6,cb7,cb8,cb9,cb10,cb11,cb12,cb13,cb14,cb15;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,6 +53,23 @@ public class UnderAlongsideTrailer extends AppCompatActivity {
         btn14 = findViewById(R.id.spanner14);
         btn15 = findViewById(R.id.spanner15);
         UAfinish = findViewById(R.id.UAfinish);
+
+        cb1 = findViewById(R.id.chassis);
+        cb2 = findViewById(R.id.bumper);
+        cb3 = findViewById(R.id.rearunderrun);
+        cb4 = findViewById(R.id.sideguards);
+        cb5 = findViewById(R.id.fifthwheel);
+        cb6 = findViewById(R.id.drawbar);
+        cb7 = findViewById(R.id.landinglegs);
+        cb8 = findViewById(R.id.Body);
+        cb9 = findViewById(R.id.wings);
+        cb10 = findViewById(R.id.bodycontainers);
+        cb11 = findViewById(R.id.tipping_rams);
+        cb12 = findViewById(R.id.oilleaks);
+        cb13 = findViewById(R.id.fueltanks);
+        cb14 = findViewById(R.id.chassissubframe);
+        cb15 = findViewById(R.id.electricalwiring);
+
 
         //opening pop up from each spanner button
         btn1.setOnClickListener(new View.OnClickListener() {
@@ -184,6 +204,155 @@ public class UnderAlongsideTrailer extends AppCompatActivity {
                 Intent intent15 = new Intent(getApplicationContext(), defectActivity.class);
                 intent15.putExtra("message","Electrical wiring, coupling sockets and equipment");
                 startActivity(intent15);
+            }
+        });
+
+        cb1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                CheckBox defectcheck = (CheckBox) v;
+                if (defectcheck.isChecked()) {
+                    Toast.makeText(UnderAlongsideTrailer.this, "Chassis/NI/C Plate not defective", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+
+        cb2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                CheckBox defectcheck = (CheckBox) v;
+                if (defectcheck.isChecked()) {
+                    Toast.makeText(UnderAlongsideTrailer.this, "Bumpers not defective", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+
+        cb3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                CheckBox defectcheck = (CheckBox) v;
+                if (defectcheck.isChecked()) {
+                    Toast.makeText(UnderAlongsideTrailer.this, "Rear underrun device not defective", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+        cb4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                CheckBox defectcheck = (CheckBox) v;
+                if (defectcheck.isChecked()) {
+                    Toast.makeText(UnderAlongsideTrailer.this, "Protective sidguards not defective", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+
+        cb5.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                CheckBox defectcheck = (CheckBox) v;
+                if (defectcheck.isChecked()) {
+                    Toast.makeText(UnderAlongsideTrailer.this, "Fifth wheel king pin and rubbing plate not defective", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+
+        cb6.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                CheckBox defectcheck = (CheckBox) v;
+                if (defectcheck.isChecked()) {
+                    Toast.makeText(UnderAlongsideTrailer.this, "Drawbar and attachement not defective", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+
+        cb7.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                CheckBox defectcheck = (CheckBox) v;
+                if (defectcheck.isChecked()) {
+                    Toast.makeText(UnderAlongsideTrailer.this, "Landing legs not defective", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+
+        cb8.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                CheckBox defectcheck = (CheckBox) v;
+                if (defectcheck.isChecked()) {
+                    Toast.makeText(UnderAlongsideTrailer.this, "Body not defective", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+
+        cb9.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                CheckBox defectcheck = (CheckBox) v;
+                if (defectcheck.isChecked()) {
+                    Toast.makeText(UnderAlongsideTrailer.this, "Wings/flaps ad spray suppression not defective", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+
+        cb10.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                CheckBox defectcheck = (CheckBox) v;
+                if (defectcheck.isChecked()) {
+                    Toast.makeText(UnderAlongsideTrailer.this, "Security of body containers and crane support legs not defective", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+
+        cb11.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                CheckBox defectcheck = (CheckBox) v;
+                if (defectcheck.isChecked()) {
+                    Toast.makeText(UnderAlongsideTrailer.this, "Tipping rams, pivots and controls not defective", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+
+        cb12.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                CheckBox defectcheck = (CheckBox) v;
+                if (defectcheck.isChecked()) {
+                    Toast.makeText(UnderAlongsideTrailer.this, "No oil leaks present", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+
+        cb13.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                CheckBox defectcheck = (CheckBox) v;
+                if (defectcheck.isChecked()) {
+                    Toast.makeText(UnderAlongsideTrailer.this, "Fuel tanks and systems not defective", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+
+        cb14.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                CheckBox defectcheck = (CheckBox) v;
+                if (defectcheck.isChecked()) {
+                    Toast.makeText(UnderAlongsideTrailer.this, "Chassis and subframe not defective", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+
+        cb15.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                CheckBox defectcheck = (CheckBox) v;
+                if (defectcheck.isChecked()) {
+                    Toast.makeText(UnderAlongsideTrailer.this, "Electrical wiring, coupling socket and equipment not defective", Toast.LENGTH_SHORT).show();
+                }
             }
         });
 

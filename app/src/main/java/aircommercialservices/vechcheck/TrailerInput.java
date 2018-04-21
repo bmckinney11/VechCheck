@@ -9,6 +9,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
@@ -23,6 +24,8 @@ public class TrailerInput extends AppCompatActivity {
     EditText TDate;
     Button TrBeginInspection;
     Button Trailerback;
+    Button Logout;
+    private FirebaseAuth nAuth;
     FirebaseDatabase database;
     DatabaseReference databaseReference;
 
@@ -39,6 +42,7 @@ public class TrailerInput extends AppCompatActivity {
        TNAxles = findViewById(R.id.NumberOfAxlesEditText);
        TBody = findViewById(R.id.BodyTypeTrEditText);
        TDate = findViewById(R.id.DateOfInspectionTrEditText);
+       Logout = findViewById(R.id.logout3);
        database = FirebaseDatabase.getInstance();
        databaseReference = database.getReference("Trailers");
 
@@ -61,6 +65,7 @@ public class TrailerInput extends AppCompatActivity {
                 startActivity(startintent3);
             }
         });
+
 
     }
 

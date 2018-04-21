@@ -48,7 +48,10 @@ public class secondactivity extends AppCompatActivity {
             public void onClick(View view) {
                 nAuth = FirebaseAuth.getInstance();
                 nAuth.signOut();
-                startActivity(new Intent(secondactivity.this,LoginScreen.class));
+                if(nAuth.getCurrentUser() == null) {
+                    startActivity(new Intent(secondactivity.this, LoginScreen.class));
+                    finish();
+                }
             }
         });
 

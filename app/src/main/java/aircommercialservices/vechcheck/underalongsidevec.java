@@ -52,7 +52,7 @@ public class underalongsidevec extends AppCompatActivity {
         uafinish = findViewById(R.id.uafinish);
 
 
-        CB41a = findViewById(R.id.chassisvec)
+        CB41a = findViewById(R.id.chassisvec);
         CB42 = findViewById(R.id.electricalwiringvec);
         CB43 = findViewById(R.id.electrailerconnections);
         CB44 = findViewById(R.id.oilleaksvec);
@@ -61,7 +61,7 @@ public class underalongsidevec extends AppCompatActivity {
         CB47 = findViewById(R.id.suspinsbushes);
         CB48 = findViewById(R.id.susunitslinkages);
         CB49 = findViewById(R.id.springunits);
-        CB50 = findViewById(R.id.shockabsorbers);
+        CB50 = findViewById(R.id.shockabsorbersvec);
         CB51 = findViewById(R.id.wheelbearingsseal);
         CB52 = findViewById(R.id.stubaxles);
         CB53 = findViewById(R.id.steeringmec);
@@ -537,7 +537,7 @@ public class underalongsidevec extends AppCompatActivity {
             }
         });
 
-        CB57.setOnClickListener(new View.OnClickListener() {
+        CB58.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 CheckBox defectcheck = (CheckBox) v;
@@ -547,7 +547,7 @@ public class underalongsidevec extends AppCompatActivity {
             }
         });
 
-        CB57.setOnClickListener(new View.OnClickListener() {
+        CB59.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 CheckBox defectcheck = (CheckBox) v;
@@ -557,7 +557,7 @@ public class underalongsidevec extends AppCompatActivity {
             }
         });
 
-        CB58.setOnClickListener(new View.OnClickListener() {
+        CB60.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 CheckBox defectcheck = (CheckBox) v;
@@ -567,7 +567,7 @@ public class underalongsidevec extends AppCompatActivity {
             }
         });
 
-        CB59.setOnClickListener(new View.OnClickListener() {
+        CB61.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 CheckBox defectcheck = (CheckBox) v;
@@ -577,7 +577,7 @@ public class underalongsidevec extends AppCompatActivity {
             }
         });
 
-        CB60.setOnClickListener(new View.OnClickListener() {
+        CB62.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 CheckBox defectcheck = (CheckBox) v;
@@ -587,7 +587,7 @@ public class underalongsidevec extends AppCompatActivity {
             }
         });
 
-        CB61.setOnClickListener(new View.OnClickListener() {
+        CB63.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 CheckBox defectcheck = (CheckBox) v;
@@ -597,7 +597,7 @@ public class underalongsidevec extends AppCompatActivity {
             }
         });
 
-        CB62.setOnClickListener(new View.OnClickListener() {
+        CB64.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 CheckBox defectcheck = (CheckBox) v;
@@ -607,7 +607,7 @@ public class underalongsidevec extends AppCompatActivity {
             }
         });
 
-        CB63.setOnClickListener(new View.OnClickListener() {
+        CB65.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 CheckBox defectcheck = (CheckBox) v;
@@ -617,7 +617,7 @@ public class underalongsidevec extends AppCompatActivity {
             }
         });
 
-        CB64.setOnClickListener(new View.OnClickListener() {
+        CB66.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 CheckBox defectcheck = (CheckBox) v;
@@ -627,16 +627,55 @@ public class underalongsidevec extends AppCompatActivity {
             }
         });
 
-        CB65.setOnClickListener(new View.OnClickListener() {
+        CB67.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 CheckBox defectcheck = (CheckBox) v;
                 if (defectcheck.isChecked()) {
-                    Toast.makeText(underalongsidevec.this, "Direction not defective", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(underalongsidevec.this, "Direction and hazard indicators not defective", Toast.LENGTH_SHORT).show();
                 }
             }
         });
 
+        CB68.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                CheckBox defectcheck = (CheckBox) v;
+                if (defectcheck.isChecked()) {
+                    Toast.makeText(underalongsidevec.this, "Side marker lamps not defective", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+
+        CB69.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                CheckBox defectcheck = (CheckBox) v;
+                if (defectcheck.isChecked()) {
+                    Toast.makeText(underalongsidevec.this, "Brake lamps not defective", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+
+        CB70.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                CheckBox defectcheck = (CheckBox) v;
+                if (defectcheck.isChecked()) {
+                    Toast.makeText(underalongsidevec.this, "Reversing lamps not defective", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+
+        CB71.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                CheckBox defectcheck = (CheckBox) v;
+                if (defectcheck.isChecked()) {
+                    Toast.makeText(underalongsidevec.this, "Registration plate not defective", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
 
 
 

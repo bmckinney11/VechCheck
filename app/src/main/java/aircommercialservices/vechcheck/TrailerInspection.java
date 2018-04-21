@@ -1,11 +1,16 @@
 package aircommercialservices.vechcheck;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
+import android.os.Build;
+import android.support.annotation.RequiresApi;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+
+import java.util.Objects;
 
 public class TrailerInspection extends AppCompatActivity {
 
@@ -19,13 +24,15 @@ public class TrailerInspection extends AppCompatActivity {
     TextView trailerinfo;
     Button alongside, sussteer, lamps, brakestyres, saveTrIn;
 
+    @RequiresApi(api = Build.VERSION_CODES.KITKAT)
+    @SuppressLint("SetTextI18n")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_trailer_inspection);
 
         //text inputed about inspection shown at the top of the inspection
-        CName = getIntent().getExtras().getString("Company Name:");
+        CName = Objects.requireNonNull(getIntent().getExtras()).getString("Company Name:");
         NIC = getIntent().getExtras().getString("Ni/C Number:");
         ChNo = getIntent().getExtras().getString("Chassis Number:");
         TYear = getIntent().getExtras().getString("Year of Trailer:");

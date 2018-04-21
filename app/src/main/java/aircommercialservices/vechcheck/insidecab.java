@@ -20,7 +20,7 @@ public class insidecab extends AppCompatActivity {
         AppCompatDelegate.setCompatVectorFromResourcesEnabled(true);
     }
 
-    ImageButton sbtn1, sbtn2, sbtn3, sbtn4, sbtn5, sbtn6, sbtn7, sbtn8, sbtn9, sbtn10, sbtn11, sbtn12, sbtn13, sbtn14, sbtn15, sbtn16, sbtn17, sbtn18, sbtn19;
+    Button sbtn1, sbtn2, sbtn3, sbtn4, sbtn5, sbtn6, sbtn7, sbtn8, sbtn9, sbtn10, sbtn11, sbtn12, sbtn13, sbtn14, sbtn15, sbtn16, sbtn17, sbtn18, sbtn19;
     Button finish;
     CheckBox CB1, CB2, CB3, CB4, CB5, CB6, CB7, CB8, CB9, CB10, CB11, CB12, CB13, CB14, CB15, CB16, CB17, CB18, CB19;
 

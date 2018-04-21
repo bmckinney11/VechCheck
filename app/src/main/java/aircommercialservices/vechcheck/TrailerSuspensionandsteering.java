@@ -8,10 +8,14 @@ import android.view.Gravity;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
+import android.widget.CheckBox;
+import android.widget.Toast;
 
 public class TrailerSuspensionandsteering extends AppCompatActivity {
 
     Button btn16,btn17,btn18,btn19,btn20,btn21,btn22,btn23,btn34,btn35,btn36,btn37, susfinish;
+    CheckBox cb16,cb17,cb18,cb19,cb20,cb21,cb22,cb23,cb34,cb35,cb36,cb37;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -47,6 +51,19 @@ public class TrailerSuspensionandsteering extends AppCompatActivity {
         btn36 = findViewById(R.id.spanner36);
         btn37 = findViewById(R.id.spanner37);
         susfinish = findViewById(R.id.susfinish);
+
+        cb16 = findViewById(R.id.suspinbushes);
+        cb17 = findViewById(R.id.sussprings);
+        cb18 = findViewById(R.id.springunitlinks);
+        cb19 = findViewById(R.id.shockabsorbers);
+        cb20 = findViewById(R.id.axlelift);
+        cb21 = findViewById(R.id.roadwheels);
+        cb22 = findViewById(R.id.airbags);
+        cb23 = findViewById(R.id.axlealignment);
+        cb34 = findViewById(R.id.stubaxles);
+        cb35 = findViewById(R.id.steeringmec);
+        cb36 = findViewById(R.id.turntable);
+        cb37 = findViewById(R.id.steeringalignment);
 
         btn16.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -153,6 +170,126 @@ public class TrailerSuspensionandsteering extends AppCompatActivity {
                 Intent intent37 = new Intent(getApplicationContext(), defectActivity.class);
                 intent37.putExtra("message","Steering Alignment");
                 startActivity(intent37);
+            }
+        });
+
+        cb16.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                CheckBox defectcheck = (CheckBox) v;
+                if (defectcheck.isChecked()) {
+                    Toast.makeText(TrailerSuspensionandsteering.this, "Suspension pins and bushes not defective", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+
+        cb17.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                CheckBox defectcheck = (CheckBox) v;
+                if (defectcheck.isChecked()) {
+                    Toast.makeText(TrailerSuspensionandsteering.this, "Suspension springs not defective", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+
+        cb18.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                CheckBox defectcheck = (CheckBox) v;
+                if (defectcheck.isChecked()) {
+                    Toast.makeText(TrailerSuspensionandsteering.this, "Spring unit links and subframes not defective", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+
+        cb19.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                CheckBox defectcheck = (CheckBox) v;
+                if (defectcheck.isChecked()) {
+                    Toast.makeText(TrailerSuspensionandsteering.this, "Shock absorbers not defective", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+
+        cb20.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                CheckBox defectcheck = (CheckBox) v;
+                if (defectcheck.isChecked()) {
+                    Toast.makeText(TrailerSuspensionandsteering.this, "Axle lift devices not defective", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+
+        cb21.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                CheckBox defectcheck = (CheckBox) v;
+                if (defectcheck.isChecked()) {
+                    Toast.makeText(TrailerSuspensionandsteering.this, "Road wheels and hubs not defective", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+
+        cb22.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                CheckBox defectcheck = (CheckBox) v;
+                if (defectcheck.isChecked()) {
+                    Toast.makeText(TrailerSuspensionandsteering.this, "Airbags not defective", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+
+        cb23.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                CheckBox defectcheck = (CheckBox) v;
+                if (defectcheck.isChecked()) {
+                    Toast.makeText(TrailerSuspensionandsteering.this, "Axle alignment not defective", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+
+        cb34.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                CheckBox defectcheck = (CheckBox) v;
+                if (defectcheck.isChecked()) {
+                    Toast.makeText(TrailerSuspensionandsteering.this, "Stub axles and wheel bearings not defective", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+
+        cb35.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                CheckBox defectcheck = (CheckBox) v;
+                if (defectcheck.isChecked()) {
+                    Toast.makeText(TrailerSuspensionandsteering.this, "Steering mechanism not defective", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+
+        cb36.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                CheckBox defectcheck = (CheckBox) v;
+                if (defectcheck.isChecked()) {
+                    Toast.makeText(TrailerSuspensionandsteering.this, "Turntable not defective", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+
+        cb37.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                CheckBox defectcheck = (CheckBox) v;
+                if (defectcheck.isChecked()) {
+                    Toast.makeText(TrailerSuspensionandsteering.this, "Steering alignment not defective", Toast.LENGTH_SHORT).show();
+                }
             }
         });
 

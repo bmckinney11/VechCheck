@@ -4,7 +4,6 @@ import android.Manifest;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.graphics.ImageFormat;
 import android.graphics.SurfaceTexture;
@@ -19,6 +18,7 @@ import android.hardware.camera2.TotalCaptureResult;
 import android.hardware.camera2.params.StreamConfigurationMap;
 import android.media.Image;
 import android.media.ImageReader;
+import android.net.Uri;
 import android.os.Build;
 import android.os.Environment;
 import android.os.Handler;
@@ -27,22 +27,30 @@ import android.support.annotation.NonNull;
 import android.support.annotation.RequiresApi;
 import android.os.Bundle;
 import android.support.v4.app.ActivityCompat;
-import android.util.DisplayMetrics;
+import android.text.TextUtils;
 import android.util.Size;
 import android.util.SparseIntArray;
-import android.view.Gravity;
 import android.view.Surface;
 import android.view.TextureView;
 import android.view.View;
-import android.view.WindowManager;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ListView;
+import android.widget.ImageButton;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
+import com.google.firebase.storage.FirebaseStorage;
+import com.google.firebase.storage.StorageReference;
+import com.google.firebase.storage.UploadTask;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -50,9 +58,7 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.OutputStream;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Collections;
-import java.util.List;
 import java.util.Objects;
 import java.util.UUID;
 
@@ -64,20 +70,30 @@ public class defectActivity extends Activity {
     private CameraCaptureSession cameraCaptureSessions;
     private CaptureRequest.Builder captureRequestBuilder;
     private Size imageDimensions;
-    private ImageReader imageReader;
     private static final SparseIntArray ORIENTATIONS = new SparseIntArray();
     private File file;
     private static final int REQUEST_CAMERA_PERMISSION = 200;
-    private boolean mFlashSupported;
     private Handler mBackgroundHandler;
+    private boolean mFlashSupported;
+    private ImageReader imageReader;
     private HandlerThread mBackgroundThread;
-    private int id =0;
+    private  int id= 0;
+    private int Gallery_intnet = 2;
+    Defects defects;
     TextView feature;
-    Button save, camerabtn;
+    Button save;
+    ImageButton camerabtn;
     EditText defectdescription;
     String name;
-    RadioButton minor, major, critical;
+    RadioButton radioButton;
     RadioGroup RGroup;
+    FirebaseDatabase database;
+    DatabaseReference dbReference;
+    StorageReference storage;
+    StorageReference imagepath;
+    String imagelocation;
+
+
 
     static {
         ORIENTATIONS.append(Surface.ROTATION_0, 90);
@@ -85,6 +101,7 @@ public class defectActivity extends Activity {
         ORIENTATIONS.append(Surface.ROTATION_180, 270);
         ORIENTATIONS.append(Surface.ROTATION_270, 180);
     }
+
 
     CameraDevice.StateCallback stateCallBack = new CameraDevice.StateCallback() {
         @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
@@ -115,28 +132,14 @@ public class defectActivity extends Activity {
 
         feature = findViewById(R.id.featuredes);
         defectdescription = findViewById(R.id.defectdescriptionET);
-        minor = findViewById(R.id.minorRB);
-        major = findViewById(R.id.majorRB);
-        critical = findViewById(R.id.criticalRB);
         save = findViewById(R.id.savedefect);
         camerabtn = findViewById(R.id.captureImageBtn);
         image = findViewById(R.id.cameraimageview);
+        database = FirebaseDatabase.getInstance();
+        dbReference = database.getReference("Defects");
+        defects = new Defects();
+        storage = FirebaseStorage.getInstance().getReference("Defects");
 
-        //changing the display to popup
-        DisplayMetrics dm = new DisplayMetrics();
-        getWindowManager().getDefaultDisplay().getMetrics(dm);
-
-        int width = dm.widthPixels;
-        int height = dm.heightPixels;
-
-        getWindow().setLayout((int) (width * .8), (int) (height * .7));
-
-        WindowManager.LayoutParams params = getWindow().getAttributes();
-        params.gravity = Gravity.CENTER;
-        params.x = 0;
-        params.y = -20;
-
-        getWindow().setAttributes(params);
 
         //opening camera to take pictures
         assert image != null;
@@ -154,13 +157,24 @@ public class defectActivity extends Activity {
         String message = intent.getStringExtra("message");
         ((TextView) findViewById(R.id.featuredes)).setText(message);
 
-        // sending defect information to table
+        // sending defect information to database
         save.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-             finish();
+               //adds all defects to database
+                btnInsert();
             }
         });
+
+    }
+
+    public  void defectinformation(View v){
+
+        //adds toast when radio button is selected
+        RGroup = findViewById(R.id.rg);
+        int checked = RGroup.getCheckedRadioButtonId();
+        radioButton = findViewById(checked);
+        Toast.makeText(defectActivity.this, "Defect Ranked as "+ radioButton.getText(),Toast.LENGTH_SHORT).show();
 
     }
 
@@ -357,6 +371,7 @@ public class defectActivity extends Activity {
 
         @Override
         public boolean onSurfaceTextureDestroyed(SurfaceTexture surfaceTexture) {
+
             return false;
         }
 
@@ -403,26 +418,83 @@ public class defectActivity extends Activity {
         mBackgroundHandler = new Handler(mBackgroundThread.getLooper());
     }
 
-    private void defectinformation(){
+    public void btnInsert(){
 
+
+        //saves picture to the database
+        dbReference.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+
+                 defects.setImageAddress(imagelocation);
+                Toast.makeText(defectActivity.this, "Image Saved", Toast.LENGTH_SHORT).show();
+            }
+
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+
+            }
+        });
+
+        //saves defect to the database
+        String Feature = feature.getText().toString().trim();
         RGroup = findViewById(R.id.rg);
         int checked = RGroup.getCheckedRadioButtonId();
+        radioButton = findViewById(checked);
+        String radiochoice = radioButton.getText().toString().trim();
+        String defectdes = defectdescription.getText().toString().trim();
 
-        String Feature = feature.getText().toString();
-        String defectdes = defectdescription.getText().toString();
+        if(TextUtils.isEmpty(radiochoice)){
+            save.setVisibility(View.INVISIBLE);
+            Toast.makeText(this,"Please enter defect Ranking!",Toast.LENGTH_LONG).show();
+        }else if (TextUtils.isEmpty(defectdes)) {
+            save.setVisibility(View.INVISIBLE);
+            Toast.makeText(this, "Please enter defect description!", Toast.LENGTH_LONG).show();
+        } else{
+            String id = dbReference.push().getKey();
+            dbReference.child(id).child("Feature").setValue(Feature);
+            dbReference.child(id).child("Defect Ranking").setValue(radiochoice);
+            dbReference.child(id).child("Defect Description").setValue(defectdes);
+            dbReference.child(id).child("Picture001").setValue(defects);
+            Toast.makeText(this,"Defect has been registered", Toast.LENGTH_LONG).show();
 
-        Intent newintent = new Intent(this, Rectification.class);
-        newintent.putExtra("Feature:", Feature);
-        newintent.putExtra("Defect description:", defectdes);
-        newintent.putExtra("Defect Rank:",checked);
-        Toast.makeText(this,"DEFECT SAVED", Toast.LENGTH_LONG).show();
-        clear();
+        }
+        finish();
+    }
+
+    public void btnImage(View v){
+
+        //choosing image from gallery
+        Intent intent = new Intent(Intent.ACTION_PICK);
+        intent.setType("image/*");
+        startActivityForResult(intent, Gallery_intnet);
 
     }
 
-    private void clear(){
-        feature.setText("");
-        defectdescription.setText("");
-    }
+    @RequiresApi(api = Build.VERSION_CODES.KITKAT)
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if(requestCode == Gallery_intnet && resultCode == RESULT_OK){
 
+            Uri uri = data.getData();
+            camerabtn.setImageURI(uri);
+            imagepath = storage.child("Defects").child(Objects.requireNonNull(uri).getLastPathSegment());
+            imagelocation = uri.getLastPathSegment();
+            imagepath.putFile(uri).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
+                @Override
+                public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
+
+                    Toast.makeText(defectActivity.this, "Uploaded",Toast.LENGTH_SHORT).show();
+                }
+            }).addOnFailureListener(new OnFailureListener() {
+                @Override
+                public void onFailure(@NonNull Exception e) {
+
+                    Toast.makeText(defectActivity.this, "Not Uploaded",Toast.LENGTH_SHORT).show();
+                }
+            });
+
+        }
+    }
 }

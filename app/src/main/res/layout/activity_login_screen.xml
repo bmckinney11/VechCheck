@@ -48,13 +48,6 @@
                 android:drawableLeft="@drawable/ic_lightbulb_outline_black_24dp"
                 />
 
-            <Button
-                android:id="@+id/newuserbtn"
-                style="@style/Widget.AppCompat.Button.Borderless"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:drawableLeft="@drawable/ic_person_add_black_24dp"
-                android:text="@string/newuser" />
         </LinearLayout>
 
     </LinearLayout>

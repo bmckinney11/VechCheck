@@ -19,9 +19,18 @@ import android.text.Layout;
 import android.text.StaticLayout;
 import android.text.TextPaint;
 import android.view.View;
+import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.ImageView;
-import android.widget.TextView;
+import android.widget.ListView;
 import android.widget.Toast;
+
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -33,9 +42,15 @@ import static aircommercialservices.vechcheck.R.layout.activity_rectification;
 
 public class Rectification extends AppCompatActivity {
 
-    int checked;
-    ArrayList<String> TV;
     ImageView imagev;
+    ListView list;
+    Button Logout;
+    private FirebaseAuth nAuth;
+    FirebaseDatabase database;
+    DatabaseReference dbReference;
+    ArrayList<String> defectlist;
+    ArrayAdapter<String> adapter;
+    defectivelist defectivelist;
 
     @RequiresApi(api = Build.VERSION_CODES.KITKAT)
     @Override
@@ -44,10 +59,31 @@ public class Rectification extends AppCompatActivity {
         setContentView(activity_rectification);
 
         imagev = findViewById(R.id.imageviewpdf);
+        list = findViewById(R.id.list);
+        Logout = findViewById(R.id.logout4);
+        defectivelist = new defectivelist();
+        database = FirebaseDatabase.getInstance();
+        dbReference = database.getReference("Defects");
+        defectlist = new ArrayList<>();
+        adapter = new ArrayAdapter<>(this, R.layout.defect_info, R.id.defectinfo, defectlist);
+        dbReference.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                for(DataSnapshot snapshot: dataSnapshot.getChildren()){
 
-        TV = Objects.requireNonNull(getIntent().getExtras()).getStringArrayList("message");
+                    defectivelist = snapshot.getValue(defectivelist.class);
+                    assert defectivelist != null;
+                    defectlist.add(defectivelist.getFeature()+ "  "+ defectivelist.getDefectdescript()+ "  "+ defectivelist.getDefectrank());
+                }
+                list.setAdapter(adapter);
+            }
 
-        //TODO SIGNIUTRE
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+
+            }
+        });
+
     }
 
     public void pickImage(View view){

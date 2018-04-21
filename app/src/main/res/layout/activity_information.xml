@@ -9,8 +9,8 @@
 
     <ImageView
         android:id="@+id/checkboxpicture"
-        android:layout_width="45dp"
-        android:layout_height="45dp"
+        android:layout_width="42dp"
+        android:layout_height="42dp"
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginLeft="8dp"
@@ -21,10 +21,10 @@
         android:src="@android:drawable/checkbox_on_background"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.036"
+        app:layout_constraintHorizontal_bias="0.034"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.453" />
+        app:layout_constraintVertical_bias="0.413" />
 
     <TextView
         android:id="@+id/infotitle"
@@ -37,31 +37,32 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:text="@string/informationtitle"
-        android:textSize="37sp"
+        android:textSize="32sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.023"
+        app:layout_constraintHorizontal_bias="0.026"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.036" />
+        app:layout_constraintVertical_bias="0.017" />
 
     <TextView
         android:id="@+id/info"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginLeft="32dp"
+        android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
-        android:layout_marginStart="32dp"
+        android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:text="@string/information"
-        android:textSize="25sp"
+        android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.333"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.172" />
+        app:layout_constraintVertical_bias="0.119" />
 
     <TextView
         android:id="@+id/key"
@@ -74,13 +75,13 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:text="@string/key"
-        android:textSize="37sp"
+        android:textSize="32sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.02"
+        app:layout_constraintHorizontal_bias="0.024"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.347" />
+        app:layout_constraintVertical_bias="0.321" />
 
     <TextView
         android:id="@+id/checkbox"
@@ -93,13 +94,13 @@
         android:layout_marginStart="128dp"
         android:layout_marginTop="8dp"
         android:text="@string/checkbox"
-        android:textSize="25sp"
+        android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.217"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.445" />
+        app:layout_constraintVertical_bias="0.395" />
 
     <TextView
         android:id="@+id/spannerinfo"
@@ -112,7 +113,7 @@
         android:layout_marginStart="128dp"
         android:layout_marginTop="8dp"
         android:text="@string/spannerbutton"
-        android:textSize="25sp"
+        android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.337"
@@ -121,8 +122,8 @@
         app:layout_constraintVertical_bias="0.59" />
 
     <ImageView
-        android:layout_width="45dp"
-        android:layout_height="45dp"
+        android:layout_width="42dp"
+        android:layout_height="42dp"
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginLeft="8dp"
@@ -139,8 +140,8 @@
         android:contentDescription="@null" />
 
     <ImageView
-        android:layout_width="45dp"
-        android:layout_height="45dp"
+        android:layout_width="42dp"
+        android:layout_height="42dp"
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginLeft="8dp"
@@ -167,7 +168,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:text="@string/defectseverity"
-        android:textSize="25sp"
+        android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.069"
@@ -186,7 +187,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:text="@string/minor"
-        android:textSize="25sp"
+        android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.021"
@@ -205,7 +206,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:text="@string/major"
-        android:textSize="25sp"
+        android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.021"
@@ -224,7 +225,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:text="@string/critical"
-        android:textSize="25sp"
+        android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.021"
@@ -243,7 +244,7 @@
         android:layout_marginStart="64dp"
         android:layout_marginTop="8dp"
         android:text="@string/minordescription"
-        android:textSize="25sp"
+        android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.133"
@@ -263,7 +264,7 @@
         android:layout_marginStart="64dp"
         android:layout_marginTop="8dp"
         android:text="@string/majordescription"
-        android:textSize="25sp"
+        android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.133"
@@ -283,7 +284,7 @@
         android:layout_marginStart="64dp"
         android:layout_marginTop="8dp"
         android:text="@string/criticaldescription"
-        android:textSize="25sp"
+        android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.135"

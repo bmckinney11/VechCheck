@@ -72,7 +72,7 @@
 
             <CheckBox
                 android:id="@+id/elecbrakingsystemandstabilitycontrol"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/hyfluidlevel"
                 android:layout_toEndOf="@+id/spannerbtn73"
@@ -84,11 +84,11 @@
                 android:id="@+id/spannerbtn74"
                 android:layout_width="35dp"
                 android:layout_height="35dp"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"
-                android:layout_below="@+id/spannerbtn73"
+                android:layout_alignStart="@+id/brakesvec"
+                android:layout_below="@+id/elecbrakingsystemandstabilitycontrol"
                 android:background="@drawable/ic_build_blue_24dp"
-                android:gravity="start" />
+                android:gravity="start"
+                android:layout_alignLeft="@+id/brakesvec" />
 
             <CheckBox
                 android:id="@+id/mecbrakecomponentsvec"
@@ -106,9 +106,8 @@
                 android:id="@+id/spannerbtn75"
                 android:layout_width="35dp"
                 android:layout_height="35dp"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"
-                android:layout_below="@+id/spannerbtn74"
+                android:layout_alignStart="@+id/brakesvec"
+                android:layout_below="@+id/mecbrakecomponentsvec"
                 android:background="@drawable/ic_build_black_24dp"
                 android:gravity="start" />
 
@@ -126,9 +125,8 @@
                 android:id="@+id/spannerbtn76"
                 android:layout_width="35dp"
                 android:layout_height="35dp"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"
-                android:layout_below="@+id/spannerbtn75"
+                android:layout_alignStart="@+id/brakesvec"
+                android:layout_below="@+id/vecDLDP"
                 android:background="@drawable/ic_build_blue_24dp"
                 android:gravity="start" />
 
@@ -148,8 +146,7 @@
                 android:id="@+id/spannerbtn77"
                 android:layout_width="35dp"
                 android:layout_height="35dp"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"
+                android:layout_alignStart="@+id/brakesvec"
                 android:layout_below="@+id/spannerbtn76"
                 android:background="@drawable/ic_build_black_24dp"
                 android:gravity="start" />
@@ -168,8 +165,7 @@
                 android:id="@+id/spannerbtn78"
                 android:layout_width="35dp"
                 android:layout_height="35dp"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"
+                android:layout_alignStart="@+id/brakesvec"
                 android:layout_below="@+id/spannerbtn77"
                 android:background="@drawable/ic_build_blue_24dp"
                 android:gravity="start" />
@@ -190,9 +186,8 @@
                 android:id="@+id/spannerbtn79"
                 android:layout_width="35dp"
                 android:layout_height="35dp"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"
-                android:layout_below="@+id/spannerbtn78"
+                android:layout_alignStart="@+id/brakesvec"
+                android:layout_below="@+id/trailercoupling"
                 android:background="@drawable/ic_build_black_24dp"
                 android:gravity="start" />
 
@@ -210,9 +205,8 @@
                 android:id="@+id/spannerbtn80"
                 android:layout_width="35dp"
                 android:layout_height="35dp"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"
-                android:layout_below="@+id/spannerbtn79"
+                android:layout_alignStart="@+id/brakesvec"
+                android:layout_below="@+id/loadsensingvec"
                 android:background="@drawable/ic_build_blue_24dp"
                 android:gravity="start" />
 
@@ -232,9 +226,8 @@
                 android:id="@+id/spannerbtn81"
                 android:layout_width="35dp"
                 android:layout_height="35dp"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"
-                android:layout_below="@+id/spannerbtn80"
+                android:layout_alignStart="@+id/brakesvec"
+                android:layout_below="@+id/antilock"
                 android:background="@drawable/ic_build_black_24dp"
                 android:gravity="start" />
 
@@ -252,9 +245,8 @@
                 android:id="@+id/spannerbtn82"
                 android:layout_width="35dp"
                 android:layout_height="35dp"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"
-                android:layout_below="@+id/spannerbtn81"
+                android:layout_alignStart="@+id/brakesvec"
+                android:layout_below="@+id/supplydumpvalve"
                 android:background="@drawable/ic_build_blue_24dp"
                 android:gravity="start" />
 
@@ -368,9 +360,9 @@
                 android:id="@+id/spannerbtn87"
                 android:layout_width="35dp"
                 android:layout_height="35dp"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"
-                android:layout_below="@+id/spannerbtn86"
+                android:layout_alignParentBottom="true"
+                android:layout_alignStart="@+id/brakesvec"
+                android:layout_marginBottom="26dp"
                 android:background="@drawable/ic_build_blue_24dp"
                 android:gravity="start" />
 

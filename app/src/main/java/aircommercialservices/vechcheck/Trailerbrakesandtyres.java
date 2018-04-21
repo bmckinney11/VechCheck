@@ -8,10 +8,14 @@ import android.view.Gravity;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
+import android.widget.CheckBox;
+import android.widget.Toast;
 
 public class Trailerbrakesandtyres extends AppCompatActivity {
 
     Button btn24,btn25,btn26,btn27,btn28,btn29,btn30,btn31,btn32,btn33,btn50,btn51,btn52,btn53,TBTfinish;
+    CheckBox cb24,cb25, cb26,cb27,cb28,cb29,cb30,cb31,cb32,cb33,cb50,cb51,cb52,cb53;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -48,6 +52,22 @@ public class Trailerbrakesandtyres extends AppCompatActivity {
         btn52 = findViewById(R.id.spanner52);
         btn53 = findViewById(R.id.spanner53);
         TBTfinish = findViewById(R.id.TBTfinish);
+
+        cb24 = findViewById(R.id.mechbrakecomp);
+        cb25 = findViewById(R.id.brakeDLDP);
+        cb26 = findViewById(R.id.brakeactuators);
+        cb27 = findViewById(R.id.brakingsystem);
+        cb28 = findViewById(R.id.elecbraking);
+        cb29 = findViewById(R.id.loadsensing);
+        cb30 = findViewById(R.id.antilock);
+        cb31 = findViewById(R.id.parkingbrake);
+        cb32 = findViewById(R.id.emergancybrake);
+        cb33 = findViewById(R.id.operatingadaptor);
+        cb50 = findViewById(R.id.tyresize);
+        cb51 = findViewById(R.id.tyrecondition);
+        cb52 = findViewById(R.id.tyrepressure);
+        cb53 = findViewById(R.id.ancillary);
+
 
 
         //opening pop up defect activity
@@ -174,6 +194,146 @@ public class Trailerbrakesandtyres extends AppCompatActivity {
                 Intent intent53 = new Intent(getApplicationContext(), defectActivity.class);
                 intent53.putExtra("message","Ancillary equipment inspection");
                 startActivity(intent53);
+            }
+        });
+
+        cb24.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                CheckBox defectcheck = (CheckBox) v;
+                if (defectcheck.isChecked()) {
+                    Toast.makeText(Trailerbrakesandtyres.this, "Mechanical brake components not defective", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+
+        cb25.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                CheckBox defectcheck = (CheckBox) v;
+                if (defectcheck.isChecked()) {
+                    Toast.makeText(Trailerbrakesandtyres.this, "Brake drums, linings, discs and pads not defective", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+
+        cb26.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                CheckBox defectcheck = (CheckBox) v;
+                if (defectcheck.isChecked()) {
+                    Toast.makeText(Trailerbrakesandtyres.this, "Brake actuators and adjuster not defective", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+
+        cb27.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                CheckBox defectcheck = (CheckBox) v;
+                if (defectcheck.isChecked()) {
+                    Toast.makeText(Trailerbrakesandtyres.this, "Braking system and components not defective", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+
+        cb28.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                CheckBox defectcheck = (CheckBox) v;
+                if (defectcheck.isChecked()) {
+                    Toast.makeText(Trailerbrakesandtyres.this, "Electronic braking and stability control system not defective", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+
+        cb29.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                CheckBox defectcheck = (CheckBox) v;
+                if (defectcheck.isChecked()) {
+                    Toast.makeText(Trailerbrakesandtyres.this, "Load sensing equipment not defective", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+
+        cb30.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                CheckBox defectcheck = (CheckBox) v;
+                if (defectcheck.isChecked()) {
+                    Toast.makeText(Trailerbrakesandtyres.this, "Anti-lock equipment,warning lights and service brake operation not defective", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+
+        cb31.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                CheckBox defectcheck = (CheckBox) v;
+                if (defectcheck.isChecked()) {
+                    Toast.makeText(Trailerbrakesandtyres.this, "Parking brake not defective", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+
+        cb32.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                CheckBox defectcheck = (CheckBox) v;
+                if (defectcheck.isChecked()) {
+                    Toast.makeText(Trailerbrakesandtyres.this, "Emergancy brake not defective", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+
+        cb33.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                CheckBox defectcheck = (CheckBox) v;
+                if (defectcheck.isChecked()) {
+                    Toast.makeText(Trailerbrakesandtyres.this, "Operating adapter not defective", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+
+        cb50.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                CheckBox defectcheck = (CheckBox) v;
+                if (defectcheck.isChecked()) {
+                    Toast.makeText(Trailerbrakesandtyres.this, "Size and types of tyres correct", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+
+        cb51.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                CheckBox defectcheck = (CheckBox) v;
+                if (defectcheck.isChecked()) {
+                    Toast.makeText(Trailerbrakesandtyres.this, "Condition of tyres not defective", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+
+        cb52.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                CheckBox defectcheck = (CheckBox) v;
+                if (defectcheck.isChecked()) {
+                    Toast.makeText(Trailerbrakesandtyres.this, "Pressure check of all tyres correct", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+
+        cb53.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                CheckBox defectcheck = (CheckBox) v;
+                if (defectcheck.isChecked()) {
+                    Toast.makeText(Trailerbrakesandtyres.this, "Ancillary equipment not defective", Toast.LENGTH_SHORT).show();
+                }
             }
         });
 

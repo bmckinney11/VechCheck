@@ -69,7 +69,8 @@
                 android:layout_alignParentStart="true"
                 android:layout_below="@+id/spannerbtn20"
                 android:background="@drawable/ic_build_black_24dp"
-                android:gravity="start" />
+                android:gravity="start"
+                tools:ignore="RtlCompat"/>
 
             <CheckBox
                 android:id="@+id/wingssprayfront"
@@ -85,11 +86,11 @@
                 android:id="@+id/spannerbtn22"
                 android:layout_width="35dp"
                 android:layout_height="35dp"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"
-                android:layout_below="@+id/spannerbtn21"
+                android:layout_alignStart="@+id/cabexterior"
+                android:layout_below="@+id/wingssprayfront"
                 android:background="@drawable/ic_build_blue_24dp"
-                android:gravity="start" />
+                android:gravity="start"
+                tools:ignore="RtlCompat"/>
 
             <CheckBox
                 android:id="@+id/cabsecurity"
@@ -107,11 +108,11 @@
                 android:id="@+id/spannerbtn23"
                 android:layout_width="35dp"
                 android:layout_height="35dp"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"
+                android:layout_alignStart="@+id/cabexterior"
                 android:layout_below="@+id/spannerbtn22"
                 android:background="@drawable/ic_build_black_24dp"
-                android:gravity="start" />
+                android:gravity="start"
+                tools:ignore="RtlCompat"/>
 
             <CheckBox
                 android:id="@+id/cabdoors"
@@ -127,11 +128,11 @@
                 android:id="@+id/spannerbtn24"
                 android:layout_width="35dp"
                 android:layout_height="35dp"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"
-                android:layout_below="@+id/spannerbtn23"
+                android:layout_alignStart="@+id/cabexterior"
+                android:layout_below="@+id/cabdoors"
                 android:background="@drawable/ic_build_blue_24dp"
-                android:gravity="start" />
+                android:gravity="start"
+                tools:ignore="RtlCompat"/>
 
             <CheckBox
                 android:id="@+id/cabfloorex"
@@ -149,11 +150,11 @@
                 android:id="@+id/spannerbtn25"
                 android:layout_width="35dp"
                 android:layout_height="35dp"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"
-                android:layout_below="@+id/spannerbtn24"
+                android:layout_alignStart="@+id/cabexterior"
+                android:layout_below="@+id/cabfloorex"
                 android:background="@drawable/ic_build_black_24dp"
-                android:gravity="start" />
+                android:gravity="start"
+                tools:ignore="RtlCompat"/>
 
             <CheckBox
                 android:id="@+id/mirrors"
@@ -169,11 +170,11 @@
                 android:id="@+id/spannerbtn26"
                 android:layout_width="35dp"
                 android:layout_height="35dp"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"
-                android:layout_below="@+id/spannerbtn25"
+                android:layout_alignStart="@+id/cabexterior"
+                android:layout_below="@+id/mirrors"
                 android:background="@drawable/ic_build_blue_24dp"
-                android:gravity="start" />
+                android:gravity="start"
+                tools:ignore="RtlCompat"/>
 
             <CheckBox
                 android:id="@+id/sidelightsoutline"
@@ -191,11 +192,11 @@
                 android:id="@+id/spannerbtn27"
                 android:layout_width="35dp"
                 android:layout_height="35dp"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"
-                android:layout_below="@+id/spannerbtn26"
+                android:layout_alignStart="@+id/cabexterior"
+                android:layout_below="@+id/sidelightsoutline"
                 android:background="@drawable/ic_build_black_24dp"
-                android:gravity="start" />
+                android:gravity="start"
+                tools:ignore="RtlCompat"/>
 
             <CheckBox
                 android:id="@+id/headlamps"
@@ -211,11 +212,11 @@
                 android:id="@+id/spannerbtn28"
                 android:layout_width="35dp"
                 android:layout_height="35dp"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"
-                android:layout_below="@+id/spannerbtn27"
+                android:layout_alignStart="@+id/cabexterior"
+                android:layout_below="@+id/headlamps"
                 android:background="@drawable/ic_build_blue_24dp"
-                android:gravity="start" />
+                android:gravity="start"
+                tools:ignore="RtlCompat"/>
 
             <CheckBox
                 android:id="@+id/frontfogspot"

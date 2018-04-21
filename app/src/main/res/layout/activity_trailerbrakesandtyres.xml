@@ -332,7 +332,7 @@
                 android:background="@drawable/ic_build_black_24dp"
                 android:gravity="start" />
 
-            <TextView
+            <CheckBox
                 android:id="@+id/ancillary"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"

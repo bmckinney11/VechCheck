@@ -9,6 +9,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
@@ -22,7 +23,9 @@ public class VehicleInput extends AppCompatActivity {
     EditText VBody;
     EditText VDate;
     Button VBegin;
+    Button logout;
     Button VehicleBack;
+    private FirebaseAuth nAuth;
     FirebaseDatabase database;
     DatabaseReference databaseReference;
 
@@ -39,7 +42,9 @@ public class VehicleInput extends AppCompatActivity {
         VNAxles = findViewById(R.id.AxleNumbersEditText);
         VBody = findViewById(R.id.BodyTypeEditText);
         VDate = findViewById(R.id.dateOfInspectionEditText);
+        logout = findViewById(R.id.logout2);
         database = FirebaseDatabase.getInstance();
+        nAuth = FirebaseAuth.getInstance();
         databaseReference = database.getReference("Vehicles");
 
 
@@ -63,6 +68,8 @@ public class VehicleInput extends AppCompatActivity {
                 addVehicleArrayList();
             }
         });
+
+
 
     }
 

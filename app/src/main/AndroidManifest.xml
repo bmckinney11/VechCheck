@@ -2,9 +2,11 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="aircommercialservices.vechcheck">
 
+    <uses-permission android:name="android.permission.INTERNET"/>
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
     <uses-permission android:name="android.permission.CAMERA" />
+
 
     <application
         android:allowBackup="true"
@@ -26,13 +28,9 @@
         <activity android:name=".VehicleInspection" />
         <activity android:name=".Rectification" />
         <activity
-            android:name=".defectActivity"
-            android:theme="@style/AppTheme.popup" />
+            android:name=".defectActivity"/>
         <activity
             android:name=".Information"
-            android:theme="@style/AppTheme.popup" />
-        <activity
-            android:name=".newuser"
             android:theme="@style/AppTheme.popup" />
         <activity
             android:name=".insidecab"
