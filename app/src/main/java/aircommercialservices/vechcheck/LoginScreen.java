@@ -50,15 +50,14 @@ public class LoginScreen extends AppCompatActivity {
             @Override
             public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
                 if (firebaseAuth.getCurrentUser() != null){
-                    startActivity(new Intent(LoginScreen.this, secondactivity.class));
-                }
+                   startActivity(new Intent(LoginScreen.this, secondactivity.class));
+               }
             }
         };
 
         login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
                 startSignIn();
             }
         });
@@ -69,6 +68,14 @@ public class LoginScreen extends AppCompatActivity {
     protected void onStart() {
         super.onStart();
         mAuth.addAuthStateListener(authStateListener);
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        if(authStateListener != null){
+            mAuth.removeAuthStateListener(authStateListener);
+        }
     }
 
     private void startSignIn(){

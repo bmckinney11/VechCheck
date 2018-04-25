@@ -34,21 +34,16 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:onClick="pickImage"
-        android:text="Save Inspection"
+        android:text="@string/save_inspection"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.95"
+        app:layout_constraintHorizontal_bias="0.018"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.923" />
-
-    <ImageView
-        android:id="@+id/imageviewpdf"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        app:layout_constraintVertical_bias="0.99" />
 
     <ScrollView
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="608dp"
         android:layout_marginBottom="24dp"
         android:layout_marginEnd="8dp"
@@ -64,8 +59,8 @@
         app:layout_constraintVertical_bias="0.0">
 
         <RelativeLayout
-            android:layout_width="584dp"
-            android:layout_height="64dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             tools:layout_editor_absoluteX="8dp"
             tools:layout_editor_absoluteY="233dp">
 

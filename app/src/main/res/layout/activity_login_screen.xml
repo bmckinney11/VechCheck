@@ -13,22 +13,23 @@
         android:orientation="vertical"
         android:padding="40dp">
 
+
         <TextView
             android:id="@+id/AIRTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:text="@string/airtitle"
+            android:text="VechCheck"
             android:textColor="#fff"
             android:textSize="40sp" />
 
         <TextView
             android:id="@+id/introTextView"
-            android:layout_width="wrap_content"
+            android:layout_width="531dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="15dp"
-            android:text="welcome.. all about the inspeoxtion"
+            android:text="@string/welcome"
             android:textColor="#fff"
             android:textSize="20sp" />
 
@@ -44,9 +45,8 @@
                 style="@style/Widget.AppCompat.Button.Borderless"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/instructions"
                 android:drawableLeft="@drawable/ic_lightbulb_outline_black_24dp"
-                />
+                android:text="@string/instructions" />
 
         </LinearLayout>
 
@@ -58,6 +58,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:orientation="vertical">
+
 
         <EditText
             android:id="@+id/usernameEditText"

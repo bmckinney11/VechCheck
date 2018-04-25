@@ -6,7 +6,7 @@ public class defectivelist {
     private String defectrank;
     private String Feature;
 
-    public defectivelist() {
+    defectivelist() {
     }
 
     public defectivelist(String defectdescript, String defectrank, String feature) {

@@ -2,6 +2,8 @@ package aircommercialservices.vechcheck;
 
 import android.Manifest;
 import android.app.Activity;
+import android.content.ContentResolver;
+import android.content.ContentValues;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
@@ -23,11 +25,13 @@ import android.os.Build;
 import android.os.Environment;
 import android.os.Handler;
 import android.os.HandlerThread;
+import android.provider.MediaStore;
 import android.support.annotation.NonNull;
 import android.support.annotation.RequiresApi;
 import android.os.Bundle;
 import android.support.v4.app.ActivityCompat;
 import android.text.TextUtils;
+import android.util.Log;
 import android.util.Size;
 import android.util.SparseIntArray;
 import android.view.Surface;
@@ -43,11 +47,8 @@ import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
-import com.google.firebase.database.DataSnapshot;
-import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.ValueEventListener;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
@@ -57,10 +58,12 @@ import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.OutputStream;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Date;
+import java.util.Locale;
 import java.util.Objects;
-import java.util.UUID;
 
 
 public class defectActivity extends Activity {
@@ -92,7 +95,6 @@ public class defectActivity extends Activity {
     StorageReference storage;
     StorageReference imagepath;
     String imagelocation;
-
 
 
     static {
@@ -161,7 +163,7 @@ public class defectActivity extends Activity {
         save.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-               //adds all defects to database
+               //adds all defect info to database
                 btnInsert();
             }
         });
@@ -207,14 +209,38 @@ public class defectActivity extends Activity {
             captureBuilder.set(CaptureRequest.CONTROL_MODE, CameraMetadata.CONTROL_MODE_AUTO);
 
             //check orientation base on the device
-            int rotation = getWindowManager().getDefaultDisplay().getRotation();
+            final int rotation = getWindowManager().getDefaultDisplay().getRotation();
             captureBuilder.set(CaptureRequest.JPEG_ORIENTATION, ORIENTATIONS.get(rotation));
 
-            file = new File(Environment.getExternalStorageDirectory() + "/" + UUID.randomUUID().toString() + ".jpg");
+
             ImageReader.OnImageAvailableListener readerListener = new ImageReader.OnImageAvailableListener() {
 
                 @Override
                 public void onImageAvailable(ImageReader imageReader) {
+
+                    String pathD = Environment.getExternalStorageDirectory()+"/"+Environment.DIRECTORY_DCIM+"/";
+                   File mediaStorageDir = new File(pathD, "VechCheck Album");
+                   if(!mediaStorageDir.exists()){
+                       if (!mediaStorageDir.mkdirs()){
+                           Log.d("Camera", "Failed to create directory");
+                       }
+                   }
+
+                   String timeStamp = new SimpleDateFormat("yyyyMMdd_HHmmss", Locale.getDefault()).format(new Date());
+                   file = new File(mediaStorageDir,"ImageName"+"_"+timeStamp+".jpeg");
+
+                    ContentValues values = new ContentValues();
+                    values.put(MediaStore.Images.Media.TITLE, "ImageName");
+                    values.put(MediaStore.Images.Media.DATE_TAKEN, System.currentTimeMillis());
+                    values.put(MediaStore.Images.Media.ORIENTATION, ORIENTATIONS.get(rotation));
+                    values.put(MediaStore.Images.Media.CONTENT_TYPE, "image/*");
+                    values.put("_data", file.getAbsolutePath());
+                    ContentResolver cr = getApplicationContext().getContentResolver();
+                    cr.insert(MediaStore.Images.Media.EXTERNAL_CONTENT_URI, values);
+
+
+                    getApplicationContext().sendBroadcast(new Intent(Intent.ACTION_MEDIA_SCANNER_SCAN_FILE, Uri.parse("file://" + file.getAbsolutePath())));
+
                     Image image = null;
                     try {
                         image = reader.acquireLatestImage();
@@ -247,6 +273,7 @@ public class defectActivity extends Activity {
 
                     }
                 }
+
             };
 
             reader.setOnImageAvailableListener(readerListener, mBackgroundHandler);
@@ -421,21 +448,6 @@ public class defectActivity extends Activity {
     public void btnInsert(){
 
 
-        //saves picture to the database
-        dbReference.addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(DataSnapshot dataSnapshot) {
-
-                 defects.setImageAddress(imagelocation);
-                Toast.makeText(defectActivity.this, "Image Saved", Toast.LENGTH_SHORT).show();
-            }
-
-            @Override
-            public void onCancelled(DatabaseError databaseError) {
-
-            }
-        });
-
         //saves defect to the database
         String Feature = feature.getText().toString().trim();
         RGroup = findViewById(R.id.rg);
@@ -455,7 +467,7 @@ public class defectActivity extends Activity {
             dbReference.child(id).child("Feature").setValue(Feature);
             dbReference.child(id).child("Defect Ranking").setValue(radiochoice);
             dbReference.child(id).child("Defect Description").setValue(defectdes);
-            dbReference.child(id).child("Picture001").setValue(defects);
+            dbReference.child(id).child("Picture001").setValue(imagelocation);
             Toast.makeText(this,"Defect has been registered", Toast.LENGTH_LONG).show();
 
         }

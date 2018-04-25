@@ -120,7 +120,6 @@ public class VehicleInput extends AppCompatActivity {
             Toast.makeText(this,"Please enter Date of Inspection!",Toast.LENGTH_LONG).show();
         }else{
             String id = databaseReference.push().getKey();
-            //Vehicles vehicles = new Vehicles(vcname,reg,vchassisno,vyear,vnumberaxles,vbodytype,vdateofi);
             databaseReference.child(id).child("Company Name").setValue(vcname);
             databaseReference.child(id).child("Registration").setValue(reg);
             databaseReference.child(id).child("Chassis Number").setValue(vchassisno);

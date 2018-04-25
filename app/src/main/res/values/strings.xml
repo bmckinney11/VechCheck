@@ -44,7 +44,7 @@
     <string name="bumper">Bumpers</string>
     <string name="underrun">Rear underrun device</string>
     <string name="sideguards">Protective sideguards</string>
-    <string name="fifthwheel">Fifth wheel kign pin+Rubbing plate</string>
+    <string name="fifthwheel">Fifth wheel king pin+Rubbing plate</string>
     <string name="drawbar">Drawbar and attachment</string>
     <string name="landinglegs">Landing Legs</string>
     <string name="body">Body</string>
@@ -221,5 +221,8 @@
     <string name="key">Key</string>
     <string name="finished">Finished</string>
     <string name="security_of_body_containers_and_crane_support_legs">Security of body, containers and crane support legs</string>
+    <string name="welcome">Welcome to the VechCheck Application to complete HGV Safety inspections.Please see below instructions for use. </string>
+    <string name="save_inspection">Save Inspection</string>
+
 
 </resources>

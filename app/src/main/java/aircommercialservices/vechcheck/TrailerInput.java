@@ -67,6 +67,17 @@ public class TrailerInput extends AppCompatActivity {
         });
 
 
+        //Logout method
+        Logout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                FirebaseAuth.getInstance().signOut();
+                Intent logoutintent = new Intent(TrailerInput.this,LoginScreen.class);
+                startActivity(logoutintent);
+            }
+        });
+
+
     }
 
     private void launchTrailerActivityInfo(){
@@ -114,7 +125,6 @@ public class TrailerInput extends AppCompatActivity {
             Toast.makeText(this,"Please enter Date of Inspection!",Toast.LENGTH_LONG).show();
         }else{
             String id = databaseReference.push().getKey();
-            //Trailers trailers = new Trailers(cname,nicNumber,chassisno,traileryear,tnumberaxles,tbodytype,tdateofi);
             databaseReference.child(id).child("Company Name").setValue(cname);
             databaseReference.child(id).child("NiorC Number").setValue(nicNumber);
             databaseReference.child(id).child("Chassis Number").setValue(chassisno);

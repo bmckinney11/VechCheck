@@ -1,20 +1,24 @@
 package aircommercialservices.vechcheck;
 
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.VideoView;
 
+import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
 import com.google.firebase.auth.FirebaseAuth;
 
 public class secondactivity extends AppCompatActivity {
 
-    private FirebaseAuth nAuth;
-    private FirebaseAuth.AuthStateListener authStateListener;
     VideoView videoview;
     Button TrailerBtn, VehicleBtn, Logout;
+    FirebaseAuth mAuth;
+    FirebaseAuth.AuthStateListener authStateListener;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,25 +45,23 @@ public class secondactivity extends AppCompatActivity {
             }
         });
 
-        //signing out
-        Logout = findViewById(R.id.logout);
-        Logout.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                nAuth = FirebaseAuth.getInstance();
-                nAuth.signOut();
-                if(nAuth.getCurrentUser() == null) {
-                    startActivity(new Intent(secondactivity.this, LoginScreen.class));
-                    finish();
-                }
-            }
-        });
+
 
         //showing video
         videoview = findViewById(R.id.videoView);
         videoview.setVideoPath("android.resource://"+getPackageName()+"/"+R.raw.video);
         videoview.start();
 
+        //Logout method
+        Logout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                FirebaseAuth.getInstance().signOut();
+                Intent logoutintent = new Intent(secondactivity.this,LoginScreen.class);
+                startActivity(logoutintent);
+            }
+        });
 
     }
+
 }

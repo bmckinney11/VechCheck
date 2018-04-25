@@ -26,7 +26,6 @@ public class VehicleInspection extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_vehicle_inspection);
 
-        //TODO
         //text inputed about inspection shown at the top of the inspection
         VCname = getIntent().getStringExtra("Company Name:");
         Reg = getIntent().getStringExtra("Vehicle Registration:");

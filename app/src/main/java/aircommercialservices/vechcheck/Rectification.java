@@ -66,6 +66,8 @@ public class Rectification extends AppCompatActivity {
         dbReference = database.getReference("Defects");
         defectlist = new ArrayList<>();
         adapter = new ArrayAdapter<>(this, R.layout.defect_info, R.id.defectinfo, defectlist);
+
+        //taking list of defects from the database
         dbReference.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
@@ -77,13 +79,22 @@ public class Rectification extends AppCompatActivity {
                 }
                 list.setAdapter(adapter);
             }
-
             @Override
             public void onCancelled(DatabaseError databaseError) {
 
             }
         });
 
+
+        //Logout method
+        Logout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                FirebaseAuth.getInstance().signOut();
+                Intent logoutintent = new Intent(Rectification.this,LoginScreen.class);
+                startActivity(logoutintent);
+            }
+        });
     }
 
     public void pickImage(View view){
@@ -114,12 +125,10 @@ public class Rectification extends AppCompatActivity {
 
             // create a new document
             PdfDocument document = new PdfDocument();
-
             PdfDocument.PageInfo pageInfo = new PdfDocument.PageInfo.Builder(100,100,1).create();
 
             //starting the page
             PdfDocument.Page page = document.startPage(pageInfo);
-
             Canvas canvas = page.getCanvas();
 
             Paint paint = new Paint();
@@ -148,9 +157,7 @@ public class Rectification extends AppCompatActivity {
             if(!root.exists()){
                 root.mkdir();
             }
-
             File file = new File(root, "defect.pdf");
-
             try{
                 document.writeTo(new FileOutputStream(file));
                 Toast.makeText(this, "Inspection PDF created", Toast.LENGTH_LONG).show();
