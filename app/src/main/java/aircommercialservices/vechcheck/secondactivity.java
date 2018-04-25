@@ -53,6 +53,7 @@ public class secondactivity extends AppCompatActivity {
         videoview.start();
 
         //Logout method
+        Logout = findViewById(R.id.logout);
         Logout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

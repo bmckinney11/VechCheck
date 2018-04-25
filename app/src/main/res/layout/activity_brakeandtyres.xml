@@ -42,7 +42,6 @@
                 android:id="@+id/spannerbtn72"
                 android:layout_width="35dp"
                 android:layout_height="35dp"
-                android:layout_alignParentLeft="true"
                 android:layout_alignParentStart="true"
                 android:layout_below="@+id/brakesvec"
                 android:background="@drawable/ic_build_blue_24dp"
@@ -54,7 +53,6 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/brakesvec"
                 android:layout_toEndOf="@+id/spannerbtn72"
-                android:layout_toRightOf="@+id/spannerbtn72"
                 android:text="@string/hydfluid"
                 android:textColor="@color/inspectionblue"
                 android:textSize="26sp"
@@ -64,7 +62,6 @@
                 android:id="@+id/spannerbtn73"
                 android:layout_width="35dp"
                 android:layout_height="35dp"
-                android:layout_alignParentLeft="true"
                 android:layout_alignParentStart="true"
                 android:layout_below="@+id/spannerbtn72"
                 android:background="@drawable/ic_build_black_24dp"
@@ -76,7 +73,6 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/hyfluidlevel"
                 android:layout_toEndOf="@+id/spannerbtn73"
-                android:layout_toRightOf="@+id/spannerbtn73"
                 android:text="@string/elecbraking"
                 android:textSize="26sp" />
 
@@ -87,8 +83,7 @@
                 android:layout_alignStart="@+id/brakesvec"
                 android:layout_below="@+id/elecbrakingsystemandstabilitycontrol"
                 android:background="@drawable/ic_build_blue_24dp"
-                android:gravity="start"
-                android:layout_alignLeft="@+id/brakesvec" />
+                android:gravity="start" />
 
             <CheckBox
                 android:id="@+id/mecbrakecomponentsvec"
@@ -96,7 +91,6 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/elecbrakingsystemandstabilitycontrol"
                 android:layout_toEndOf="@+id/spannerbtn74"
-                android:layout_toRightOf="@+id/spannerbtn74"
                 android:text="@string/mecbrakecomponents"
                 android:textColor="@color/inspectionblue"
                 android:textSize="26sp"
@@ -117,7 +111,6 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/mecbrakecomponentsvec"
                 android:layout_toEndOf="@+id/spannerbtn74"
-                android:layout_toRightOf="@+id/spannerbtn74"
                 android:text="@string/drumlinginsdiscpads"
                 android:textSize="26sp" />
 
@@ -136,7 +129,6 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/vecDLDP"
                 android:layout_toEndOf="@+id/spannerbtn76"
-                android:layout_toRightOf="@+id/spannerbtn76"
                 android:text="@string/actuators"
                 android:textColor="@color/inspectionblue"
                 android:textSize="26sp"
@@ -157,7 +149,6 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/brakeactuatorsvec"
                 android:layout_toEndOf="@+id/spannerbtn77"
-                android:layout_toRightOf="@+id/spannerbtn77"
                 android:text="@string/brakingsystem"
                 android:textSize="26sp" />
 
@@ -176,7 +167,6 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/brakesyscomponentsvec"
                 android:layout_toEndOf="@+id/spannerbtn78"
-                android:layout_toRightOf="@+id/spannerbtn78"
                 android:text="@string/trailercoupling"
                 android:textColor="@color/inspectionblue"
                 android:textSize="26sp"
@@ -197,7 +187,6 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/trailercoupling"
                 android:layout_toEndOf="@+id/spannerbtn79"
-                android:layout_toRightOf="@+id/spannerbtn79"
                 android:text="@string/loadsesingantilock"
                 android:textSize="26sp" />
 
@@ -216,7 +205,6 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/loadsensingvec"
                 android:layout_toEndOf="@+id/spannerbtn80"
-                android:layout_toRightOf="@+id/spannerbtn80"
                 android:text="@string/antilockdev"
                 android:textColor="@color/inspectionblue"
                 android:textSize="26sp"
@@ -237,7 +225,6 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/antilock"
                 android:layout_toEndOf="@+id/spannerbtn81"
-                android:layout_toRightOf="@+id/spannerbtn81"
                 android:text="@string/supplydump"
                 android:textSize="26sp" />
 
@@ -256,7 +243,6 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/supplydumpvalve"
                 android:layout_toEndOf="@+id/spannerbtn82"
-                android:layout_toRightOf="@+id/spannerbtn82"
                 android:text="@string/addbrakes"
                 android:textColor="@color/inspectionblue"
                 android:textSize="26sp"
@@ -276,7 +262,6 @@
                 android:id="@+id/spannerbtn83"
                 android:layout_width="35dp"
                 android:layout_height="35dp"
-                android:layout_alignParentLeft="true"
                 android:layout_alignParentStart="true"
                 android:layout_below="@+id/tyresvec"
                 android:background="@drawable/ic_build_blue_24dp"
@@ -288,7 +273,6 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/tyresvec"
                 android:layout_toEndOf="@+id/spannerbtn83"
-                android:layout_toRightOf="@+id/spannerbtn83"
                 android:text="@string/sizzetypetyres"
                 android:textColor="@color/inspectionblue"
                 android:textSize="26sp"
@@ -298,7 +282,6 @@
                 android:id="@+id/spannerbtn84"
                 android:layout_width="35dp"
                 android:layout_height="35dp"
-                android:layout_alignParentLeft="true"
                 android:layout_alignParentStart="true"
                 android:layout_below="@+id/spannerbtn83"
                 android:background="@drawable/ic_build_black_24dp"
@@ -310,7 +293,6 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/sizetypetyresvec"
                 android:layout_toEndOf="@+id/spannerbtn84"
-                android:layout_toRightOf="@+id/spannerbtn84"
                 android:text="@string/condtiontyres"
                 android:textSize="26sp" />
 
@@ -318,7 +300,6 @@
                 android:id="@+id/spannerbtn85"
                 android:layout_width="35dp"
                 android:layout_height="35dp"
-                android:layout_alignParentLeft="true"
                 android:layout_alignParentStart="true"
                 android:layout_below="@+id/spannerbtn84"
                 android:background="@drawable/ic_build_blue_24dp"
@@ -329,8 +310,6 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/condtyresvec"
-                android:layout_toEndOf="@+id/spannerbtn85"
-                android:layout_toRightOf="@+id/spannerbtn85"
                 android:text="@string/tyrepressure"
                 android:textColor="@color/inspectionblue"
                 android:textSize="26sp"
@@ -340,7 +319,6 @@
                 android:id="@+id/spannerbtn86"
                 android:layout_width="35dp"
                 android:layout_height="35dp"
-                android:layout_alignParentLeft="true"
                 android:layout_alignParentStart="true"
                 android:layout_below="@+id/spannerbtn85"
                 android:background="@drawable/ic_build_black_24dp"
@@ -352,7 +330,6 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/tyrepressurevec"
                 android:layout_toEndOf="@+id/spannerbtn86"
-                android:layout_toRightOf="@+id/spannerbtn86"
                 android:text="@string/driveaxle"
                 android:textSize="26sp" />
 
@@ -372,32 +349,32 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/driveaxles"
                 android:layout_toEndOf="@+id/spannerbtn87"
-                android:layout_toRightOf="@+id/spannerbtn87"
                 android:text="@string/ancillary"
                 android:textColor="@color/inspectionblue"
                 android:textSize="26sp"
                 android:textStyle="bold" />
 
-            <Button
-                android:id="@+id/BTfinish"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp"
-                android:layout_marginEnd="8dp"
-                android:layout_marginLeft="8dp"
-                android:layout_marginRight="8dp"
-                android:layout_marginStart="8dp"
-                android:layout_marginTop="8dp"
-                android:text="@string/finished"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.955"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.977" />
+
 
         </RelativeLayout>
     </ScrollView>
 
+    <Button
+        android:id="@+id/BTfinish"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/finished"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.955"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.977" />
 
 </android.support.constraint.ConstraintLayout>

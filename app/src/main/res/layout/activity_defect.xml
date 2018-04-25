@@ -13,7 +13,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
-        android:layout_marginLeft="32dp"
         android:layout_marginStart="32dp"
         android:layout_marginTop="8dp"
         android:textSize="30sp"
@@ -23,7 +22,7 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.027"
+        app:layout_constraintVertical_bias="0.017"
         tools:text="Chassis/NI/C Plate" />
 
     <TextView
@@ -38,10 +37,10 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.098"
+        app:layout_constraintHorizontal_bias="0.097"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.112"
+        app:layout_constraintVertical_bias="0.089"
         tools:text="@string/severity" />
 
     <TextView
@@ -70,10 +69,10 @@
         android:layout_marginTop="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.067"
+        app:layout_constraintHorizontal_bias="0.073"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.208">
+        app:layout_constraintVertical_bias="0.177">
 
         <RadioButton
             android:id="@+id/minorRB"
@@ -95,8 +94,8 @@
             android:id="@+id/majorRB"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/major"
             android:onClick="defectinformation"
+            android:text="@string/major"
             android:textColor="#ff6600"
             android:textSize="30sp"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -110,9 +109,9 @@
             android:id="@+id/criticalRB"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:onClick="defectinformation"
             android:text="@string/critical"
             android:textColor="#ff0000"
-            android:onClick="defectinformation"
             android:textSize="30sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -197,9 +196,9 @@
         android:layout_height="wrap_content"
         android:background="#76d3f2"
         android:contentDescription="@null"
-        android:padding="5dp"
         android:onClick="btnImage"
-        android:src="@android:drawable/ic_menu_camera"
+        android:padding="5dp"
+        android:src="@android:drawable/ic_menu_save"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.93"

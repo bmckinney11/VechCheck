@@ -215,8 +215,8 @@
     <string name="checkbox">Checkbox- Check the corresponding checkbox if the feature has no defect present. Leave blank if N/A (not applicable) to that vehicle or trailer</string>
     <string name="spannerbutton">Spanner button- Opens up information box for providing details on the corresponding defect.</string>
     <string name="defectseverity">Each defect must be described and ranked according to its severity.</string>
-    <string name="minordescription">A minor defect is one that </string>
-    <string name="majordescription">A major defect is one that</string>
+    <string name="capturedescription">Capture Image Button </string>
+    <string name="selectdescription">Select Image Button</string>
     <string name="criticaldescription">A critical defect is one that</string>
     <string name="key">Key</string>
     <string name="finished">Finished</string>

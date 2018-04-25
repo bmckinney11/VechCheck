@@ -91,7 +91,7 @@ public class TrailerInput extends AppCompatActivity {
 
         Intent intent = new Intent(TrailerInput.this, TrailerInspection.class);
         intent.putExtra("Company Name:",cname);
-        intent.putExtra("Ni/C Number:", nicNumber);
+        intent.putExtra("Ni.C Number:", nicNumber);
         intent.putExtra("Chassis Number:", chassisno);
         intent.putExtra("Year of Trailer:", traileryear);
         intent.putExtra("Number of Axles:", tnumberaxles);
